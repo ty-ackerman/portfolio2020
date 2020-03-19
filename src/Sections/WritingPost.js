@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import queryString from 'query-string'
 import {isEmpty} from "lodash"
-import {PostContent, PostPhoto} from "../Components/PostContent"
+import {PostContent, PostPhoto, PostSubtitle, PostListOrdered, PostListUnordered} from "../Components/PostContent"
 
 import Posts from '../Writing/Posts.json';
 
@@ -27,8 +27,14 @@ function WritingPost(props) {
 				return <PostContent key={key} {...section}/>
 			case "photo":
 				return <PostPhoto key={key} {...section} />
-		}
+			case "subtitle": 
+				return <PostSubtitle key={key} {...section} />
+			case "ol":
+				return <PostListOrdered key={key} {...section} />
+			case "ul":
+				return <PostListUnordered key={key} {...section} />
 
+		}
 	}
 	return (
 		<div>

@@ -15,10 +15,22 @@
 				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
 			},
 			{
+				"type": "subtitle",
+				"content": "So why??"
+			},
+			{
 				"type": "photo",
 				"content": "https://shawglobalnews.files.wordpress.com/2019/06/nba-finals.jpg?quality=70&strip=all",
-				"size": "md",
+				"size": "lg",
 				"altText": "World champs baby!!!"
+			},
+			{
+				"type": "ul",
+				"content": [
+					"We the North",
+					"Repeat 2020",
+					"In Masai We Trust"
+				]
 			},
 			{
 				"type": "paragraph",
@@ -50,6 +62,10 @@
 		"dateShort": "Feb 2020",
 		"path": "first-post",
 		"sections": [
+			{
+				"type": "subtitle",
+				"content": "This is super easy"
+			},
 			{
 				"type": "paragraph",
 				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
