@@ -28,6 +28,15 @@ a:hover {
 	transition: all .15s linear;
 }
 
+.post-title {
+	transition: all .15s linear;
+}
+
+a:hover .post-title {
+	color: black;
+	text-decoration: underline;
+}
+
 li {
 	list-style-type: none;
 }
