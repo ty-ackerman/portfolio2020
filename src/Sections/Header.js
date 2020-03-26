@@ -81,7 +81,7 @@ export default function Header() {
 						<a href="https://www.instagram.com/ty.ackerman/" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a>
 					</div>
 					<div className="fa-icon linkedin">
-						<a href="https://www.linkedin.com/in/tyler-ackerman-b8b564163/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+						<a href="http://www.linkedin.com/in/ty-ackerman" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
 					</div>
 					<div className="fa-icon email ">
 						<a href="mailto:me@tylerackerman.io?subject=Sweet Website Ty!"><FontAwesomeIcon icon={faEnvelope} /></a>
