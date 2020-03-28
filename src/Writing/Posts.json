@@ -11,12 +11,12 @@
 				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
 			},
 			{
-				"type": "blockquote",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			},
-			{
 				"type": "subtitle",
 				"content": "So why??"
+			},
+			{
+				"type": "blockquote",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
 			},
 			{
 				"type": "photo",
@@ -26,11 +26,7 @@
 			},
 			{
 				"type": "ul",
-				"content": [
-					"We the North",
-					"Repeat 2020",
-					"In Masai We Trust"
-				]
+				"content": [ "We the North", "Repeat 2020", "In Masai We Trust" ]
 			},
 			{
 				"type": "paragraph",
@@ -55,7 +51,7 @@
 			}
 		]
 	},
-		{
+	{
 		"title": "My First Post",
 		"description": "I don't really know what to say",
 		"dateLong": "February 01, 2020",
@@ -63,12 +59,12 @@
 		"path": "first-post",
 		"sections": [
 			{
-				"type": "subtitle",
-				"content": "This is super easy"
-			},
-			{
 				"type": "paragraph",
 				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			},
+			{
+				"type": "subtitle",
+				"content": "This is super easy"
 			},
 			{
 				"type": "blockquote",
