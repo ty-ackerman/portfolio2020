@@ -42,25 +42,40 @@ export function PostBlockquote(props) {
 }
 
 export function PostListOrdered(props) {
+	const OrderedList = styled.ol`
+		list-style-position: inside;
+		li {
+			list-style-type: upper-roman;
+		}
+	`;
+
 	return (
 		<div>
-			<ol>
+			<OrderedList>
 				{props.content.map((item, key) => {
 					return <li key={key}>{item}</li>;
 				})}
-			</ol>
+			</OrderedList>
 		</div>
 	);
 }
 
 export function PostListUnordered(props) {
+	const UnorderedList = styled.ul`
+		list-style-position: inside;
+		padding-left: 40px;
+		li {
+			list-style-type: square;
+		}
+	`;
+
 	return (
 		<div>
-			<ul>
+			<UnorderedList>
 				{props.content.map((item, key) => {
 					return <li key={key}>{item}</li>;
 				})}
-			</ul>
+			</UnorderedList>
 		</div>
 	);
 }

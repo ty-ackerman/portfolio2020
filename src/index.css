@@ -13,6 +13,16 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+::selection {
+	background: #000000; /* WebKit/Blink Browsers */
+	color: white;
+}
+
+::-moz-selection {
+	background: #000000; /* Gecko Browsers */
+	color: white;
+}
+
 h1,
 h2,
 h3,

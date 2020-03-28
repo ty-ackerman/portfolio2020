@@ -1,40 +1,40 @@
-import React from 'react'
+import React from 'react';
+
+import Posts from '../Writing/Posts.json';
+import WritingListItem from './WritingListItem';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Title from './Title';
 
 export default function RecentWriting() {
-    // Temp articles until I actually write them
-    const articles = [
-        {
-            title: "Two Years Since Bootcamp",
-            preview: "Reflecting on anniversary of starting HackerYou",
-            date: "March 2020"
-        },
-        {
-            title: "Portfolio Face-Lift",
-            preview: "The long awaited revamping of my website",
-            date: "February 2020"
-        }
-    ]
+	// Temp articles until I actually write them
 
-    const renderWriting = (articles) => {
-        if (!articles) return;
-        const recentArticles = articles.length >= 5 ? articles.slice(0,5) : articles;
-        return recentArticles.map((article, key) => {
-            return (
-                <div key={key}>
-                    <div className="article-left">
-                        <div className="article-title">{article.title}</div>
-                        <div className="article-preview">{article.preview}</div>
-                    </div>
-                        <div className="article-date">{article.date}</div>
-                </div>
-            )
-        })
-    }
+	const renderWriting = (Posts) => {
+		if (!Posts) return;
+		const recentPosts = Posts.length >= 3 ? Posts.slice(0, 3) : Posts;
+		return recentPosts.map((post) => {
+			return <WritingListItem key={post.path} post={post} />;
+		});
+	};
 
-    return (
-        <div>
-            <h2>Recent Writing</h2>
-            {renderWriting(articles)}
-        </div>
-    )
+	const RecentWriting = styled.div`
+		margin-top: 40px;
+		.see-more {
+			padding: 20px 0;
+			text-align: left;
+			height: 50px;
+			display: flex;
+			align-items: center;
+		}
+	`;
+
+	return (
+		<RecentWriting>
+			<Title title="Recent Writing" />
+			{renderWriting(Posts)}
+			<div className="see-more">
+				<Link to="/writing">View all writing</Link>
+			</div>
+		</RecentWriting>
+	);
 }

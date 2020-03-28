@@ -6,7 +6,8 @@ export default function Title(props) {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		margin-bottom: 40px;
+		padding-bottom: 40px;
+		position: relative;
 		@media (max-width: 1200px) {
 			flex-flow: column wrap;
 			align-items: flex-start;
@@ -20,6 +21,14 @@ export default function Title(props) {
 		h3 {
 			font-weight: 400;
 			width: 55%;
+		}
+		&:after {
+			width: 100%;
+			height: 1px;
+			content: '';
+			background-color: #dfdfdf;
+			position: absolute;
+			bottom: 0;
 		}
 	`;
 

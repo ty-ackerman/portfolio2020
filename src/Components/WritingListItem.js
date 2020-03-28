@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ export default function WritingListItem(props) {
 	const { post } = props;
 
 	const StyledItem = styled.div`
-		border-top: 1px solid #dfdfdf;
+		border-bottom: 1px solid #dfdfdf;
 		.one-post {
 			padding: 25px 0;
 			display: flex;

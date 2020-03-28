@@ -33,6 +33,7 @@ export default function Footer() {
 					<a
 						href="https://drive.google.com/file/d/1C2xilrTXY4-1PNW4PEtgUsQLxsUQLa7T/view?usp=sharing"
 						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<li>Resume</li>
 					</a>

@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/ta-logo.png';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -53,7 +53,7 @@ export default function Header() {
 			width: 130px;
 			font-size: 25px;
 		}
-	`
+	`;
 
 	return (
 		<HeaderWrapper>
@@ -66,29 +66,40 @@ export default function Header() {
 				<nav className="menu-items">
 					<ul>
 						<li>
-							<NavLink activeClassName="is-active" to="/about">About</NavLink>
+							<NavLink activeClassName="is-active" to="/about">
+								About
+							</NavLink>
 						</li>
 						<li>
-							<NavLink activeClassName="is-active" to="/projects">Projects</NavLink>
+							<NavLink activeClassName="is-active" to="/projects">
+								Projects
+							</NavLink>
 						</li>
 						<li>
-							<NavLink activeClassName="is-active" to="/writing">Writing</NavLink>
+							<NavLink activeClassName="is-active" to="/writing">
+								Writing
+							</NavLink>
 						</li>
 					</ul>
 				</nav>
 				<div className="social-icons">
 					<div className="fa-icon instagram">
-						<a href="https://www.instagram.com/ty.ackerman/" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a>
+						<a href="https://www.instagram.com/ty.ackerman/" target="_blank" rel="noopener noreferrer">
+							<FontAwesomeIcon icon={faInstagram} />
+						</a>
 					</div>
 					<div className="fa-icon linkedin">
-						<a href="http://www.linkedin.com/in/ty-ackerman" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+						<a href="http://www.linkedin.com/in/ty-ackerman" target="_blank" rel="noopener noreferrer">
+							<FontAwesomeIcon icon={faLinkedinIn} />
+						</a>
 					</div>
 					<div className="fa-icon email ">
-						<a href="mailto:me@tylerackerman.io?subject=Sweet Website Ty!"><FontAwesomeIcon icon={faEnvelope} /></a>
+						<a href="mailto:me@tylerackerman.io?subject=Sweet Website Ty!">
+							<FontAwesomeIcon icon={faEnvelope} />
+						</a>
 					</div>
 				</div>
 			</div>
 		</HeaderWrapper>
 	);
 }
-

@@ -1,0 +1,91 @@
+[
+	{
+		"title": "Website Ideas",
+		"description": "Some cool stuff I have planned for the future",
+		"dateLong": "March 13, 2020",
+		"dateShort": "Mar 2020",
+		"path": "website-ideas",
+		"sections": [
+			{
+				"type": "paragraph",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			},
+			{
+				"type": "subtitle",
+				"content": "So why??"
+			},
+			{
+				"type": "blockquote",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			},
+			{
+				"type": "photo",
+				"content": "https://shawglobalnews.files.wordpress.com/2019/06/nba-finals.jpg?quality=70&strip=all",
+				"size": "lg",
+				"altText": "World champs baby!!!"
+			},
+			{
+				"type": "paragraph",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			},
+			{
+				"type": "ol",
+				"content": [ "We the North", "Repeat 2020", "In Masai We Trust" ]
+			},
+			{
+				"type": "paragraph",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			},
+			{
+				"type": "ul",
+				"content": [ "We the North", "Repeat 2020", "In Masai We Trust" ]
+			},
+			{
+				"type": "paragraph",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			}
+		]
+	},
+	{
+		"title": "Harry Potter and the Chamber of Secrets",
+		"description": "Classic movie.",
+		"dateLong": "Feb 27, 2020",
+		"dateShort": "Mar 2020",
+		"path": "harry-potter",
+		"sections": [
+			{
+				"type": "paragraph",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			},
+			{
+				"type": "blockquote",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			}
+		]
+	},
+	{
+		"title": "My First Post",
+		"description": "I don't really know what to say",
+		"dateLong": "February 01, 2020",
+		"dateShort": "Feb 2020",
+		"path": "first-post",
+		"sections": [
+			{
+				"type": "paragraph",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			},
+			{
+				"type": "subtitle",
+				"content": "This is super easy"
+			},
+			{
+				"type": "blockquote",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			},
+			{
+				"type": "paragraph",
+				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+			}
+		]
+	}
+]

@@ -93,6 +93,7 @@ function WritingPost(props) {
 			position: relative;
 			margin-top: 80px;
 			border-top: 1px solid #dfdfdf;
+			max-height: 100px;
 			.change-title {
 				color: #797979;
 			}

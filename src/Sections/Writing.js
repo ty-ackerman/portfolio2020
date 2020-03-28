@@ -9,6 +9,10 @@ import styled from 'styled-components';
 export default function Writing() {
 	const WritingContainer = styled.div``;
 
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
+
 	return (
 		<WritingContainer className="section">
 			<Title title="Writing" subtitle="Notes about life, work, and everything in between." />
