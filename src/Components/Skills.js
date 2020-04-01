@@ -1,21 +1,38 @@
-import React from 'react'
+import React from 'react';
+import Title from './Title';
+import styled from 'styled-components';
+
+import { FaReact, FaNodeJs, FaJava, FaPython } from 'react-icons/fa';
+import { IoLogoJavascript } from 'react-icons/io';
+import { DiMongodb, DiBackbone } from 'react-icons/di';
+
 
 export default function Skills() {
-    return (
-        <div>
+    const Skills = styled.div`
+    margin-top: 40px;
+    h2 {
+        font-size: 34px;
+    }
+    .skills-container {
+        display: flex;
+        justify-content: space-around;
+        font-size: 100px;
+        padding: 60px 0;
+    }
+    `;
+
+	return (
+		<Skills>
             <h2>I've Worked With</h2>
-            <div className="skills-container">
-                <div>ReactJs</div>
-                <div>ES6</div>
-                <div>NodeJs</div>
-                <div>MongoDB</div>
-                <div>Mongoose</div>
-                <div>Express</div>
-                <div>Backbone</div>
-                <div>Java</div>
-                <div>Python</div>
-                <div>Some other language</div>
-            </div>
-        </div>
-    )
+			<div className="skills-container">
+				<div alt="hellooo"><FaReact /></div>
+				<div><IoLogoJavascript/></div>
+				<div><FaNodeJs/></div>
+				<div><DiMongodb/></div>
+				<div><FaJava/></div>
+				<div><DiBackbone/></div>
+				<div><FaPython/></div>
+			</div>
+		</Skills>
+	);
 }
