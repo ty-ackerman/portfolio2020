@@ -8,10 +8,13 @@
     "@fortawesome/free-regular-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
+    "@react-firebase/database": "^0.3.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "devicon-react": "^1.1.1",
+    "firebase": "^7.13.1",
+    "lodash": "^4.17.15",
     "query-string": "^6.11.1",
     "react": "^16.13.0",
     "react-devicon": "^0.1.9",
@@ -43,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^3.0.0"
   }
 }
