@@ -3,6 +3,7 @@ import Title from '../Components/Title';
 import { Link } from 'react-router-dom';
 import { PostContent, PostSubtitle } from '../Components/PostContent';
 import fire from '../Components/fire'
+import TattooContent from '../Components/TattooContent'
 import styled from 'styled-components';
 import {isEmpty} from "lodash"
 
@@ -33,14 +34,6 @@ export default class Tattoo extends Component {
 		})
 	}
 
-	renderData = () => {
-		if (this.state.content && this.state.type) {
-			return <img src={this.state.content} />
-			
-		} else {
-			return "Loading ..."
-		}
-	}
 
 
 	render() {
@@ -50,7 +43,7 @@ export default class Tattoo extends Component {
 					<Title title="My QR Code Tattoo" subtitle="My ridiculous permanent decision." />
 					<PostContent content={description} />
 					<PostSubtitle content={subtitle} />
-					{this.renderData()}
+					<TattooContent content={this.state.content} type={this.state.type}/>
 					To learn more about the tattoo, <Link to="/writing/post?id=tattoo">click here</Link>.
 				</div>
 			</div>
