@@ -52,12 +52,12 @@ export default function AboutText(props) {
 			flex-wrap: wrap;
 		}
 		.about-title {
-			width: 250px;
+			width: 350px;
 			padding-right: 100px;
 		}
 		.about-body-container {
 			font-size: 18px;
-			width: calc(100% - 350px);
+			width: calc(100% - 450px);
 		}
 		.body.about-me {
 			margin-bottom: 20px;

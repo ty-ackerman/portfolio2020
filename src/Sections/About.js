@@ -8,12 +8,10 @@ export default function About() {
 		window.scrollTo(0, 0);
 	});
 
-	const AboutSection = styled.div`margin-left: 380px;`;
-
 	return (
-		<AboutSection className="section">
+		<div className="section">
 			<Title title="About Me" />
 			<AboutText />
-		</AboutSection>
+		</div>
 	);
 }

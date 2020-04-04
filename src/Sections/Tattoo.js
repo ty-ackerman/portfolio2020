@@ -5,7 +5,6 @@ import { PostContent, PostSubtitle } from '../Components/PostContent';
 import fire from '../Components/fire'
 import TattooContent from '../Components/TattooContent'
 import styled from 'styled-components';
-import {isEmpty} from "lodash"
 
 const description =
 	'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit perspiciatis ducimus in nostrum, et aspernatur architecto voluptatum facere a nesciunt! Quia dolor hic error minima doloribus? Doloremque laudantium tenetur porro?';

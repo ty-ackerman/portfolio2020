@@ -15,11 +15,8 @@ var fire = firebase.initializeApp(config);
   
 export default fire;
 
-export const getData = async () => {
-    const dbRef = await fire.database().ref('/');
-    let tempData = {};
-    dbRef.on('value', async function(snap) {
-        const data = await snap.val()
-        Object.assign(tempData, data)
-    })
+export const postData = async (content, type) => {
+    fire.database().ref('/').set({
+      content, type
+    });
 }

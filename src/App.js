@@ -10,6 +10,7 @@ import Projects from './Sections/Projects';
 import Writing from './Sections/Writing';
 import WritingPost from './Sections/WritingPost';
 import Tattoo from './Sections/Tattoo';
+import AddContent from './Sections/AddContent';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route path="/projects" exact render={() => <Projects />} />
 				<Route path="/writing/post" render={() => <WritingPost />} />
 				<Route path="/writing" exact render={() => <Writing />} />
+				<Route path="/tattoo/add" exact render={() => <AddContent />} />
 				<Route path="/tattoo" exact render={() => <Tattoo />} />
 				<Route path="/" render={() => <Home />} />
 			</Switch>
