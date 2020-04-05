@@ -15,6 +15,7 @@ export default function HomeBio() {
 				font-size: 40px;
 				font-weight: 700;
 				margin-bottom: 30px;
+				line-height: 1.2;
 				span {
 					color: #3868d8;
 					&::selection {
@@ -30,13 +31,26 @@ export default function HomeBio() {
 				font-size: 18px;
 			}
 		}
+		@media (max-width: 585px) {
+			padding-top: 25px;
+			padding-bottom: 100px;
+			.home-header {
+				.bio-main {
+					font-size: 32px;
+					margin-bottom: 15px;
+				}
+			}
+		}
 	`;
 
 	return (
 		<HomeBio>
 			<div className="home-header">
 				<div className="bio-main">
-					Hi! My name is <span>Ty Ackerman</span>.<br />I'm a web developer from Toronto.
+					{console.log(window.innerWidth)}
+					Hi! My name is {window.innerWidth < 580 && <br />}
+					<span>Ty Ackerman</span>.{window.innerWidth > 580 && <br />} {window.innerWidth > 580 && ' '} I'm a
+					web developer from Toronto.
 				</div>
 				<div className="bio-secondary">
 					I enjoy designing and building things that look nice and work well, whether it’s websites, services

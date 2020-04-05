@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Title from '../Components/Title';
 
 export default function Projects() {
 	useEffect(() => {
@@ -7,7 +8,8 @@ export default function Projects() {
 
 	return (
 		<div className="section">
-			<div>Coming soon ...</div>
+			<Title title="Projects" />
+			<div style={{ marginTop: '40px' }}>Under construction ...</div>
 		</div>
 	);
 }

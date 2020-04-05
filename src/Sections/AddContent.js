@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { postData } from '../Components/fire';
 import Title from '../Components/Title';
 import fire from '../Components/fire';
+import { css } from '@emotion/core';
 import TattooContent from '../Components/TattooContent';
-import styled from 'styled-components';
+import ClockLoader from 'react-spinners/ClockLoader';
+import styled, { keyframes } from 'styled-components';
+import { fadeOut, fadeIn } from 'react-animations';
 
 const ContentAdder = styled.div`
 	.add-content {
@@ -58,7 +61,7 @@ const ContentAdder = styled.div`
 			}
 		}
 		.button-container {
-			margin: 40px 0;
+			margin: 30px 0;
 			display: flex;
 			justify-content: space-between;
 			input {
@@ -67,7 +70,7 @@ const ContentAdder = styled.div`
 				background-color: white;
 				color: black;
 				border: 1px solid black;
-				padding: 10px 40px;
+				padding: 5px 40px;
 				&.active {
 					background-color: #efefef;
 				}
@@ -92,6 +95,21 @@ const ContentAdder = styled.div`
 		background-color: #f3f3f3;
 	}
 `;
+
+const override = css`margin: 0 auto;`;
+
+const LoadingContainer = styled.div`
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+const fadeOutAnimation = keyframes`${fadeOut}`;
+const fadeInAnimation = keyframes`${fadeIn}`;
+
+const FadeOutDiv = styled.div`animation: 1s ${fadeOutAnimation};`;
+const FadeInDiv = styled.div`animation: 1s ${fadeInAnimation};`;
 
 export class AddContent extends Component {
 	state = {
@@ -133,66 +151,73 @@ export class AddContent extends Component {
 
 	renderForm = () => {
 		const { content, type, newType, newContent } = this.state;
-
-		if (content && type) {
-			return (
-				<form onSubmit={this.handleSubmit}>
-					<h2 className="content-title">New Content</h2>
+		return (
+			<form onSubmit={this.handleSubmit}>
+				<h2 className="content-title">New Content</h2>
+				<input
+					type="text"
+					name="newContent"
+					defaultValue={content}
+					onChange={this.handleChange}
+					placeholder="Content - Paste YouTube url, image address, or redirect url"
+				/>
+				<div className="button-container">
 					<input
-						type="text"
-						name="newContent"
-						defaultValue={content}
-						onChange={this.handleChange}
-						placeholder="Content - Paste YouTube url, image address, or redirect address"
+						type="button"
+						className={newType === 'picture' && 'active'}
+						name="newType"
+						value="picture"
+						onClick={this.handleChange}
 					/>
-					<div className="button-container">
-						<input
-							type="button"
-							className={newType === 'picture' && 'active'}
-							name="newType"
-							value="picture"
-							onClick={this.handleChange}
-						/>
-						<input
-							type="button"
-							className={newType === 'video' && 'active'}
-							name="newType"
-							value="video"
-							onClick={this.handleChange}
-						/>
-						<input
-							type="button"
-							className={newType === 'website' && 'active'}
-							name="newType"
-							value="website"
-							onClick={this.handleChange}
-						/>
-					</div>
-					<input type="submit" disabled={!newType || !newContent} />
-				</form>
-			);
-		} else {
-			return (
-				<div>
-					<div>Still loading!!!</div>
+					<input
+						type="button"
+						className={newType === 'video' && 'active'}
+						name="newType"
+						value="video"
+						onClick={this.handleChange}
+					/>
+					<input
+						type="button"
+						className={newType === 'website' && 'active'}
+						name="newType"
+						value="website"
+						onClick={this.handleChange}
+					/>
 				</div>
-			);
-		}
+				<input type="submit" disabled={!newType || !newContent} />
+			</form>
+		);
 	};
 
 	render() {
-		return (
-			<ContentAdder className="section">
-				<Title title="Change QR Code Content" />
-				<div className="add-content">
-					{this.renderForm()}
-					<div className="preview">
-						<h2 className="content-title">Preview</h2>
-						<TattooContent content={this.state.newContent} type={this.state.newType} />
-					</div>
-				</div>
-			</ContentAdder>
-		);
+		const { content, type } = this.state;
+		if (content && type) {
+			return (
+				<ContentAdder className="section">
+					<Title title="Change QR Code Content" />
+					<FadeInDiv>
+						<div className="add-content">
+							{this.renderForm()}
+							<div className="preview">
+								<h2 className="content-title">Preview</h2>
+								<TattooContent content={this.state.newContent} type={this.state.newType} />
+							</div>
+						</div>
+					</FadeInDiv>
+				</ContentAdder>
+			);
+		} else {
+			return (
+				<ContentAdder className="section">
+					<Title title="Change QR Code Content" />
+					<FadeOutDiv>
+						<LoadingContainer>
+							<ClockLoader css={override} size={50} color={'#000000'} loading={true} />
+						</LoadingContainer>
+					</FadeOutDiv>
+				</ContentAdder>
+			);
+		}
 	}
 }
 

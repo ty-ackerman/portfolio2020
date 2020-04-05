@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 export default function Footer() {
 	const Footer = styled.footer`
 		margin-top: 50px;
-		margin-left: 380px;
+		margin-left: 340px;
 		margin-right: 40px;
 		padding-top: 10px;
 		padding-bottom: 30px;
@@ -20,6 +20,18 @@ export default function Footer() {
 		.footer-bottom {
 			color: #656565;
 			font-size: 12px;
+		}
+		@media (min-width: 1450px) {
+			margin-left: 380px;
+		}
+		@media (max-width: 1000px) {
+			margin: 50px 80px 0px 80px;
+		}
+		@media (max-width: 770px) {
+			margin: 50px 40px 0px 40px;
+		}
+		@media (max-width: 500px) {
+			margin: 50px 30px 0px 30px;
 		}
 	`;
 

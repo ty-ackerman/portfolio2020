@@ -9,11 +9,7 @@ export default function Home() {
 		window.scrollTo(0, 0);
 	});
 
-	const HomeSection = styled.div`
-		margin-left: 380px;
-		margin-top: 100px;
-		margin-right: 40px;
-	`;
+	const HomeSection = styled.div``;
 
 	return (
 		<HomeSection className="section">

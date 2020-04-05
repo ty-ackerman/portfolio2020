@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../assets/ta-logo.png';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,6 +52,63 @@ export default function Header() {
 			justify-content: space-between;
 			width: 130px;
 			font-size: 25px;
+		}
+
+		@media (min-width: 1450px) {
+			width: 400px;
+			padding: 50px 60px;
+		}
+
+		@media (max-width: 1000px) {
+			padding: 40px 0;
+			margin: 0 80px;
+			width: calc(100% - 160px);
+			display: block;
+			bottom: inherit;
+			top: 0;
+			position: relative;
+			.social-icons {
+				display: none;
+			}
+			.header-inner {
+				border: none;
+				flex-direction: row-reverse;
+				align-items: center;
+				padding: 0;
+			}
+			.logo-container {
+				width: 60px;
+			}
+			nav {
+				padding: 0;
+				ul {
+					display: flex;
+					flex-direction: row;
+					width: 250px;
+					margin: 0;
+					justify-content: space-between;
+					li {
+						margin: 0;
+					}
+				}
+			}
+		}
+		@media (max-width: 770px) {
+			margin: 0 40px;
+			width: calc(100% - 80px);
+		}
+		@media (max-width: 500px) {
+			margin: 0 30px;
+			width: calc(100% - 60px);
+			nav ul {
+				width: 215px;
+			}
+		}
+		@media (max-width: 380px) {
+			nav ul {
+				width: 175px;
+				font-size: 16px;
+			}
 		}
 	`;
 

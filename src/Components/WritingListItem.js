@@ -26,6 +26,26 @@ export default function WritingListItem(props) {
 			font-style: italic;
 			color: #656565;
 		}
+		@media (max-width: 700px) {
+			.post-date {
+				width: 30%;
+			}
+		}
+		@media (max-width: 550px) {
+			.one-post {
+				flex-flow: column-reverse wrap;
+				.post-subtitle {
+					display: none;
+				}
+				.post-title {
+					font-size: 18px;
+					font-weight: 400;
+				}
+				.post-date {
+					color: #656565;
+				}
+			}
+		}
 	`;
 
 	return (

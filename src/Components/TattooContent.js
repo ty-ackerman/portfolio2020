@@ -17,7 +17,7 @@ export default function TattooContent(props) {
 				);
 			case 'website':
 				return (
-					<div style={{ maxWidth: '800px' }}>
+					<div style={{ maxWidth: '80%' }}>
 						<div>QR code redirects to:</div>
 						<div style={{ paddingTop: '10px' }}>
 							<a target="_blank" rel="noopener noreferrer" href={content}>

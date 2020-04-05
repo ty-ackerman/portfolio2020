@@ -69,6 +69,43 @@ export default function AboutText(props) {
 		.about-container:last-child {
 			margin-top: 50px;
 		}
+
+		@media (max-width: 1400px) {
+			.about-title {
+				padding-right: 50px;
+				width: 300px;
+			}
+			.about-body-container {
+				width: calc(100% - 350px);
+			}
+		}
+
+		@media (max-width: 1150px) {
+			.about-title {
+				padding-right: 50px;
+				width: 250px;
+			}
+			.about-body-container {
+				width: calc(100% - 250px);
+			}
+		}
+
+		@media (max-width: 700px) {
+			.about-container {
+				flex-direction: column;
+			}
+			.about-title {
+				padding-right: 50px;
+				width: 250px;
+				margin-bottom: 20px;
+			}
+			.about-body-container {
+				width: 100%;
+			}
+			.about-container:last-child {
+				margin-top: 20px;
+			}
+		}
 	`;
 
 	return (

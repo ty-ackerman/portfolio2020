@@ -54,6 +54,8 @@ function WritingPost(props) {
 	const WritingPost = styled.div`
 		display: flex;
 		flex-flow: column wrap;
+		position: relative;
+		padding-bottom: 100px;
 		.post-contents {
 			margin: 0 auto;
 			max-width: 600px;
@@ -83,6 +85,9 @@ function WritingPost(props) {
 		.change-post {
 			display: flex;
 			justify-content: ${post.index === 0 ? 'flex-end' : 'space-between'};
+			position: absolute;
+			bottom: 0;
+			width: 100%;
 		}
 		.next,
 		.previous {

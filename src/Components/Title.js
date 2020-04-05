@@ -17,10 +17,17 @@ export default function Title(props) {
 		h1 {
 			width: 45%;
 			font-size: 34px;
+			@media (max-width: 1200px) {
+				width: 100%;
+			}
 		}
 		h3 {
 			font-weight: 400;
 			width: 55%;
+			@media (max-width: 1200px) {
+				width: 100%;
+				padding-top: 10px;
+			}
 		}
 		&:after {
 			width: 100%;
@@ -29,6 +36,12 @@ export default function Title(props) {
 			background-color: #dfdfdf;
 			position: absolute;
 			bottom: 0;
+		}
+
+		@media (max-width: 585px) {
+			h1 {
+				font-size: 30px;
+			}
 		}
 	`;
 
