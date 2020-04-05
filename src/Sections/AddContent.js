@@ -14,6 +14,13 @@ const ContentAdder = styled.div`
 		margin-top: 40px;
 		flex-flow: row wrap;
 		justify-content: space-between;
+		@media (max-width: 900px) {
+			flex-flow: column wrap;
+			form,
+			.preview {
+				width: 100%;
+			}
+		}
 	}
 	h2.content-title {
 		padding-bottom: 15px;
@@ -32,22 +39,42 @@ const ContentAdder = styled.div`
 	form,
 	.preview {
 		width: 50%;
-		min-height: calc(100vh - 382px);
+		@media (min-width: 900px) {
+			min-height: calc(100vh - 382px);
+		}
 	}
 	.preview {
-		padding-left: 25px;
+		@media (min-width: 900px) {
+			padding-left: 25px;
+		}
+		@media (max-width: 900px) {
+			padding-top: 50px;
+		}
 	}
 	form {
-		padding-right: 25px;
+		@media (min-width: 900px) {
+			padding-right: 25px;
+		}
+		@media (max-width: 900px) {
+			padding-bottom: 50px;
+		}
 		position: relative;
 		&:after {
 			content: "";
 			background-color: #dfdfdf;
-			width: 1px;
-			height: 100%;
 			position: absolute;
-			right: 0;
-			top: 0;
+			@media (min-width: 900px) {
+				width: 1px;
+				height: 100%;
+				right: 0;
+				top: 0;
+			}
+			@media (max-width: 900px) {
+				height: 1px;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+			}
 		}
 		input[type=text] {
 			width: 100%;
@@ -64,13 +91,31 @@ const ContentAdder = styled.div`
 			margin: 30px 0;
 			display: flex;
 			justify-content: space-between;
+			@media (min-width: 1600px) {
+				font-size: 20px;
+			}
 			input {
 				text-transform: capitalize;
 				transition: .15s all linear;
 				background-color: white;
 				color: black;
 				border: 1px solid black;
-				padding: 5px 40px;
+
+				@media (min-width: 1301px) {
+					padding: 5px 40px;
+				}
+				@media (max-width: 1300px) {
+					padding: 5px 30px;
+				}
+				@media (max-width: 1150px) {
+					padding: 5px 20px;
+				}
+				@media (max-width: 1000px) {
+					padding: 5px 30px;
+				}
+				@media (max-width: 420px) {
+					padding: 5px 20px;
+				}
 				&.active {
 					background-color: #efefef;
 				}
@@ -82,6 +127,9 @@ const ContentAdder = styled.div`
 			text-transform: capitalize;
 			border: 1px solid black;
 			padding: 10px 0;
+			@media (min-width: 1600px) {
+				font-size: 20px;
+			}
 			&:disabled {
 				color: #dfdfdf;
 				border-color: #dfdfdf;
