@@ -55,7 +55,7 @@ function WritingPost(props) {
 		display: flex;
 		flex-flow: column wrap;
 		position: relative;
-		padding-bottom: 100px;
+		padding-bottom: 150px;
 		.post-contents {
 			margin: 0 auto;
 			max-width: 600px;
@@ -92,6 +92,7 @@ function WritingPost(props) {
 		.next,
 		.previous {
 			width: 20%;
+			min-width: 120px;
 			cursor: pointer;
 			padding-top: 20px;
 			position: relative;
