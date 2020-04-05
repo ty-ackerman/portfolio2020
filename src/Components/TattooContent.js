@@ -7,11 +7,18 @@ import { fadeOut, fadeIn } from 'react-animations';
 export default function TattooContent(props) {
 	const { content, type } = props;
 
+	const isMobile = () => {
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			return true;
+		}
+		return false;
+	};
+
 	const handleContent = (content, type) => {
 		switch (type) {
 			case 'picture':
 				return (
-					<div style={{ maxWidth: '50%' }}>
+					<div style={{ maxWidth: isMobile() ? '100%' : '50%' }}>
 						<img src={content} alt="" />
 					</div>
 				);
