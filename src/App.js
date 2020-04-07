@@ -22,6 +22,8 @@ function App() {
 				<Route path="/writing/post" render={() => <WritingPost />} />
 				<Route path="/writing" exact render={() => <Writing />} />
 				<Route path="/tattoo/add" exact render={() => <AddContent />} />
+				<Route path="/tattoo/info" exact render={() => <Tattoo />} />
+				<Route path="/tattoo" exact render={() => <Tattoo redirect />} />
 				<Route path="/tattoo" exact render={() => <Tattoo />} />
 				<Route path="/" render={() => <Home />} />
 			</Switch>

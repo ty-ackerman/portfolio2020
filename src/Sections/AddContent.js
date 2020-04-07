@@ -225,7 +225,7 @@ export class AddContent extends Component {
 		setTimeout(() => {
 			this.handleClose()
 			setTimeout(() => {
-				this.props.history.push('/tattoo')
+				this.props.history.push('/tattoo/add')
 			}, 200)
 		}, 1500);
 	};

@@ -19,7 +19,6 @@ export class Tattoo extends Component {
     this.state = {
       content: '',
 	  type: '',
-	  referrer: '',
       fullScreen: true
     }
   }
@@ -41,8 +40,7 @@ export class Tattoo extends Component {
     const dbRef = await fire.database().ref('/')
     dbRef.on('value', async snapshot => {
 	  const data = await snapshot.val()
-	  const referrer = document.referrer
-      this.setState({...data, referrer})
+      this.setState({...data})
     })
   }
 
@@ -65,7 +63,8 @@ export class Tattoo extends Component {
             <div className='post-contents'>
               <TattooContent
                 content={this.state.content}
-                type={this.state.type}
+				type={this.state.type}
+				redirect={this.props.redirect}
               />
             </div>
           </div>
@@ -87,7 +86,7 @@ export class Tattoo extends Component {
 					<TattooContent
 					content={this.state.content}
 					type={this.state.type}
-					referrer = {this.state.referrer}
+					redirect={this.props.redirect}
 					/>
 					<div>
 					To learn more about the tattoo,{' '}

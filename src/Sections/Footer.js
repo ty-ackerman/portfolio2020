@@ -49,7 +49,7 @@ export default function Footer() {
 					>
 						<li>Resume</li>
 					</a>
-					<NavLink activeClassName="is-active" to="/tattoo">
+					<NavLink activeClassName="is-active" to="/tattoo/info">
 						<li>Tattoo</li>
 					</NavLink>
 				</ul>

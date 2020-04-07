@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Fade from './Fade'
 
 export default function TattooContent(props) {
-	const { content, type, referrer } = props;
+	const { content, type, redirect } = props;
 
 	const isMobile = () => {
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -23,9 +23,9 @@ export default function TattooContent(props) {
 					</div>
 				);
 			case 'website':
-				// if (referrer = "http://tyack.tech") {
-				// 	window.location = content
-				// } 
+				if (redirect) {
+					window.location = content;
+				}
 				return (
 					<div style={{ maxWidth: '80%' }}>
 						<div>QR code redirects to:</div>
