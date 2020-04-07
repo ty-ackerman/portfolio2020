@@ -7,6 +7,8 @@ import TattooContent from '../Components/TattooContent';
 import ClockLoader from 'react-spinners/ClockLoader';
 import styled, { keyframes } from 'styled-components';
 import { fadeOut, fadeIn } from 'react-animations';
+import {withRouter} from 'react-router-dom'
+import Snackbar from '@material-ui/core/Snackbar';
 
 const ContentAdder = styled.div`
 	.add-content {
@@ -142,6 +144,28 @@ const ContentAdder = styled.div`
 	input[type=submit]:active {
 		background-color: #f3f3f3;
 	}
+
+	.MuiSnackbar-root .MuiPaper-root {
+		background-color: white;
+		color: black;
+		border: 1px solid black;
+	}
+
+	.clear-input {
+		background-color: white;
+		height: 40px;
+		width: 48px;
+		position: absolute;
+		right: 10px;
+		top: 83px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 700
+		-webkit-text-stroke-width: 1px;
+  		-webkit-text-stroke-color: white;
+	}
 `;
 
 const override = css`margin: 0 auto;`;
@@ -160,14 +184,21 @@ const FadeOutDiv = styled.div`animation: 1s ${fadeOutAnimation};`;
 const FadeInDiv = styled.div`animation: 1s ${fadeInAnimation};`;
 
 export class AddContent extends Component {
+	constructor(props) {
+		super(props);
+		this.textInput = React.createRef();
+	}
 	state = {
 		content: '',
 		type: '',
 		newContent: '',
-		newType: ''
+		newType: '',
+		openSnackbar: false,
+		displayClear: false
 	};
 
 	componentDidMount() {
+		window.scrollTo(0, 0)
 		this.getData();
 	}
 
@@ -190,24 +221,55 @@ export class AddContent extends Component {
 		const { newContent, newType } = this.state;
 		// Add error handling to make sure both fields are full
 		postData(newContent, newType);
+		this.setState({openSnackbar: true})
+		setTimeout(() => {
+			this.handleClose()
+			setTimeout(() => {
+				this.props.history.push('/tattoo')
+			}, 200)
+		}, 1500);
 	};
+	handleClose = () => {
+    	this.setState({ openSnackbar: false });
+  	};
 
-	handleActiveClass = (e) => {
-		const { type } = this.state;
-		return 'test';
-	};
+	shouldBlur = (e) => {
+		if (e.keyCode === 13) {
+			e.target.blur();
+    	}
+	}
+
+	clearInput = (e) => {
+		e.preventDefault()
+		this.textInput.current.value = "";
+		this.setState({displayClear: false, newContent: ""})
+	}
+
+	displayClear = () => {
+		if (
+      		/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        	navigator.userAgent
+      		)
+    	) {
+			this.setState({displayClear: true})
+		}
+	}
 
 	renderForm = () => {
-		const { content, type, newType, newContent } = this.state;
+		const { content, type, newType, newContent, displayClear } = this.state;
 		return (
-			<form onSubmit={this.handleSubmit}>
+			<form onSubmit={this.handleSubmit} id="add-content-form">
 				<h2 className="content-title">New Content</h2>
+				{displayClear && <button className="clear-input" onClick={this.clearInput}>Clear</button>}
 				<input
 					type="text"
 					name="newContent"
 					defaultValue={content}
 					onChange={this.handleChange}
+					onFocus={this.displayClear}
 					placeholder="Content - Paste YouTube url, image address, or redirect url"
+					onKeyDown={this.shouldBlur}
+					ref={this.textInput}
 				/>
 				<div className="button-container">
 					<input
@@ -251,6 +313,12 @@ export class AddContent extends Component {
 								<TattooContent content={this.state.newContent} type={this.state.newType} />
 							</div>
 						</div>
+						      <Snackbar
+								anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+								open={this.state.openSnackbar}
+								onClose={this.handleClose}
+								message="New content saved successfully."
+							/>
 					</FadeInDiv>
 				</ContentAdder>
 			);
@@ -269,4 +337,4 @@ export class AddContent extends Component {
 	}
 }
 
-export default AddContent;
+export default withRouter(AddContent);

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Title from '../Components/Title';
 import AboutText from '../Components/AboutText';
-import styled from 'styled-components';
+import Fade from '../Components/Fade'
 
 export default function About() {
 	useEffect(() => {
@@ -9,9 +9,11 @@ export default function About() {
 	});
 
 	return (
+		<Fade show>
 		<div className="section">
 			<Title title="About Me" />
 			<AboutText />
 		</div>
+		</Fade>
 	);
 }

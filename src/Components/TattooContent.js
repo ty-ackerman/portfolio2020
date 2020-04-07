@@ -1,11 +1,11 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import ClockLoader from 'react-spinners/ClockLoader';
-import styled, { keyframes } from 'styled-components';
-import { fadeOut, fadeIn } from 'react-animations';
+import styled from 'styled-components';
+import Fade from './Fade'
 
 export default function TattooContent(props) {
-	const { content, type } = props;
+	const { content, type, referrer } = props;
 
 	const isMobile = () => {
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -23,6 +23,9 @@ export default function TattooContent(props) {
 					</div>
 				);
 			case 'website':
+				// if (referrer = "http://tyack.tech") {
+				// 	window.location = content
+				// } 
 				return (
 					<div style={{ maxWidth: '80%' }}>
 						<div>QR code redirects to:</div>
@@ -70,11 +73,6 @@ export default function TattooContent(props) {
 		align-items: center;
 	`;
 
-	const fadeOutAnimation = keyframes`${fadeOut}`;
-	const fadeInAnimation = keyframes`${fadeIn}`;
-
-	const FadeOutDiv = styled.div`animation: 1s ${fadeOutAnimation};`;
-	const FadeInDiv = styled.div`animation: 1s ${fadeInAnimation};`;
 
 	const TattooContentContainer = styled.div`
 		display: flex;
@@ -85,17 +83,17 @@ export default function TattooContent(props) {
 
 	if (content && type) {
 		return (
-			<FadeInDiv>
+			<Fade show>
 				<TattooContentContainer>{handleContent(content, type)}</TattooContentContainer>
-			</FadeInDiv>
+			</Fade >
 		);
 	}
 
 	return (
-		<FadeOutDiv>
+		<Fade show={false} >
 			<LoadingContainer>
 				<ClockLoader css={override} size={50} color={'#000000'} loading={true} />
 			</LoadingContainer>
-		</FadeOutDiv>
+		</Fade >
 	);
 }
