@@ -1,125 +1,128 @@
-import React from 'react';
-import me from '../assets/me-grayscale.jpg';
-import styled from 'styled-components';
+import React from 'react'
+import me from '../assets/me-grayscale.jpg'
+import styled from 'styled-components'
 
-export default function AboutText(props) {
-	const aboutSections = [
-		{
-			titleType: 'image',
-			titleContent: me,
-			body: [
-				'I’m a designer and developer born and bred in Norrland, and now living in Stockholm. I enjoy coffee, movies, long walks in nature, and music made before I was born (1991, that is).',
-				'I’ve spent most of my career designing and developing websites and services. I’ve also worked with identity design, editorial design, and written for websites and magazines. I’m currently doing some freelance work while figuring out what comes next. Interested in working with me? Send me an email.',
-				'When I’m not doing client work, I enjoy spending my time on various side projects. Since 2012, I’ve released 20 free WordPress themes that have been downloaded more than 3 million times and are used on hundreds of thousands of websites. In 2019, I designed and helped develop Twenty Twenty, the default theme in WordPress 5.3. I also run a WordPress glossary and Kaffeguide.se – a Swedish site about brewing coffee. I like to keep busy. And caffeinated.'
-			]
-		},
-		{
-			titleType: 'text',
-			titleContent: 'Colophon',
-			body: [
-				'This site is running on WordPress with a custom theme called Reset. It’s not available for download, but Koji is somewhat similar in structure. The theme is designed with Sketch, developed with Visual Studio Code, version controlled on GitHub with the Tower Mac app, and hosted on Binero. Caching is handled by WP Super Cache.',
-				'The site uses the lovely Söhne typeface, designed by Kris Sowersby of Klim Type Foundry.'
-			]
-		}
-	];
+export default function AboutText (props) {
+  const aboutSections = [
+    {
+      titleType: 'image',
+      titleContent: me,
+      body: [
+        'I’m a front-end web developer out of Toronto, Canada. In addition to my full-time work with Amdocs, I enjoy freelancing, writing, and researching on the side. This website was created to showcase some of my latest projects and to share some of my hot takes with the world.',
 
-	const renderTitle = (section) => {
-		const { titleType, titleContent } = section;
-		if (titleType === 'image') {
-			return <img src={titleContent} alt="" />;
-		} else {
-			return titleContent;
-		}
-	};
+        'My journey into tech was definitely unconventional to say the least. In 2017, I graduated from Wilfrid Laurier University with a degree in Business Administration and a graduate diploma in Accounting. Less than a year later, I completed a full-time web development program with Juno College of Technology and landed my dream job as a UI Developer with Scotiabank.',
 
-	const renderBody = (section) => {
-		const { body } = section;
+        "I’m a strong believer in giving back to the community that helped raise you. Since graduating, I’ve accepted several different positions with the college; including roles in student mentoring, in-class instructor assisting, and assignment grading. Most recently, I've been selected as a recurring guest speaker - providing career advice for recent grads. ",
 
-		return body.map((paragraph, key) => {
-			return (
-				<div key={key} className="body about-me">
-					{paragraph}
-				</div>
-			);
-		});
-	};
+        'Aside from coding, I’m a die-hard Toronto Raptors fan. I bleed red, literally and figuratively. To answer your question, yes, June 2019 was the best month of my life. During the NBA offseason, I take every opportunity I can to travel the globe. I’ve been fortunate enough to visit some pretty neat places. Last but not least, no About Me section is complete without mentioning my two lovely dogs, Barkley and Cooper.'
+      ]
+    },
+    {
+      titleType: 'text',
+      titleContent: 'Colophon',
+      body: [
+        'This site is currently running on React, built using the Create React App toolchain. I also utilized the Styled Components package to help create custom styling. For the design, I took inspiration from a ton of different minimalistic webpages I’ve seen over the past couple years. I was aiming for something clean, simple, and modern.'
+      ]
+    }
+  ]
 
-	const AboutContent = styled.div`
-		margin-top: 55px;
-		.about-container {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-		.about-title {
-			width: 350px;
-			padding-right: 100px;
-		}
-		.about-body-container {
-			font-size: 18px;
-			width: calc(100% - 450px);
-		}
-		.body.about-me {
-			margin-bottom: 20px;
-		}
-		.about-title {
-			font-weight: 500;
-			font-size: 19px;
-		}
-		.about-container:last-child {
-			margin-top: 50px;
-		}
+  const renderTitle = section => {
+    const { titleType, titleContent } = section
+    if (titleType === 'image') {
+      return <img src={titleContent} alt='' />
+    } else {
+      return titleContent
+    }
+  }
 
-		@media (max-width: 1400px) {
-			.about-title {
-				padding-right: 50px;
-				width: 300px;
-			}
-			.about-body-container {
-				width: calc(100% - 350px);
-			}
-		}
+  const renderBody = section => {
+    const { body } = section
 
-		@media (max-width: 1150px) {
-			.about-title {
-				padding-right: 50px;
-				width: 250px;
-			}
-			.about-body-container {
-				width: calc(100% - 250px);
-			}
-		}
+    return body.map((paragraph, key) => {
+      return (
+        <div key={key} className='body about-me'>
+          {paragraph}
+        </div>
+      )
+    })
+  }
 
-		@media (max-width: 700px) {
-			.about-container {
-				flex-direction: column;
-			}
-			.about-title {
-				padding-right: 50px;
-				width: 250px;
-				margin-bottom: 20px;
-			}
-			.about-body-container {
-				width: 100%;
-			}
-			.about-container:last-child {
-				margin-top: 20px;
-			}
-		}
-	`;
+  const AboutContent = styled.div`
+    margin-top: 55px;
+    .about-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .about-title {
+      width: 350px;
+      padding-right: 100px;
+    }
+    .about-body-container {
+      font-size: 18px;
+      width: calc(100% - 450px);
+    }
+    .body.about-me {
+      margin-bottom: 20px;
+    }
+    .about-title {
+      font-weight: 500;
+      font-size: 19px;
+    }
+    .about-container:last-child {
+      margin-top: 50px;
+    }
 
-	return (
-		<AboutContent>
-			{aboutSections.map((section, key) => {
-				return (
-					<div className="about-container">
-						<div className="about-title" key={key}>
-							{renderTitle(section)}
-						</div>
-						<div className="about-body-container">{renderBody(section)}</div>
-					</div>
-				);
-			})}
-		</AboutContent>
-	);
+    @media (max-width: 1400px) {
+      .about-title {
+        padding-right: 50px;
+        width: 300px;
+      }
+      .about-body-container {
+        width: calc(100% - 350px);
+      }
+    }
+
+    @media (max-width: 1150px) {
+      .about-title {
+        padding-right: 50px;
+        width: 250px;
+      }
+      .about-body-container {
+        width: calc(100% - 250px);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .about-container {
+        flex-direction: column;
+      }
+      .about-title {
+        padding-right: 50px;
+        width: 250px;
+        margin-bottom: 20px;
+      }
+      .about-body-container {
+        width: 100%;
+      }
+      .about-container:last-child {
+        margin-top: 20px;
+      }
+    }
+  `
+
+  return (
+    <AboutContent>
+      {aboutSections.map((section, key) => {
+        return (
+          <div className='about-container'>
+            <div className='about-title' key={key}>
+              {renderTitle(section)}
+            </div>
+            <div className='about-body-container'>{renderBody(section)}</div>
+          </div>
+        )
+      })}
+    </AboutContent>
+  )
 }
