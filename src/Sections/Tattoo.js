@@ -9,7 +9,7 @@ import { useSwipeable, Swipeable } from 'react-swipeable'
 import { withRouter } from 'react-router-dom'
 
 const description =
-  'The hardest part about getting a tattoo is choosing a permanent design. My unique solution - a QR code that scans to the content of my choosing by linking it to my personal website. To put it more simply, I can change what the code displays with the tap of a button.'
+  'The hardest part about getting a tattoo is choosing a permanent design. My solution - a QR code that scans to the content of my choosing by linking it to my personal website. To put it more simply, I can change what the code displays with only a few clicks.'
 
 const subtitle = 'So What Does It Scan To?'
 
@@ -55,8 +55,9 @@ export class Tattoo extends Component {
 
   render () {
     const { fullScreen } = this.state
+    const { redirect } = this.props
 
-    if (fullScreen) {
+    if (fullScreen && redirect) {
       return (
         <Swipeable onSwipedLeft={eventData => this.handleSwipe()}>
           <Fade show>
@@ -80,7 +81,7 @@ export class Tattoo extends Component {
             <div className='post-contents'>
               <Title
                 title='My QR Code Tattoo'
-                subtitle='My ridiculous permanent decision.'
+                subtitle='Permanent tattoo, temporary content.'
               />
               <PostContent content={description} />
               <PostSubtitle content={subtitle} />

@@ -1,108 +1,216 @@
 [
-	{
-		"title": "Website Ideas",
-		"description": "Some cool stuff I have planned for the future",
-		"dateLong": "March 13, 2020",
-		"dateShort": "Mar 2020",
-		"path": "website-ideas",
-		"sections": [
-			{
-				"type": "paragraph",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			},
-			{
-				"type": "subtitle",
-				"content": "So why??"
-			},
-			{
-				"type": "blockquote",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			},
-			{
-				"type": "photo",
-				"content": "https://shawglobalnews.files.wordpress.com/2019/06/nba-finals.jpg?quality=70&strip=all",
-				"size": "lg",
-				"altText": "World champs baby!!!"
-			},
-			{
-				"type": "paragraph",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			},
-			{
-				"type": "ol",
-				"content": [ "We the North", "Repeat 2020", "In Masai We Trust" ]
-			},
-			{
-				"type": "paragraph",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			},
-			{
-				"type": "ul",
-				"content": [ "We the North", "Repeat 2020", "In Masai We Trust" ]
-			},
-			{
-				"type": "paragraph",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			}
-		]
-	},
-	{
-		"title": "Harry Potter and the Chamber of Secrets",
-		"description": "Classic movie.",
-		"dateLong": "Feb 27, 2020",
-		"dateShort": "Mar 2020",
-		"path": "harry-potter",
-		"sections": [
-			{
-				"type": "paragraph",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			},
-			{
-				"type": "blockquote",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			}
-		]
-	},
-	{
-		"title": "My QR Code Tattoo",
-		"description": "Another great permanent decision",
-		"dateLong": "Feb 27, 2020",
-		"dateShort": "Mar 2020",
-		"path": "tattoo",
-		"sections": [
-			{
-				"type": "paragraph",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			},
-			{
-				"type": "blockquote",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			}
-		]
-	},
-	{
-		"title": "My First Post",
-		"description": "I don't really know what to say",
-		"dateLong": "February 01, 2020",
-		"dateShort": "Feb 2020",
-		"path": "first-post",
-		"sections": [
-			{
-				"type": "paragraph",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			},
-			{
-				"type": "subtitle",
-				"content": "This is super easy"
-			},
-			{
-				"type": "blockquote",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			},
-			{
-				"type": "paragraph",
-				"content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-			}
-		]
-	}
+  {
+    "title": "Harry Potter and the Chamber of Secrets",
+    "description": "Classic movie.",
+    "dateLong": "Feb 27, 2020",
+    "dateShort": "Mar 2020",
+    "path": "harry-potter",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+      },
+      {
+        "type": "blockquote",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+      }
+    ]
+  },
+  {
+    "title": "My QR Code Tattoo",
+    "description": "Permanent tattoo, temporary content.",
+    "dateLong": "Mar 20, 2020",
+    "dateShort": "Mar 2020",
+    "path": "tattoo",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "When I decided that I wanted to get my second tattoo, I knew that I wanted something unique that would also age well. I considered countless designs but found it impossible to narrow down my options. "
+      },
+      {
+        "type": "paragraph",
+        "content": "So I chose all of them."
+      },
+      {
+        "type": "paragraph",
+        "content": "In other words, I decided on getting a QR code design that when scanned, redirects the user to my personal website where I can alter the content that’s displayed with a few clicks. Throughout this post, I will breakdown different criteria to help you make an informed decision, as well as how I went about handling the data from a technical standpoint. "
+      },
+      {
+        "type": "photo",
+        "content": "https://scontent.fyzd1-2.fna.fbcdn.net/v/t1.15752-9/s2048x2048/93136926_536142663948157_376375032189812736_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_oc=AQl7TbMkq00Cb9aeHKMu6c8a2Tbkg2CtWhP2zJ-em5cVsu2wY13iVysrRMfaPcDC6Co&_nc_ht=scontent.fyzd1-2.fna&_nc_tp=7&oh=81682de95b93fc8a61e2ddda1c7d1c35&oe=5EB48D9A",
+        "size": "lg",
+        "altText": "QR code tattoo on my left forearm."
+      },
+      {
+        "type": "paragraph",
+        "content": "After several hours of research, I narrowed the most important things to consider into three categories:"
+      },
+      {
+        "type": "ol",
+        "content": ["The content", "The scannability", "The code generator"]
+      },
+      {
+        "type": "subtitle",
+        "content": "The Content"
+      },
+      {
+        "type": "paragraph",
+        "content": "When choosing what exactly you want your QR code to scan to, it’s extremely important that this content is permanent. A great example of something permanent is plain text, like a note containing the unique phrase, “Live, Laugh, Love”. A terrible example is what one Argentinian sports fan did last year when he decided to make his code scan to a YouTube video of his club winning the Copa Libertadores."
+      },
+      {
+        "type": "blockquote",
+        "content": "It was an innovative, high-tech tribute. The only problem is that a rival team's fans responded by flooding to YouTube and reporting the video for copyright infringement as a prank, according to The Independent — which resulted with the video vanishing."
+      },
+      {
+        "type": "paragraph",
+        "content": "You read that correctly. This die-hard fan now has a big QR code tattoo that scans to a removed video. Don’t be like him. If you really want your favourite YouTube video tattooed on your body, I would consider spending a couple hours learning basic HTML, purchasing a domain name with hosting, and have the QR code scan to your personal website with the video embedded instead. That way if some rival hooligans decide to report your video, you can easily embed another one. Of course, make sure you auto-renew your domain name. "
+      },
+      {
+        "type": "subtitle",
+        "content": "The Scannability"
+      },
+      {
+        "type": "paragraph",
+        "content": "First and foremost, I would strongly recommend finding a highly skilled tattoo artist who has experience with QR codes. Ask them what their scan success rate is. Additionally, you’re going to want to make sure the tattoo is placed on a flat surface that likely won’t change size in the future. Forearm or back is typically safe. Upper arm or chest area may cause some issues. If you have darker skin, aim for a lighter area that's less exposed to the sun to increase the contrast of the ink. "
+      },
+      {
+        "type": "paragraph",
+        "content": "Your success rate will generally increase if you go for a larger QR code with less content being displayed. Without getting too technical, larger codes mean larger dots, which makes it easier for scanners to pick up on the data points.  Less content means less dots to be tattooed. The smaller QR codes are 21x21 dots and can hold up to 10 characters, while the larger ones are as big as 177x177 dots and can hold up to 1,852 characters. While it might seem enticing to get the lyrics to Despacito placed in a QR code, it will generally look more like static on a TV screen and will have to cover your entire back for the slight chance of a scan. Save yourself and your tattoo artist the trouble"
+      },
+      {
+        "type": "paragraph",
+        "content": "What many people opt to do is to add error correction to their code. This allows for successful scans even when up to 30% of the tattoo to be incorrect or destroyed. If you’re feeling extra daring, you could even intentionally cover 30% of the tattoo with the logo of your choice to incorporate a neat little design.  "
+      },
+      {
+        "type": "paragraph",
+        "content": "I recommend keeping it simple."
+      },
+      {
+        "type": "subtitle",
+        "content": "The Code Generator"
+      },
+      {
+        "type": "paragraph",
+        "content": "As I mentioned before, it’s very important that the content of the tattoo is permanent. While there are plenty of websites online that will create a custom QR code, make sure that the code doesn’t scan to their website first, process the data, and then redirect to the actual content you wanted displayed. If that website no longer exists in the future, neither will the content of your tattoo. Thankfully, this is fairly easy to check. Just generate the tattoo and scan it with your phone. If your phone alerts you of a redirect to the generator’s domain, I would change generators. "
+      },
+      {
+        "type": "paragraph",
+        "content": "The code generator I used was www.the-qrcode-generator.com. They had several different options of content to display, was super user friendly, and didn’t require me to pay."
+      },
+      {
+        "type": "subtitle",
+        "content": "The Code Behind the Code"
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "photo",
+        "content": "https://scontent.fyzd1-2.fna.fbcdn.net/v/t1.15752-9/92328561_222542758824182_6814991961963888640_n.jpg?_nc_cat=111&_nc_sid=b96e70&_nc_oc=AQnv2tEPCyB3BTCiNuNxb15ajywAHMUbL0-KdlytJtriQ_lCiPYgzqXmFA-NmHvQAaA&_nc_ht=scontent.fyzd1-2.fna&oh=b287e017a7e1054157be30fbd47f008c&oe=5EB48ABA",
+        "size": "lg",
+        "altText": "Change QR Code page of portfolio"
+      },
+
+      {
+        "type": "blockquote",
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+      }
+    ]
+  },
+  {
+    "title": "The New Website",
+    "description": "Out with the old, in with the new.",
+    "dateLong": "February 20th, 2020",
+    "dateShort": "Feb 2020",
+    "path": "new-website",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "After nearly two years, I finally decided it was time to give the ol’ portfolio a facelift. The moment feels a little bittersweet with plenty of nostalgia. It was created in the final days of bootcamp at Juno College in the Spring of 2017. To say it stood the test of time is a big overstatement. My old friend was ready to go to the land of no return – somewhere between my old Accounting lecture notes and any junior high school pictures. "
+      },
+      {
+        "type": "photo",
+        "content": "https://scontent.fyzd1-2.fna.fbcdn.net/v/t1.15752-9/92290054_502314903797841_1378633662488117248_n.jpg?_nc_cat=108&_nc_sid=b96e70&_nc_oc=AQn_vN7OTjW-bvo2OpS9zLhg10SSjUOMYrPVVZ8eQ-GUE7-F_5j-a7ZIzBJ2KNlXfLs&_nc_ht=scontent.fyzd1-2.fna&oh=aaa94760ba7ab69f8eabd0c2e558530f&oe=5EB13702",
+        "size": "lg",
+        "altText": "Old website splash page."
+      },
+      {
+        "type": "subtitle",
+        "content": "Why the Upgrade?"
+      },
+      {
+        "type": "paragraph",
+        "content": "When I first created my portfolio, I had already secured my first web development position with Scotiabank. I was due to start working the following week, so I prioritized brushing up on the fundamentals for onboarding over creating a pretty-looking webpage."
+      },
+      {
+        "type": "paragraph",
+        "content": "Fast forward two years."
+      },
+      {
+        "type": "paragraph",
+        "content": "The portfolio that barely represented my skillset as a developer when it was created definitely does not represent them now. I feel a sense of embarrassment and shame whenever someone asks to see it. The projects I had completed have APIs that are no longer maintained or just flat out don’t work anymore. The CSS animations and transitions look like they’re straight out of Piczo. Worst of all, my splash image on the homepage (see above) isn’t even a picture of me. "
+      },
+      {
+        "type": "subtitle",
+        "content": "Portfolio in React?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Yes. Let me explain."
+      },
+      {
+        "type": "paragraph",
+        "content": "I’ve been working with React for nearly two years now, and really appreciate the versatility of reusable components. Take these blog posts for example. Each paragraph, subtitle, image, bullet point, and blockquote is already preformatted and ready to go. It requires additional initial set-up work, but the investment pays off over time."
+      },
+      {
+        "type": "paragraph",
+        "content": "Additionally, there are a ton of React-specific packages that I’ve only gotten the chance to use in a limited capacity (including Styled-Components, Material UI, and React Firebase). I figured at worst, this provides me the opportunity to practice with some cool new features and potentially bring them into the workplace."
+      },
+      {
+        "type": "subtitle",
+        "content": "What about Projects?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Patience. They are coming."
+      },
+      {
+        "type": "paragraph",
+        "content": "As with most things, I think it’s best to leave the old projects in the previous decade. Don’t worry, I have plenty of new project ideas on the way. I can’t wait to showcase all the new skills I’ve had the chance to learn over the course of the past couple years!"
+      },
+      {
+        "type": "paragraph",
+        "content": "My first major project has been to finish this portfolio, but now that it’s completed, I definitely want to make a full-stack application using the MERN stack (MongoDB, Express, React, Node). I’m also in the process of completing an Advanced Java course through Seneca College, so it would be pretty neat to create an something using Java in the backend with React in the front. Last but not least, I’ve been meaning to brush up on my Python knowledge, so anything involving that would be super cool as well. "
+      },
+      {
+        "type": "subtitle",
+        "content": "What's next?"
+      },
+      {
+        "type": "paragraph",
+        "content": "I’ve got a few different ideas I plan to test out in the next coming weeks and months. There’s a really unique concept I have in the works involving a QR code and a tattoo, so stay tuned for that. I also plan on adding blog posts every once in a while, and I’ll try my best to limit the amount of Raptors content. Amongst other things, I want to jump on the Dark Theme trend that every application is currently developing. I plan on creating a function that detects whether the user’s device is in dark mode and change the theming accordingly. "
+      },
+      {
+        "type": "paragraph",
+        "content": "Much like myself, this website is currently in development. Make sure to pop back in to see some cool updates!"
+      }
+    ]
+  }
 ]

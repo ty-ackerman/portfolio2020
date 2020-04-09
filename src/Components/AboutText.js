@@ -61,6 +61,7 @@ export default function AboutText (props) {
     .about-body-container {
       font-size: 18px;
       width: calc(100% - 450px);
+      text-align: justify;
     }
     .body.about-me {
       margin-bottom: 20px;
