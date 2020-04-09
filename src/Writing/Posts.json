@@ -1,22 +1,5 @@
 [
   {
-    "title": "Harry Potter and the Chamber of Secrets",
-    "description": "Classic movie.",
-    "dateLong": "Feb 27, 2020",
-    "dateShort": "Mar 2020",
-    "path": "harry-potter",
-    "sections": [
-      {
-        "type": "paragraph",
-        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-      },
-      {
-        "type": "blockquote",
-        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
-      }
-    ]
-  },
-  {
     "title": "My QR Code Tattoo",
     "description": "Permanent tattoo, temporary content.",
     "dateLong": "Mar 20, 2020",
@@ -103,23 +86,11 @@
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "At a high level, the QR code scans to a short domain name that I purchased (tyack.tech), that immediately redirects the user to tylerackerman.io/tattoo. When this particular route is accessed, a GET request is performed to receive data from a Google Firebase Realtime Database that stores an object containing the contents that I want displayed. My application then handles that data and displays it on the user’s mobile phone. "
       },
       {
         "type": "paragraph",
-        "content": ""
-      },
-      {
-        "type": "paragraph",
-        "content": ""
-      },
-      {
-        "type": "paragraph",
-        "content": ""
-      },
-      {
-        "type": "paragraph",
-        "content": ""
+        "content": "If I haven’t completely lost you yet, lets dig a little deeper."
       },
       {
         "type": "photo",
@@ -127,10 +98,44 @@
         "size": "lg",
         "altText": "Change QR Code page of portfolio"
       },
-
       {
-        "type": "blockquote",
-        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias vel libero dicta cum iusto ratione animi delectus minus recusandae magni, voluptas quisquam excepturi non nihil magnam eveniet fuga veritatis suscipit."
+        "type": "paragraph",
+        "content": "The reason I chose to purchase the domain name tyack.tech was specifically because what I mentioned above – the domain is exactly 10 characters, meaning I was able to use the smallest QR code available, and therefore increasing the scannability."
+      },
+      {
+        "type": "paragraph",
+        "content": "The database holds an object with two properties:"
+      },
+      {
+        "type": "ul",
+        "content": [
+          "type – either a photo, video, or website redirect",
+          "content – the URL address of the content type"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "When the application receives the data, it then processes it into one of either three different React components – dependent completely on the type. When I want to change the content that is displayed, there’s a separate URL that I have access to (see above), that allows me to add the content and preview it at the same time. Once I approve of the new content, I submit the form and the old data is overwritten. "
+      },
+      {
+        "type": "paragraph",
+        "content": "There’s a ton more I can talk about, but to keep myself from rambling, I’ll summarize it by saying it works way better than I could have anticipated."
+      },
+      {
+        "type": "subtitle",
+        "content": "What's Next?"
+      },
+      {
+        "type": "paragraph",
+        "content": "The possibilities are truly endless. I originally built this using Firebase for React simply because I hadn’t had the time to try it out yet, but I eventually want to create my own database using Node. In terms of different content to display, someone actually recommended that I add my emergency contact and blood type in case of an emergency. A whole new practical application I had never even considered. "
+      },
+      {
+        "type": "paragraph",
+        "content": "For now, I’m having fun changing the content to headshots of my less tech-savvy friends and convincing them that they mean that much to me."
+      },
+      {
+        "type": "paragraph",
+        "content": "Special thank you goes out to my tattoo artist Wookjin. He’s designed both my tattoos and has a super bright future ahead of him. If you want to see some truly amazing works of art, follow him on Instagram @shimwoojin."
       }
     ]
   },
