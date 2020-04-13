@@ -10,7 +10,8 @@ import {
   PostSubtitle,
   PostListOrdered,
   PostListUnordered,
-  PostBlockquote
+  PostBlockquote,
+  PostCode
 } from '../Components/PostContent'
 import styled from 'styled-components'
 
@@ -50,6 +51,8 @@ function WritingPost (props) {
         return <PostListUnordered key={key} {...section} />
       case 'blockquote':
         return <PostBlockquote key={key} {...section} />
+      case 'code':
+        return <PostCode key={key} {...section} />
       default:
         break
     }

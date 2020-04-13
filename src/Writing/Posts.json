@@ -43,7 +43,7 @@
       },
       {
         "type": "photo",
-        "content": "https://scontent.fykz1-2.fna.fbcdn.net/v/t1.15752-9/93378137_2875202592593936_2873712821902770176_n.jpg?_nc_cat=109&_nc_sid=b96e70&_nc_oc=AQmAyl-bDuaQ9Na2BRdOujEqq9bf7zWEV8d50ZwnjZKfdBKtu1x2Dv7jERDOljeK1Is&_nc_ht=scontent.fykz1-2.fna&oh=44387f723c10f8333ca8e8c0da1cd709&oe=5EB888FC",
+        "content": "https://scontent.fykz1-2.fna.fbcdn.net/v/t1.15752-9/93317230_555895218670617_4348090131576520704_n.png?_nc_cat=104&_nc_sid=b96e70&_nc_oc=AQk-OVTzpOvg4oXNqYzrfU3cwg9N9xHLvntratwZE8rB2Bbei5bGAgLH4lyD-KJrK9w&_nc_ht=scontent.fykz1-2.fna&oh=53ed233bfcf947dc851ebe40be092f0a&oe=5EB7D566",
         "size": "lg",
         "altText": "Screenshot of package.json"
       },
@@ -56,76 +56,88 @@
         "content": "Step 2 - Build the Application"
       },
       {
-        "type": "paragraph",
-        "content": ""
+        "type": "photo",
+        "content": "https://scontent.fykz1-2.fna.fbcdn.net/v/t1.15752-9/92638557_508852749811044_1449339724807274496_n.png?_nc_cat=101&_nc_sid=b96e70&_nc_oc=AQlw61PX8BUGMjPl41myvCGJDjFZ26HUqGxhsClOjFIJgkNg2nrcpx81DMkDdSL9KHE&_nc_ht=scontent.fykz1-2.fna&oh=3cde17e4d4779d6f6a641cd3248fd695&oe=5EB92AA6",
+        "size": "lg",
+        "altText": "Screenshot of terminal after build"
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "Make sure your dependencies are up to date by running a quick npm install or yarn (depending on the package manager you’re using) in your terminal. Once that’s completed, run npm run build."
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "You’ll notice that a new “build” folder has been created. This contains a super compressed version of your application. More simply, this has all the static files required for you to run your application. We will be uploading this folder to your hosting platform of choice."
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 3 - Create .htaccess File"
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "Note - this step is only required the first time that your application is deployed.",
+        "fontStyle": "italic"
+      },
+      {
+        "type": "code",
+        "content": "<IfModule mod_rewrite.c>\n\n  RewriteEngine On\n  RewriteBase /\n  RewriteRule ^index.html$ - [L]\n  RewriteCond %{REQUEST_FILENAME} !-f\n  RewriteCond %{REQUEST_FILENAME} !-d\n  RewriteCond %{REQUEST_FILENAME} !-l\n  RewriteRule . /index.html [L]\n</IfModule>"
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "Within your build folder, create a new file named .htaccess. The purpose of this file, without getting overly technical, is that it contains the configuration required for the server to understand which file to serve when someone visits your homepage."
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "Copy and paste the contents located in the code block above into your .htaccess file. "
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 4A - Upload Files Using FTP Client"
+      },
+      {
+        "type": "photo",
+        "content": "https://scontent.fykz1-1.fna.fbcdn.net/v/t1.15752-0/p480x480/93193032_222169505678701_6984578651157168128_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_oc=AQk_NmYqiQI8E1Jkcj59syPzeaWXXCqeSi7fpUu8v41E8piTtJxkb3nM_WCOYdSU8jk&_nc_ht=scontent.fykz1-1.fna&oh=5ee7549e03baf1765ba617d511d07e6a&oe=5EBB5D7B",
+        "size": "lg",
+        "altText": "Screenshot of FileZilla File Transfer"
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "Open your preferred FTP client (in my example, I used FileZilla), and navigate to the build directory on your local site. On the remote site, navigate to the /public_html directory. Upload all the files within the build directory. If this is your first time deploying the application, make sure .htaccess is included."
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 4B - Upload Files Using cPanel"
+      },
+      {
+        "type": "photo",
+        "content": "https://scontent.fykz1-1.fna.fbcdn.net/v/t1.15752-9/92701624_2741588795894881_2154754812883763200_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_oc=AQnNEhg11H9F0YfKqE5ipiGU_j4451eN5krzshkjQnfKOT6ug2MoyscioR-cQlPKXak&_nc_ht=scontent.fykz1-1.fna&oh=71d8e941bfeb40f20dab866afb00c877&oe=5EB9595D",
+        "size": "lg",
+        "altText": "Screenshot of cPanel File Transfer"
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "For those who aren’t familiar with any FTP clients, there is the option to upload the static files using cPanel instead. While this certainly isn’t my preferred method, many developers opt to choosing this method. It is worth noting that this process requires a few additional steps."
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "cPanel is a web-based graphical user interface used as a control panel to manage web hosting service accounts. It is the software of choice for many hosting platforms, including Bluehost, HostGator, and GoDaddy Hosting. In other words, it allows developers to publish websites, manage domains, organize web files, create email accounts, and much more. "
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "Login to your hosting platform of choice and navigate to cPanel. This is typically found within the advanced settings under File Manager. Once there, open the /public_html directory and upload all the files within the build folder of your local application. Be sure to include the .htaccess file if this is your first time deploying your application."
       },
       {
         "type": "paragraph",
-        "content": ""
+        "content": "Note - cPanel will not allow you to upload everything at once. You will need to create a directory structure within cPanel that matches exactly what is located in the build folder. Once that’s complete, upload each folder’s contents individually.",
+        "fontStyle": "italic"
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 5 - Refresh Your Webpage"
       },
       {
         "type": "paragraph",
-        "content": ""
-      },
-      {
-        "type": "paragraph",
-        "content": ""
-      },
-      {
-        "type": "paragraph",
-        "content": ""
-      },
-      {
-        "type": "paragraph",
-        "content": ""
-      },
-      {
-        "type": "paragraph",
-        "content": ""
-      },
-      {
-        "type": "paragraph",
-        "content": ""
-      },
-      {
-        "type": "paragraph",
-        "content": ""
+        "content": "Congratulations! You’ve officially deployed your first React application to your personal website. If you don’t see any changes, don’t panic. Give it a few minutes and refresh again. Some hosting platforms deploy changes in intervals throughout the day."
       },
       {
         "type": "paragraph",

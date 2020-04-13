@@ -5,6 +5,7 @@ export function PostContent (props) {
   const Paragraph = styled.div`
     margin: 14px 0;
     text-align: justify;
+    ${props.fontStyle && `font-style: ${props.fontStyle}`}
   `
   return <Paragraph className={`post-${props.type}`}>{props.content}</Paragraph>
 }
@@ -45,6 +46,22 @@ export function PostBlockquote (props) {
     <div>
       <Blockquote>{props.content}</Blockquote>
     </div>
+  )
+}
+
+export function PostCode (props) {
+  const StyledPre = styled.pre`
+    background-color: #dfdfdf;
+    color: black;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  `
+
+  return (
+    <StyledPre>
+      <code>{props.content}</code>
+    </StyledPre>
   )
 }
 
