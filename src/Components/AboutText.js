@@ -131,12 +131,6 @@ export default function AboutText (props) {
           </div>
         )
       })}
-      <pre style={{ backgroundColor: 'black', color: 'blue' }}>
-        <code>{`
-        html { background: red; }
-        body { color: blue; }
-      `}</code>
-      </pre>
     </AboutContent>
   )
 }
