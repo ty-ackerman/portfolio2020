@@ -7,17 +7,6 @@ import Fade from './Fade'
 export default function TattooContent (props) {
   const { content, type, redirect } = props
 
-  const isMobile = () => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    ) {
-      return true
-    }
-    return false
-  }
-
   const handleContent = (content, type) => {
     switch (type) {
       case 'picture':
@@ -44,6 +33,7 @@ export default function TattooContent (props) {
         const id = getYoutubeId(content)
         return (
           <iframe
+            title='youtube-link'
             width='560'
             height='315'
             src={`https://www.youtube.com/embed/${id}?rel=0&autoplay=1`}
@@ -54,7 +44,6 @@ export default function TattooContent (props) {
             allowFullScreen={true}
           />
         )
-        break
 
       default:
         break

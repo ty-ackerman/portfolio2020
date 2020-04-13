@@ -1,5 +1,143 @@
 [
   {
+    "title": "Deploying a React App",
+    "description": "Launch via shared hosting in under five minutes.",
+    "dateLong": "Apr 10, 2020",
+    "dateShort": "Apr 2020",
+    "path": "deploy-react-app",
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "I’ve received a lot of questions recently with regards to deploying a React application to a personal webpage. Mostly, the confusion lies around the mistaken belief of the process being long and complicated. For that reason, many people opt instead to deploy via third-party hosting platforms like GitHub Pages, Firebase Hosting, or Heroku. While these are all great free options that I’ve used in the past, I’m happy to tell you that you can actually have your React application online within five minutes on your own personal domain. "
+      },
+      {
+        "type": "paragraph",
+        "content": "Before we begin, we’re going to make two assumptions about your application:"
+      },
+      {
+        "type": "ol",
+        "content": [
+          "You created your application using create-react-app",
+          "You already own a domain name and shared hosting"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Pros & Cons"
+      },
+      {
+        "type": "paragraph",
+        "content": "Most people choose the free hosting option due to the cost and lack of commitment. Using these platforms, users are able to launch their application in under an hour without entering any credit card information. These websites generally advertise high uptime (mostly ~95%) and only require an account to initialize."
+      },
+      {
+        "type": "paragraph",
+        "content": "With that being said, you will be obliged to include their personal signature in your subdomain. For example, if I had deployed this website using Heroku, my address would have www.tylerackerman.herokuapp.com. While there is no change in performance, it’s a little more satisfying and authentic without the additional subdomain. "
+      },
+      {
+        "type": "paragraph",
+        "content": "It is worth noting that some platforms offer a paid subscription model where you can have that subdomain removed, but at that point, might as well just purchase a domain with hosting."
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 1 - Add Homepage to the Application"
+      },
+      {
+        "type": "photo",
+        "content": "https://scontent.fykz1-2.fna.fbcdn.net/v/t1.15752-9/93378137_2875202592593936_2873712821902770176_n.jpg?_nc_cat=109&_nc_sid=b96e70&_nc_oc=AQmAyl-bDuaQ9Na2BRdOujEqq9bf7zWEV8d50ZwnjZKfdBKtu1x2Dv7jERDOljeK1Is&_nc_ht=scontent.fykz1-2.fna&oh=44387f723c10f8333ca8e8c0da1cd709&oe=5EB888FC",
+        "size": "lg",
+        "altText": "Screenshot of package.json"
+      },
+      {
+        "type": "paragraph",
+        "content": "Navigate to package.json located in the root directory of your application. If no “homepage” attribute exists, add one with the value being your domain name."
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 2 - Build the Application"
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      },
+      {
+        "type": "paragraph",
+        "content": ""
+      }
+    ]
+  },
+  {
     "title": "QR Code Tattoo",
     "description": "Permanent design, temporary content.",
     "dateLong": "Mar 20, 2020",

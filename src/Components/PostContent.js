@@ -96,6 +96,8 @@ export function PostPhoto (props) {
         return '50%'
       case 'lg':
         return '100%'
+      default:
+        break
     }
   }
 

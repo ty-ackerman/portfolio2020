@@ -50,6 +50,8 @@ function WritingPost (props) {
         return <PostListUnordered key={key} {...section} />
       case 'blockquote':
         return <PostBlockquote key={key} {...section} />
+      default:
+        break
     }
   }
 

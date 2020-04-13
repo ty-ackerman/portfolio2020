@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
-import Title from '../Components/Title'
 import { Link } from 'react-router-dom'
-import { PostContent, PostSubtitle } from '../Components/PostContent'
 import fire from '../Components/fire'
 import Fade from '../Components/Fade'
 import TattooContent from '../Components/TattooContent'
-import { useSwipeable, Swipeable } from 'react-swipeable'
+import { Swipeable } from 'react-swipeable'
 import { withRouter } from 'react-router-dom'
 import styled from 'styled-components'
 
 const content =
   'The hardest part about getting a tattoo is choosing a permanent design. My solution - a QR code that scans to the content of my choosing by linking it to my personal website. To put it more simply, I can change what the code displays with only a few clicks.'
-
-const subtitle = 'Current Content'
 
 const title = 'QR Code Tattoo'
 const description = 'Permanent Design - Temporary Content'
