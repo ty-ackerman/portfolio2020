@@ -110,6 +110,13 @@ export default function AboutText (props) {
         margin-top: 20px;
       }
     }
+
+    @media (max-width: 480px) {
+      .about-title {
+        width: 100%;
+        padding: 0;
+      }
+    }
   `
 
   return (
@@ -124,6 +131,12 @@ export default function AboutText (props) {
           </div>
         )
       })}
+      <pre style={{ backgroundColor: 'black', color: 'blue' }}>
+        <code>{`
+        html { background: red; }
+        body { color: blue; }
+      `}</code>
+      </pre>
     </AboutContent>
   )
 }
