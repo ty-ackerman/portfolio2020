@@ -12,7 +12,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Before we begin, we’re going to make two assumptions about your application:"
+        "content": "Before we begin, we’re going to make a couple assumptions about your application:"
       },
       {
         "type": "ol",
@@ -31,11 +31,11 @@
       },
       {
         "type": "paragraph",
-        "content": "With that being said, you will be obliged to include their personal signature in your subdomain. For example, if I had deployed this website using Heroku, my address would have www.tylerackerman.herokuapp.com. While there is no change in performance, it’s a little more satisfying and authentic without the additional subdomain. "
+        "content": "With that being said, you will be obliged to include their personal signature in your subdomain. For example, if I had deployed this website using Heroku, my full address would have been www.tylerackerman.herokuapp.com. While there is no change in performance, it’s a little more satisfying and authentic without the additional subdomain. "
       },
       {
         "type": "paragraph",
-        "content": "It is worth noting that some platforms offer a paid subscription model where you can have that subdomain removed, but at that point, might as well just purchase a domain with hosting."
+        "content": "It is worth noting that some platforms offer a paid subscription model where you can have the additional subdomain removed, but at that point, you might as well just purchase a domain with hosting."
       },
       {
         "type": "subtitle",
@@ -63,7 +63,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Make sure your dependencies are up to date by running a quick npm install or yarn (depending on the package manager you’re using) in your terminal. Once that’s completed, run npm run build."
+        "content": "Make sure your dependencies are up to date by running a quick “npm install” or “yarn” (depending on the package manager you’re using). Once that’s complete, run “npm run build”."
       },
       {
         "type": "paragraph",
@@ -116,7 +116,7 @@
       },
       {
         "type": "paragraph",
-        "content": "For those who aren’t familiar with any FTP clients, there is the option to upload the static files using cPanel instead. While this certainly isn’t my preferred method, many developers opt to choosing this method. It is worth noting that this process requires a few additional steps."
+        "content": "For those who aren’t familiar with any FTP clients, there is the option to upload the static files using cPanel instead. It is worth noting that this process requires a few additional steps."
       },
       {
         "type": "paragraph",
