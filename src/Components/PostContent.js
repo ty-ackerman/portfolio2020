@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export function PostContent (props) {
   const Paragraph = styled.div`
     margin: 14px 0;
-    text-align: justify;
+    text-align: left;
     ${props.fontStyle && `font-style: ${props.fontStyle}`}
   `
   return <Paragraph className={`post-${props.type}`}>{props.content}</Paragraph>
@@ -29,7 +29,7 @@ export function PostBlockquote (props) {
     padding-right: 30px;
     position: relative;
     font-style: italic;
-    text-align: justify;
+    text-align: left;
     &:before {
       width: 1px;
       height: calc(100% - 10px);

@@ -71,7 +71,7 @@ const PostContentsStyled = styled.div`
     .content-info {
       padding: 15px 0;
       @media(max-width: 850px) {
-        text-align: justify;
+        text-align: left;
       }
     }
     .learn-more {

@@ -7,22 +7,43 @@ export default function HomeBio () {
     margin: 0 auto;
     padding-bottom: 200px;
     border-bottom: 1px solid #dfdfdf;
+    text-align: left;
+    span.location {
+      display: block;
+      font-size: 20px;
+      color: black;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 20px;
+      &:after {
+        content: '';
+        background-color: #dfdfdf;
+        width: 50px;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
     .home-header {
       max-width: 600px;
       width: 100%;
       margin: 0 auto;
       .bio-main {
+        letter-spacing: 2px;
         font-size: 40px;
         font-weight: 700;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         line-height: 1.2;
-        span {
-          color: #3868d8;
+        text-align: left;
+        span.name {
+          text-shadow: 0.5px 0.5px 0.5px black;
+          color: #274896;
           &::selection {
-            color: #3868d8;
+            color: #274896;
           }
           &::-moz-selection {
-            color: #3868d8;
+            color: #274896;
           }
         }
       }
@@ -32,16 +53,21 @@ export default function HomeBio () {
       }
     }
     @media (max-width: 585px) {
+      span.location {
+        font-size: 16px;
+      }
       padding-top: 25px;
       padding-bottom: 100px;
       .home-header {
         .bio-main {
-          font-size: 32px;
+          font-size: 30px;
+          letter-spacing: initial;
           margin-bottom: 15px;
         }
       }
     }
     .bio-contact {
+      text-align: left;
       margin-top: 15px;
       a {
         text-decoration: underline;
@@ -53,15 +79,18 @@ export default function HomeBio () {
     <HomeBio>
       <div className='home-header'>
         <div className='bio-main'>
-          Hi! My name is {window.innerWidth < 580 && <br />}
-          <span>Ty Ackerman</span>.{window.innerWidth > 580 && <br />}{' '}
-          {window.innerWidth > 580 && ' '} I'm a web developer from Toronto.
+          <div>
+            <span className='name'> Ty Ackerman</span>
+            <br /> React Developer
+            <br />
+            <span className='location'>Toronto, Canada</span>
+          </div>
         </div>
         <div className='bio-secondary'>
           <div>
-            Welcome to the window to my world. I'm a simple man. I create clean
-            and modern content, write about what's on my mind, laugh at things I
-            find funny, and scream at the TV while I watch the Raptors.
+            I create clean and modern web content, write about what's on my
+            mind, laugh at things I find funny, and scream at the TV while I
+            watch the Raptors.
           </div>
           <div className='bio-contact'>
             Like what you see?{' '}
