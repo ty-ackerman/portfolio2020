@@ -7,11 +7,11 @@ import styled from 'styled-components';
 import Title from './Title';
 
 export default function RecentWriting() {
-	// Temp articles until I actually write them
-
 	const renderWriting = (Posts) => {
+		// Filter hidden articles
 		if (!Posts) return;
-		const recentPosts = Posts.length >= 3 ? Posts.slice(0, 3) : Posts;
+		const filteredPosts = Posts.filter(post => !post.hidden);
+		const recentPosts = filteredPosts.length >= 3 ? filteredPosts.slice(0, 3) : filteredPosts;
 		return recentPosts.map((post) => {
 			return <WritingListItem key={post.path} post={post} />;
 		});

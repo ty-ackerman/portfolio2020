@@ -21,7 +21,7 @@ export default function Writing () {
           subtitle='Notes about life, work, and everything in between.'
         />
         {Posts.map(post => {
-          return <WritingListItem key={post.path} post={post} />
+          return !post.hidden && <WritingListItem key={post.path} post={post} />
         })}
       </WritingContainer>
     </Fade>
