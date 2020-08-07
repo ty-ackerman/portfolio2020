@@ -8,11 +8,11 @@ export default function AboutText (props) {
       titleType: 'image',
       titleContent: me,
       body: [
-        'I’m a front-end web developer out of Toronto, Canada. In addition to my full-time work with Amdocs, I enjoy freelancing, writing, and researching on the side. This website was created to showcase some of my latest projects and to share some of my hot takes with the world.',
+        'I’m a front-end web developer based out of Toronto, Canada. In addition to my full-time work with Amdocs, I enjoy freelancing, writing, and researching on the side. This webpage was created to showcase some of my latest projects and to share some of my hotter takes with the world.',
 
-        'My journey into tech was definitely unconventional to say the least. In 2017, I graduated from Wilfrid Laurier University with a degree in Business Administration and a graduate diploma in Accounting. Less than a year later, I completed a full-time web development program with Juno College of Technology and landed my dream job as a UI Developer with Scotiabank.',
+        'In the summer of 2017, I graduated from Wilfrid Laurier University with a degree in Business Administration and a graduate diploma in Accounting. Less than a year later, I completed a full-time web development program with Juno College of Technology and landed my dream job as a UI Developer with Scotiabank.',
 
-        "I’m a strong believer in giving back to the community that helped raise you. Since graduating, I’ve accepted several different positions with the college; including roles in student mentoring, in-class instructor assisting, and assignment grading. Most recently, I've been selected as a recurring guest speaker - providing career advice for recent grads. ",
+        "I’m a strong believer in giving back to the community that helped raise you. Since graduating, I’ve accepted several different positions with the career college; including roles in student mentorship, in-class instructor assistance, and assignment marking. Most recently, I have been selected as a recurring guest speaker - providing career advice for recent grads.",
 
         'Aside from coding, I’m a die-hard Toronto Raptors fan. I bleed red, literally and figuratively. To answer your question, yes, June 2019 was the best month of my life. During the NBA offseason, I take every opportunity I can to travel the globe. I’ve been fortunate enough to visit some pretty neat places. Last but not least, no About Me section is complete without mentioning my two lovely dogs, Barkley and Cooper.'
       ]
