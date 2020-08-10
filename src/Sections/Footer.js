@@ -54,7 +54,7 @@ export default function Footer() {
 					</NavLink>
 				</ul>
 			</div>
-			<div className="footer-bottom">Ty Ackerman 2018-2020</div>
+			<div className="footer-bottom">Tyler Ackerman 2018-2020</div>
 		</Footer>
 	);
 }

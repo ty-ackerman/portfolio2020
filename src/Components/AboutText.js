@@ -8,7 +8,7 @@ export default function AboutText (props) {
       titleType: 'image',
       titleContent: me,
       body: [
-        'I’m a front-end web developer based out of Toronto, Canada. In addition to my full-time work with Amdocs, I enjoy freelancing, writing, and researching on the side. This webpage was created to showcase some of my latest projects and to share some of my hotter takes with the world.',
+        'I’m a front end web developer based out of Toronto, Canada. In addition to my full-time work with Amdocs, I enjoy freelancing, writing, and researching on the side. This webpage was created to showcase some of my latest projects and to share some of my hotter takes with the world.',
 
         'In the summer of 2017, I graduated from Wilfrid Laurier University with a degree in Business Administration and a graduate diploma in Accounting. Less than a year later, I completed a full-time web development program with Juno College of Technology and landed my dream job as a UI Developer with Scotiabank.',
 

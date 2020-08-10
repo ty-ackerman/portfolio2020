@@ -31,14 +31,14 @@ export default function HomeBio () {
       margin: 0 auto;
       .bio-main {
         letter-spacing: 2px;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 700;
         margin-bottom: 20px;
         line-height: 1.2;
         text-align: left;
         span.name {
-          text-shadow: 0.5px 0.5px 0.5px black;
           color: #274896;
+          font-size: 50px;
           &::selection {
             color: #274896;
           }
@@ -80,8 +80,8 @@ export default function HomeBio () {
       <div className='home-header'>
         <div className='bio-main'>
           <div>
-            <span className='name'> Ty Ackerman</span>
-            <br /> React Developer
+            <span className='name'> Tyler Ackerman</span>
+            <br /> Front End Developer
             <br />
             <span className='location'>Toronto, Canada</span>
           </div>
