@@ -17,7 +17,7 @@
     "@testing-library/user-event": "^7.1.2",
     "devicon-react": "^1.1.1",
     "firebase": "^7.13.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "query-string": "^6.11.1",
     "react": "^16.13.0",
     "react-animations": "^1.0.0",
