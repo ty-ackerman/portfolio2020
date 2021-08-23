@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import get from 'lodash/get'
 import { withRouter } from 'react-router-dom'
 import queryString from 'query-string'
 import { isEmpty } from 'lodash'
@@ -11,7 +12,8 @@ import {
   PostListOrdered,
   PostListUnordered,
   PostBlockquote,
-  PostCode
+  PostCode,
+  PostLink
 } from '../Components/PostContent'
 import styled from 'styled-components'
 
@@ -53,6 +55,8 @@ function WritingPost (props) {
         return <PostBlockquote key={key} {...section} />
       case 'code':
         return <PostCode key={key} {...section} />
+      case 'link':
+        return <PostLink key={key} {...section} />
       default:
         break
     }
@@ -62,7 +66,7 @@ function WritingPost (props) {
     display: flex;
     flex-flow: column wrap;
     position: relative;
-    padding-bottom: 150px;
+    ${!post.hidden && 'padding-bottom: 150px;'}
     .post-contents {
       margin: 0 auto;
       max-width: 600px;
@@ -91,7 +95,7 @@ function WritingPost (props) {
     }
     .change-post {
       display: flex;
-      justify-content: ${post.index === 0 ? 'flex-end' : 'space-between'};
+      justify-content: ${props => post.index === 0 || get(props, `posts.[${post.index - 1}.hidden]`)? 'flex-end' : 'space-between'};
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -124,9 +128,9 @@ function WritingPost (props) {
     props.history.push(`/writing/post?id=${postPath}`)
   }
 
-  return (
+  if (posts) return (
     <Fade show>
-      <WritingPost className='section'>
+      <WritingPost className='section' posts={posts}>
         <div className='post-contents post-header'>
           <h1 className='title'>{post.title}</h1>
           <div className='date'>{post.dateLong}</div>
@@ -135,33 +139,36 @@ function WritingPost (props) {
           {!isEmpty(post) &&
             post.sections.map((section, key) => renderContent(section, key))}
         </div>
-        <div className='change-post'>
-          {post.index > 0 && (
-            <div
-              className='previous'
-              onClick={() => loadNewPost(posts[post.index - 1].path)}
-            >
-              <div className='change-title'>Previous</div>
-              <div className='change-post-name'>
-                {posts[post.index - 1].title}
+        {!post.hidden && (
+          <div className='change-post'>
+            {post.index > 0 && !posts[post.index - 1].hidden && (
+              <div
+                className='previous'
+                onClick={() => loadNewPost(posts[post.index - 1].path)}
+              >
+                <div className='change-title'>Previous</div>
+                <div className='change-post-name'>
+                  {posts[post.index - 1].title}
+                </div>
               </div>
-            </div>
-          )}
-          {post.index < posts.length - 1 && (
-            <div
-              className='next'
-              onClick={() => loadNewPost(posts[post.index + 1].path)}
-            >
-              <div className='change-title'>Next</div>
-              <div className='change-post-name'>
-                {posts[post.index + 1].title}
+            )}
+            {post.index < posts.length - 1 && (
+              <div
+                className='next'
+                onClick={() => loadNewPost(posts[post.index + 1].path)}
+              >
+                <div className='change-title'>Next</div>
+                <div className='change-post-name'>
+                  {posts[post.index + 1].title}
+                </div>
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        )}
       </WritingPost>
     </Fade>
   )
+  return null
 }
 
 export default withRouter(WritingPost)

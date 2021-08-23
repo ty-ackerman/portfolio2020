@@ -12,18 +12,7 @@ export default function HomeBio () {
       display: block;
       font-size: 20px;
       color: black;
-      font-weight: 500;
       position: relative;
-      padding-bottom: 20px;
-      &:after {
-        content: '';
-        background-color: #dfdfdf;
-        width: 50px;
-        height: 1px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
     }
     .home-header {
       max-width: 600px;
@@ -32,15 +21,26 @@ export default function HomeBio () {
       .bio-main {
         letter-spacing: 2px;
         font-size: 30px;
-        font-weight: 700;
         margin-bottom: 20px;
         line-height: 1.2;
         text-align: left;
+        position: relative;
+        padding-bottom: 20px;
+        &:after {
+          content: '';
+          background-color: #dfdfdf;
+          width: 50px;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
         span.name {
-          color: #274896;
+          font-weight: 700;
+          // color: #274896;
           font-size: 50px;
           &::selection {
-            color: #274896;
+            // color: #274896;
           }
           &::-moz-selection {
             color: #274896;
@@ -83,7 +83,7 @@ export default function HomeBio () {
             <span className='name'> Tyler Ackerman</span>
             <br /> Front End Developer
             <br />
-            <span className='location'>Toronto, Canada</span>
+            {/* <span className='location'>Toronto, Canada</span> */}
           </div>
         </div>
         <div className='bio-secondary'>

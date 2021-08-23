@@ -1,5 +1,84 @@
 [
 	{
+		"title": "What Makes Me Unique?",
+		"description": "",
+		"dateLong": "August 18, 2020",
+		"dateShort": "Aug 2020",
+		"path": "what-makes-me-unique",
+		"hidden": true,
+		"sections": [
+			{
+				"type": "paragraph",
+				"content": "When I say that my passion for tech is ingrained within me, I mean it both figuratively and literally."
+			},
+			{
+				"type": "photo",
+				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/93136926_536142663948157_376375032189812736_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=BU-qPbIFjbsAX8BWfWL&_nc_ht=scontent-bos3-1.xx&tp=7&oh=c127f1a948ff7e8ba14835899b626e43&oe=5F7E431A",
+				"size": "lg",
+				"altText": "QR code tattoo on my left forearm."
+			},
+			{
+				"type": "link",
+				"content": "Click here to understand how.",
+				"path": "/writing/post?id=tattoo"
+			}
+		]
+	},
+	{
+		"title": "Success Engineer — Inpixon",
+		"description": "",
+		"dateLong": "August 18, 2020",
+		"dateShort": "Aug 2020",
+		"path": "inpixon-success-engineer",
+		"hidden": true,
+		"sections": [
+			{
+				"type": "paragraph",
+				"content": "What is the new normal?"
+			},
+			{
+				"type": "paragraph",
+				"content": "Over the past few months, this question has immersed itself into our everyday dialogs. How will customers feel safe while dining at their favourite restaurant? How will stores provide a safe environment for patrons? If a guest were to test positive for COVID-19, who should be notified?"
+			},
+			{
+				"type": "paragraph",
+				"content": "Inpixon’s proprietary software, more specifically the Indoor Positioning technology, provides a unique solution for businesses addressing these issues, as mentioned on the company website:"
+			},
+			{
+				"type": "blockquote",
+				"content": "It is a technology that allows users to accurately pinpoint the location of people or assets inside a building…"
+			},
+			{
+				"type": "paragraph",
+				"content": "As a candidate for Inpixon’s Success Engineer position, I am excited at the prospect of joining a team at the forefront of indoor intelligence with cutting edge technology that truly has the potential of changing the world as we know it. "
+			},
+			{
+				"type": "paragraph",
+				"content": "I’ve had the pleasure of speaking with Jeannie Ly about the organization, the company culture, and the role itself, and strongly believe that I possess the ideal skillset for this position. As a Software Engineer with Amdocs, I have not only enhanced existing interfaces with additional features, but have also developed applications from idea conception to production. Moreover, as a graduate of Wilfrid Laurier University's School of Business and Economics, I have had the opportunity to work for various companies in roles ranging from Staff Accountant to Operational Efficiencies Specialist. This has allowed me to develop the interpersonal skills needed to address client concerns in a professional manner, while also understanding a company’s financial motivations."
+			},
+			{
+				"type": "paragraph",
+				"content": "Aside from my work experience, I am also a strong believer in giving back to the community through volunteerism. As an active member of the Juno College of Technology community, I am heavily involved in student mentorship through several events including guest speaking engagements, after-hours web development help sessions, and mock tech interviews for recent graduate students. Prior to that, I also sat on the Board for The Foundation for Student Achievement, a charity focused on supporting at-risk youth by providing after-school tutoring sessions, scholarships, computer equipment, and meals."
+			},
+			{
+				"type": "paragraph",
+				"content": "As a potential Success Engineer, I welcome the challenge of bridging the gap between my business acumen and my passion for coding. I have heard great things about the Inpixon team, and am excited for the opportunity to work with intelligent, motivated, like-minded people. "
+			},
+			{
+				"type": "paragraph",
+				"content": "I thank you for your consideration, and I look forward to hearing more about the position."
+			},
+			{
+				"type": "paragraph",
+				"content": "Warm regards,"
+			},
+			{
+				"type": "paragraph",
+				"content": "Tyler Ackerman"
+			}
+		]
+	},
+	{
 		"title": "Deploying a React App",
 		"description": "Launch via shared hosting in under five minutes.",
 		"dateLong": "August 5, 2020",
@@ -44,7 +123,7 @@
 			},
 			{
 				"type": "photo",
-				"content": "https://scontent.fykz1-2.fna.fbcdn.net/v/t1.15752-9/93317230_555895218670617_4348090131576520704_n.png?_nc_cat=104&_nc_sid=b96e70&_nc_ohc=HAd5oBRRLWQAX_M1jxC&_nc_ht=scontent.fykz1-2.fna&oh=e913a73b58018a0d398ea40e780f852d&oe=5F5214E6",
+				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/93317230_555895218670617_4348090131576520704_n.png?_nc_cat=104&_nc_sid=b96e70&_nc_ohc=5t1fJjYFjDkAX_VgPjp&_nc_ht=scontent-bos3-1.xx&oh=c8ea77133bb5a9ebea8d4e866e051a85&oe=5F7D9666",
 				"size": "lg",
 				"altText": "Screenshot of package.json"
 			},
@@ -58,7 +137,7 @@
 			},
 			{
 				"type": "photo",
-				"content": "https://scontent.fykz1-2.fna.fbcdn.net/v/t1.15752-9/92638557_508852749811044_1449339724807274496_n.png?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=yI5VYDZ4gfgAX8QATEM&_nc_ht=scontent.fykz1-2.fna&oh=369cf49cb755d144ed8c359723b53592&oe=5F536A26",
+				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/92638557_508852749811044_1449339724807274496_n.png?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=7gZzYw7gUggAX88gIZm&_nc_ht=scontent-bos3-1.xx&oh=10eb066f32291bb02cdb3d27b84c70ce&oe=5F7EEBA6",
 				"size": "lg",
 				"altText": "Screenshot of terminal after build"
 			},
@@ -97,7 +176,7 @@
 			},
 			{
 				"type": "photo",
-				"content": "https://scontent.fykz1-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/93193032_222169505678701_6984578651157168128_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=8lPWF4xNsY8AX9EHxiK&_nc_ht=scontent.fykz1-1.fna&oh=462ccf4e5004a955b25fe4380a6f1192&oe=5F52F621",
+				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/93193032_222169505678701_6984578651157168128_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=vlImzBTqfFsAX-nsjdG&_nc_ht=scontent-bos3-1.xx&oh=f2b80be6a5ae35b90433115b08e795c3&oe=5F7E77A1",
 				"size": "lg",
 				"altText": "Screenshot of FileZilla File Transfer"
 			},
@@ -111,7 +190,7 @@
 			},
 			{
 				"type": "photo",
-				"content": "https://scontent.fykz1-1.fna.fbcdn.net/v/t1.15752-9/92701624_2741588795894881_2154754812883763200_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=cR4aZLsBv6AAX8ie75d&_nc_ht=scontent.fykz1-1.fna&oh=b3274a7aba96ea3c69fd6d85f8ec901e&oe=5F5398DD",
+				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/92701624_2741588795894881_2154754812883763200_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=kQ4wPcgDCKEAX-r4R-G&_nc_ht=scontent-bos3-1.xx&oh=66aa2a51b8f61d5fc5b841944b5248b3&oe=5F7F1A5D",
 				"size": "lg",
 				"altText": "Screenshot of cPanel File Transfer"
 			},
@@ -164,7 +243,7 @@
 			},
 			{
 				"type": "photo",
-				"content": "https://scontent.fykz1-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/93136926_536142663948157_376375032189812736_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=d06U6SOkP4wAX8AbvDX&_nc_ht=scontent.fykz1-1.fna&tp=-7&oh=cd8299d003af27cf2eafa1fb20ce28e0&oe=5F52C19A",
+				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/93136926_536142663948157_376375032189812736_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=BU-qPbIFjbsAX8BWfWL&_nc_ht=scontent-bos3-1.xx&tp=7&oh=c127f1a948ff7e8ba14835899b626e43&oe=5F7E431A",
 				"size": "lg",
 				"altText": "QR code tattoo on my left forearm."
 			},
@@ -238,7 +317,7 @@
 			},
 			{
 				"type": "photo",
-				"content": "https://scontent.fykz1-2.fna.fbcdn.net/v/t1.15752-9/92328561_222542758824182_6814991961963888640_n.jpg?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=MkRZq4-bTjkAX8SPGC4&_nc_ht=scontent.fykz1-2.fna&oh=158de0714898e52c3195c058929d00c0&oe=5F52BEBA",
+				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/92328561_222542758824182_6814991961963888640_n.jpg?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=BBx2qlEkXGAAX-ErTy9&_nc_ht=scontent-bos3-1.xx&oh=30dc424f18ebdd8d1a34b286660165ad&oe=5F7E403A",
 				"size": "lg",
 				"altText": "Change QR Code page of portfolio"
 			},
@@ -297,7 +376,7 @@
 			},
 			{
 				"type": "photo",
-				"content": "https://scontent.fykz1-2.fna.fbcdn.net/v/t1.15752-9/92290054_502314903797841_1378633662488117248_n.jpg?_nc_cat=108&_nc_sid=b96e70&_nc_ohc=NvgdGGs01isAX_-hF-w&_nc_ht=scontent.fykz1-2.fna&oh=2c1a987802b2f557c64aea87d1c0a98b&oe=5F535F82",
+				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/92290054_502314903797841_1378633662488117248_n.jpg?_nc_cat=108&_nc_sid=b96e70&_nc_ohc=aKdIhSX7bXgAX9iWSZb&_nc_ht=scontent-bos3-1.xx&oh=4ea61a93f8128d2b300ea8a90b703eed&oe=5F7EE102",
 				"size": "lg",
 				"altText": "Old website splash page."
 			},

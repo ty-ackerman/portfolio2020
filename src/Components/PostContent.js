@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export function PostContent (props) {
   const Paragraph = styled.div`
@@ -8,6 +9,18 @@ export function PostContent (props) {
     ${props.fontStyle && `font-style: ${props.fontStyle}`}
   `
   return <Paragraph className={`post-${props.type}`}>{props.content}</Paragraph>
+}
+
+export function PostLink (props) {
+  // const Link = styled.a`
+  
+  // `
+
+  return (
+    <div>
+      <Link to={props.path}>{props.content}</Link>
+    </div>
+  )
 }
 
 export function PostSubtitle (props) {

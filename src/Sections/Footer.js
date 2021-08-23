@@ -43,7 +43,7 @@ export default function Footer() {
 						<li>Contact</li>
 					</a>
 					<a
-						href="https://drive.google.com/file/d/1C2xilrTXY4-1PNW4PEtgUsQLxsUQLa7T/view?usp=sharing"
+						href="https://drive.google.com/file/d/1Xms9zB7_elAFCUmyXuU5GD70D1qKsaY3/view?usp=sharing"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
