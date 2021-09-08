@@ -1,445 +1,445 @@
 [
-	{
-		"title": "What Makes Me Unique?",
-		"description": "",
-		"dateLong": "August 18, 2020",
-		"dateShort": "Aug 2020",
-		"path": "what-makes-me-unique",
-		"hidden": true,
-		"sections": [
-			{
-				"type": "paragraph",
-				"content": "When I say that my passion for tech is ingrained within me, I mean it both figuratively and literally."
-			},
-			{
-				"type": "photo",
-				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/93136926_536142663948157_376375032189812736_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=BU-qPbIFjbsAX8BWfWL&_nc_ht=scontent-bos3-1.xx&tp=7&oh=c127f1a948ff7e8ba14835899b626e43&oe=5F7E431A",
-				"size": "lg",
-				"altText": "QR code tattoo on my left forearm."
-			},
-			{
-				"type": "link",
-				"content": "Click here to understand how.",
-				"path": "/writing/post?id=tattoo"
-			}
-		]
-	},
-	{
-		"title": "Success Engineer — Inpixon",
-		"description": "",
-		"dateLong": "August 18, 2020",
-		"dateShort": "Aug 2020",
-		"path": "inpixon-success-engineer",
-		"hidden": true,
-		"sections": [
-			{
-				"type": "paragraph",
-				"content": "What is the new normal?"
-			},
-			{
-				"type": "paragraph",
-				"content": "Over the past few months, this question has immersed itself into our everyday dialogs. How will customers feel safe while dining at their favourite restaurant? How will stores provide a safe environment for patrons? If a guest were to test positive for COVID-19, who should be notified?"
-			},
-			{
-				"type": "paragraph",
-				"content": "Inpixon’s proprietary software, more specifically the Indoor Positioning technology, provides a unique solution for businesses addressing these issues, as mentioned on the company website:"
-			},
-			{
-				"type": "blockquote",
-				"content": "It is a technology that allows users to accurately pinpoint the location of people or assets inside a building…"
-			},
-			{
-				"type": "paragraph",
-				"content": "As a candidate for Inpixon’s Success Engineer position, I am excited at the prospect of joining a team at the forefront of indoor intelligence with cutting edge technology that truly has the potential of changing the world as we know it. "
-			},
-			{
-				"type": "paragraph",
-				"content": "I’ve had the pleasure of speaking with Jeannie Ly about the organization, the company culture, and the role itself, and strongly believe that I possess the ideal skillset for this position. As a Software Engineer with Amdocs, I have not only enhanced existing interfaces with additional features, but have also developed applications from idea conception to production. Moreover, as a graduate of Wilfrid Laurier University's School of Business and Economics, I have had the opportunity to work for various companies in roles ranging from Staff Accountant to Operational Efficiencies Specialist. This has allowed me to develop the interpersonal skills needed to address client concerns in a professional manner, while also understanding a company’s financial motivations."
-			},
-			{
-				"type": "paragraph",
-				"content": "Aside from my work experience, I am also a strong believer in giving back to the community through volunteerism. As an active member of the Juno College of Technology community, I am heavily involved in student mentorship through several events including guest speaking engagements, after-hours web development help sessions, and mock tech interviews for recent graduate students. Prior to that, I also sat on the Board for The Foundation for Student Achievement, a charity focused on supporting at-risk youth by providing after-school tutoring sessions, scholarships, computer equipment, and meals."
-			},
-			{
-				"type": "paragraph",
-				"content": "As a potential Success Engineer, I welcome the challenge of bridging the gap between my business acumen and my passion for coding. I have heard great things about the Inpixon team, and am excited for the opportunity to work with intelligent, motivated, like-minded people. "
-			},
-			{
-				"type": "paragraph",
-				"content": "I thank you for your consideration, and I look forward to hearing more about the position."
-			},
-			{
-				"type": "paragraph",
-				"content": "Warm regards,"
-			},
-			{
-				"type": "paragraph",
-				"content": "Tyler Ackerman"
-			}
-		]
-	},
-	{
-		"title": "Deploying a React App",
-		"description": "Launch via shared hosting in under five minutes.",
-		"dateLong": "August 5, 2020",
-		"dateShort": "Aug 2020",
-		"path": "deploy-react-app",
-		"hidden": false,
-		"sections": [
-			{
-				"type": "paragraph",
-				"content": "I’ve received a lot of questions recently with regards to deploying a React application to a personal webpage. Mostly, the confusion lies around the mistaken belief of the process being long and complicated. For that reason, many people opt instead to deploy via third-party hosting platforms like GitHub Pages, Firebase Hosting, or Heroku. While these are all great free options that I’ve used in the past, I’m happy to tell you that you can actually have your React application online within five minutes on your own personal domain. "
-			},
-			{
-				"type": "paragraph",
-				"content": "Before we begin, we’re going to make a couple assumptions about your application:"
-			},
-			{
-				"type": "ol",
-				"content": [
-					"You created your application using create-react-app",
-					"You already own a domain name and shared hosting"
-				]
-			},
-			{
-				"type": "subtitle",
-				"content": "Pros & Cons"
-			},
-			{
-				"type": "paragraph",
-				"content": "Most people choose the free hosting option due to the cost and lack of commitment. Using these platforms, users are able to launch their application in under an hour without entering any credit card information. These websites generally advertise high uptime (mostly ~95%) and only require an account to initialize."
-			},
-			{
-				"type": "paragraph",
-				"content": "With that being said, you will be obliged to include their personal signature in your subdomain. For example, if I had deployed this website using Heroku, my full address would have been www.tylerackerman.herokuapp.com. While there is no change in performance, it’s a little more satisfying and authentic without the additional subdomain. "
-			},
-			{
-				"type": "paragraph",
-				"content": "It is worth noting that some platforms offer a paid subscription model where you can have the additional subdomain removed, but at that point, you might as well just purchase a domain with hosting."
-			},
-			{
-				"type": "subtitle",
-				"content": "Step 1 - Add Homepage to the Application"
-			},
-			{
-				"type": "photo",
-				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/93317230_555895218670617_4348090131576520704_n.png?_nc_cat=104&_nc_sid=b96e70&_nc_ohc=5t1fJjYFjDkAX_VgPjp&_nc_ht=scontent-bos3-1.xx&oh=c8ea77133bb5a9ebea8d4e866e051a85&oe=5F7D9666",
-				"size": "lg",
-				"altText": "Screenshot of package.json"
-			},
-			{
-				"type": "paragraph",
-				"content": "Navigate to package.json located in the root directory of your application. If no “homepage” attribute exists, add one with the value being your domain name."
-			},
-			{
-				"type": "subtitle",
-				"content": "Step 2 - Build the Application"
-			},
-			{
-				"type": "photo",
-				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/92638557_508852749811044_1449339724807274496_n.png?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=7gZzYw7gUggAX88gIZm&_nc_ht=scontent-bos3-1.xx&oh=10eb066f32291bb02cdb3d27b84c70ce&oe=5F7EEBA6",
-				"size": "lg",
-				"altText": "Screenshot of terminal after build"
-			},
-			{
-				"type": "paragraph",
-				"content": "Make sure your dependencies are up to date by running a quick “npm install” or “yarn” (depending on the package manager you’re using). Once that’s complete, run “npm run build”."
-			},
-			{
-				"type": "paragraph",
-				"content": "You’ll notice that a new “build” folder has been created. This contains a super compressed version of your application. More simply, this has all the static files required for you to run your application. We will be uploading this folder to your hosting platform of choice."
-			},
-			{
-				"type": "subtitle",
-				"content": "Step 3 - Create .htaccess File"
-			},
-			{
-				"type": "paragraph",
-				"content": "Note - this step is only required the first time that your application is deployed.",
-				"fontStyle": "italic"
-			},
-			{
-				"type": "code",
-				"content": "<IfModule mod_rewrite.c>\n\n  RewriteEngine On\n  RewriteBase /\n  RewriteRule ^index.html$ - [L]\n  RewriteCond %{REQUEST_FILENAME} !-f\n  RewriteCond %{REQUEST_FILENAME} !-d\n  RewriteCond %{REQUEST_FILENAME} !-l\n  RewriteRule . /index.html [L]\n</IfModule>"
-			},
-			{
-				"type": "paragraph",
-				"content": "Within your build folder, create a new file named .htaccess. The purpose of this file, without getting overly technical, is that it contains the configuration required for the server to understand which file to serve when someone visits your homepage."
-			},
-			{
-				"type": "paragraph",
-				"content": "Copy and paste the contents located in the code block above into your .htaccess file. "
-			},
-			{
-				"type": "subtitle",
-				"content": "Step 4A - Upload Files Using FTP Client"
-			},
-			{
-				"type": "photo",
-				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/93193032_222169505678701_6984578651157168128_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=vlImzBTqfFsAX-nsjdG&_nc_ht=scontent-bos3-1.xx&oh=f2b80be6a5ae35b90433115b08e795c3&oe=5F7E77A1",
-				"size": "lg",
-				"altText": "Screenshot of FileZilla File Transfer"
-			},
-			{
-				"type": "paragraph",
-				"content": "Open your preferred FTP client (in my example, I used FileZilla), and navigate to the build directory on your local site. On the remote site, navigate to the /public_html directory. Upload all the files within the build directory. If this is your first time deploying the application, make sure .htaccess is included."
-			},
-			{
-				"type": "subtitle",
-				"content": "Step 4B - Upload Files Using cPanel"
-			},
-			{
-				"type": "photo",
-				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/92701624_2741588795894881_2154754812883763200_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=kQ4wPcgDCKEAX-r4R-G&_nc_ht=scontent-bos3-1.xx&oh=66aa2a51b8f61d5fc5b841944b5248b3&oe=5F7F1A5D",
-				"size": "lg",
-				"altText": "Screenshot of cPanel File Transfer"
-			},
-			{
-				"type": "paragraph",
-				"content": "For those who aren’t familiar with any FTP clients, there is the option to upload the static files using cPanel instead. It is worth noting that this process requires a few additional steps."
-			},
-			{
-				"type": "paragraph",
-				"content": "cPanel is a web-based graphical user interface used as a control panel to manage web hosting service accounts. It is the software of choice for many hosting platforms, including Bluehost, HostGator, and GoDaddy Hosting. In other words, it allows developers to publish websites, manage domains, organize web files, create email accounts, and much more. "
-			},
-			{
-				"type": "paragraph",
-				"content": "Login to your hosting platform of choice and navigate to cPanel. This is typically found within the advanced settings under File Manager. Once there, open the /public_html directory and upload all the files within the build folder of your local application. Be sure to include the .htaccess file if this is your first time deploying your application."
-			},
-			{
-				"type": "paragraph",
-				"content": "Note - cPanel will not allow you to upload everything at once. You will need to create a directory structure within cPanel that matches exactly what is located in the build folder. Once that’s complete, upload each folder’s contents individually.",
-				"fontStyle": "italic"
-			},
-			{
-				"type": "subtitle",
-				"content": "Step 5 - Refresh Your Webpage"
-			},
-			{
-				"type": "paragraph",
-				"content": "Congratulations! You’ve officially deployed your first React application to your personal website. If you don’t see any changes, don’t panic. Give it a few minutes and refresh again. Some hosting platforms deploy changes in intervals throughout the day."
-			}
-		]
-	},
-	{
-		"title": "QR Code Tattoo",
-		"description": "Permanent design, temporary content.",
-		"dateLong": "July 15, 2020",
-		"dateShort": "July 2020",
-		"path": "tattoo",
-		"hidden": false,
-		"sections": [
-			{
-				"type": "paragraph",
-				"content": "When I decided that I wanted to get my second tattoo, I knew that I wanted something unique that would also age well. I considered countless designs but found it impossible to narrow down my options. "
-			},
-			{
-				"type": "paragraph",
-				"content": "So I chose all of them."
-			},
-			{
-				"type": "paragraph",
-				"content": "In other words, I decided on getting a QR code design that when scanned, redirects the user to my personal website where I can alter the content that’s displayed with a few clicks. Throughout this post, I will breakdown different criteria to help you make an informed decision, as well as how I went about handling the data from a technical standpoint. "
-			},
-			{
-				"type": "photo",
-				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/s2048x2048/93136926_536142663948157_376375032189812736_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=BU-qPbIFjbsAX8BWfWL&_nc_ht=scontent-bos3-1.xx&tp=7&oh=c127f1a948ff7e8ba14835899b626e43&oe=5F7E431A",
-				"size": "lg",
-				"altText": "QR code tattoo on my left forearm."
-			},
-			{
-				"type": "paragraph",
-				"content": "After several hours of research, I narrowed the most important things to consider into three categories:"
-			},
-			{
-				"type": "ol",
-				"content": [ "The content", "The scannability", "The code generator" ]
-			},
-			{
-				"type": "subtitle",
-				"content": "The Content"
-			},
-			{
-				"type": "paragraph",
-				"content": "When choosing what exactly you want your QR code to scan to, it’s extremely important that this content is permanent. A great example of something permanent is plain text, like a note containing the unique phrase, “Live, Laugh, Love”. A terrible example is what one Argentinian sports fan did last year when he decided to make his code scan to a YouTube video of his club winning the Copa Libertadores."
-			},
-			{
-				"type": "blockquote",
-				"content": "It was an innovative, high-tech tribute. The only problem is that a rival team's fans responded by flooding to YouTube and reporting the video for copyright infringement as a prank, according to The Independent — which resulted with the video vanishing."
-			},
-			{
-				"type": "paragraph",
-				"content": "You read that correctly. This die-hard fan now has a big QR code tattoo that scans to a removed video. Don’t be like him. If you really want your favourite YouTube video tattooed on your body, I would consider spending a couple hours learning basic HTML, purchasing a domain name with hosting, and have the QR code scan to your personal website with the video embedded instead. That way if some rival hooligans decide to report your video, you can easily embed another one. Of course, make sure you auto-renew your domain name. "
-			},
-			{
-				"type": "subtitle",
-				"content": "The Scannability"
-			},
-			{
-				"type": "paragraph",
-				"content": "First and foremost, I would strongly recommend finding a highly skilled tattoo artist who has experience with QR codes. Ask them what their scan success rate is. Additionally, you’re going to want to make sure the tattoo is placed on a flat surface that likely won’t change size in the future. Forearm or back is typically safe. Upper arm or chest area may cause some issues. If you have darker skin, aim for a lighter area that's less exposed to the sun to increase the contrast of the ink. "
-			},
-			{
-				"type": "paragraph",
-				"content": "Your success rate will generally increase if you go for a larger QR code with less content being displayed. Without getting too technical, larger codes mean larger dots, which makes it easier for scanners to pick up on the data points.  Less content means less dots to be tattooed. The smaller QR codes are 21x21 dots and can hold up to 10 characters, while the larger ones are as big as 177x177 dots and can hold up to 1,852 characters. While it might seem enticing to get the lyrics to Despacito placed in a QR code, it will generally look more like static on a TV screen and will have to cover your entire back for the slight chance of a scan. Save yourself and your tattoo artist the trouble. "
-			},
-			{
-				"type": "paragraph",
-				"content": "What many people opt to do is to add error correction to their code. This allows for successful scans even when up to 30% of the tattoo to be incorrect or destroyed. If you’re feeling extra daring, you could even intentionally cover 30% of the tattoo with the logo of your choice to incorporate a neat little design. "
-			},
-			{
-				"type": "paragraph",
-				"content": "I recommend keeping it simple."
-			},
-			{
-				"type": "subtitle",
-				"content": "The Code Generator"
-			},
-			{
-				"type": "paragraph",
-				"content": "As I mentioned before, it’s very important that the content of the tattoo is permanent. While there are plenty of websites online that will create a custom QR code, make sure that the code doesn’t scan to their website first, process the data, and then redirect to the actual content you wanted displayed. If that website no longer exists in the future, neither will the content of your tattoo. Thankfully, this is fairly easy to check. Just generate the tattoo and scan it with your phone. If your phone alerts you of a redirect to the generator’s domain, I would change generators. "
-			},
-			{
-				"type": "paragraph",
-				"content": "The code generator I used was www.the-qrcode-generator.com. They had several different options of content to display, was super user friendly, and didn’t require me to pay."
-			},
-			{
-				"type": "subtitle",
-				"content": "The Code Behind the Code"
-			},
-			{
-				"type": "paragraph",
-				"content": "At a high level, the QR code scans to a short domain name that I purchased (tyack.tech), that immediately redirects the user to tylerackerman.io/tattoo. When this particular route is accessed, a GET request is performed to receive data from a Google Firebase Realtime Database that stores an object containing the contents that I want displayed. My application then handles that data and displays it on the user’s mobile phone. "
-			},
-			{
-				"type": "paragraph",
-				"content": "If I haven’t completely lost you yet, lets dig a little deeper."
-			},
-			{
-				"type": "photo",
-				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/92328561_222542758824182_6814991961963888640_n.jpg?_nc_cat=111&_nc_sid=b96e70&_nc_ohc=BBx2qlEkXGAAX-ErTy9&_nc_ht=scontent-bos3-1.xx&oh=30dc424f18ebdd8d1a34b286660165ad&oe=5F7E403A",
-				"size": "lg",
-				"altText": "Change QR Code page of portfolio"
-			},
-			{
-				"type": "paragraph",
-				"content": "The reason I chose to purchase the domain name tyack.tech was specifically because what I mentioned above – the domain is exactly 10 characters, meaning I was able to use the smallest QR code available, and therefore increasing the scannability."
-			},
-			{
-				"type": "paragraph",
-				"content": "The database holds an object with two properties:"
-			},
-			{
-				"type": "ul",
-				"content": [
-					"type – either a photo, video, or website redirect",
-					"content – the URL address of the content type"
-				]
-			},
-			{
-				"type": "paragraph",
-				"content": "When the application receives the data, it then processes it into one of either three different React components – dependent completely on the type. When I want to change the content that is displayed, there’s a separate URL that I have access to (see above), that allows me to add the content and preview it at the same time. Once I approve of the new content, I submit the form and the old data is overwritten. "
-			},
-			{
-				"type": "paragraph",
-				"content": "There’s a ton more I can talk about, but to keep myself from rambling, I’ll summarize it by saying it works way better than I could have anticipated."
-			},
-			{
-				"type": "subtitle",
-				"content": "What's Next?"
-			},
-			{
-				"type": "paragraph",
-				"content": "The possibilities are truly endless. I originally built this using Firebase for React simply because I hadn’t had the time to try it out yet, but I eventually want to create my own database using Node. In terms of different content to display, someone actually recommended that I add my emergency contact and blood type in case of an emergency. A whole new practical application I had never even considered. "
-			},
-			{
-				"type": "paragraph",
-				"content": "For now, I’m having fun changing the content to headshots of my less tech-savvy friends and convincing them that they mean that much to me."
-			},
-			{
-				"type": "paragraph",
-				"content": "Special thank you goes out to my tattoo artist, Wookjin. He’s designed both my tattoos and has a super bright future ahead of him. If you want to see some truly amazing works of art, follow him on Instagram @shimwoojin."
-			}
-		]
-	},
-	{
-		"title": "The New Website",
-		"description": "Out with the old, in with the new.",
-		"dateLong": "June 20th, 2020",
-		"dateShort": "June 2020",
-		"path": "new-website",
-		"hidden": false,
-		"sections": [
-			{
-				"type": "paragraph",
-				"content": "After over two years, I finally decided it was time to give the ol’ portfolio a facelift. The moment feels a little bittersweet with plenty of nostalgia. It was created in the final days of bootcamp at Juno College in the Spring of 2017. To say it stood the test of time is a big overstatement. My old friend was ready to go to the land of no return – somewhere between my old Accounting lecture notes and any junior high school pictures. "
-			},
-			{
-				"type": "photo",
-				"content": "https://scontent-bos3-1.xx.fbcdn.net/v/t1.15752-9/92290054_502314903797841_1378633662488117248_n.jpg?_nc_cat=108&_nc_sid=b96e70&_nc_ohc=aKdIhSX7bXgAX9iWSZb&_nc_ht=scontent-bos3-1.xx&oh=4ea61a93f8128d2b300ea8a90b703eed&oe=5F7EE102",
-				"size": "lg",
-				"altText": "Old website splash page."
-			},
-			{
-				"type": "subtitle",
-				"content": "Why the Upgrade?"
-			},
-			{
-				"type": "paragraph",
-				"content": "When I first created my portfolio, I had already secured my first web development position with Scotiabank. I was due to start working the following week, so I prioritized brushing up on the fundamentals for onboarding over creating a pretty-looking webpage."
-			},
-			{
-				"type": "paragraph",
-				"content": "Fast forward two years."
-			},
-			{
-				"type": "paragraph",
-				"content": "The portfolio that barely represented my skillset as a developer when it was created definitely does not represent them now. I feel a sense of embarrassment and shame whenever someone asks to see it. The projects I had completed have APIs that are no longer maintained or just flat out don’t work anymore. The CSS animations and transitions look like they’re straight out of Piczo. Worst of all, my splash image on the homepage (see above) isn’t even a picture of me. "
-			},
-			{
-				"type": "subtitle",
-				"content": "Portfolio in React?"
-			},
-			{
-				"type": "paragraph",
-				"content": "Yes. Let me explain."
-			},
-			{
-				"type": "paragraph",
-				"content": "I’ve been working with React for nearly two years now, and really appreciate the versatility of reusable components. Take these blog posts for example. Each paragraph, subtitle, image, bullet point, and blockquote is already preformatted and ready to go. It requires additional initial set-up work, but the investment pays off over time."
-			},
-			{
-				"type": "paragraph",
-				"content": "Additionally, there are a ton of React-specific packages that I’ve only gotten the chance to use in a limited capacity (including Styled-Components, Material UI, and React Firebase). I figured at worst, this provides me the opportunity to practice with some cool new features and potentially bring them into the workplace."
-			},
-			{
-				"type": "subtitle",
-				"content": "What about Projects?"
-			},
-			{
-				"type": "paragraph",
-				"content": "Patience. They are coming."
-			},
-			{
-				"type": "paragraph",
-				"content": "As with most things, I think it’s best to leave the old projects in the previous decade. Don’t worry, I have plenty of new project ideas on the way. I can’t wait to showcase all the new skills I’ve had the chance to learn over the course of the past couple years!"
-			},
-			{
-				"type": "paragraph",
-				"content": "My first major project has been to finish this portfolio, but now that it’s completed, I definitely want to make a full-stack application using the MERN stack (MongoDB, Express, React, Node). I’m also in the process of completing an Advanced Java course through Seneca College, so it would be pretty neat to create an something using Java in the backend with React in the front. Last but not least, I’ve been meaning to brush up on my Python knowledge, so anything involving that would be super cool as well. "
-			},
-			{
-				"type": "subtitle",
-				"content": "What's next?"
-			},
-			{
-				"type": "paragraph",
-				"content": "I’ve got a few different ideas I plan to test out in the next coming weeks and months. There’s a really unique concept I have in the works involving a QR code and a tattoo, so stay tuned for that. I also plan on adding blog posts every once in a while, and I’ll try my best to limit the amount of Raptors content. Amongst other things, I want to jump on the Dark Theme trend that every application is currently developing. I plan on creating a function that detects whether the user’s device is in dark mode and change the theming accordingly. "
-			},
-			{
-				"type": "paragraph",
-				"content": "Much like myself, this website is currently in development. Make sure to pop back in to see some cool updates!"
-			}
-		]
-	}
+  {
+    "title": "What Makes Me Unique?",
+    "description": "",
+    "dateLong": "August 18, 2020",
+    "dateShort": "Aug 2020",
+    "path": "what-makes-me-unique",
+    "hidden": true,
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "When I say that my passion for tech is ingrained within me, I mean it both figuratively and literally."
+      },
+      {
+        "type": "photo",
+        "content": "https://www.dropbox.com/s/0b7vnnzrwo3k1xq/93136926_536142663948157_376375032189812736_n.jpeg?raw=1",
+        "size": "lg",
+        "altText": "QR code tattoo on my left forearm."
+      },
+      {
+        "type": "link",
+        "content": "Click here to understand how.",
+        "path": "/writing/post?id=tattoo"
+      }
+    ]
+  },
+  {
+    "title": "Success Engineer — Inpixon",
+    "description": "",
+    "dateLong": "August 18, 2020",
+    "dateShort": "Aug 2020",
+    "path": "inpixon-success-engineer",
+    "hidden": true,
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "What is the new normal?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Over the past few months, this question has immersed itself into our everyday dialogs. How will customers feel safe while dining at their favourite restaurant? How will stores provide a safe environment for patrons? If a guest were to test positive for COVID-19, who should be notified?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Inpixon’s proprietary software, more specifically the Indoor Positioning technology, provides a unique solution for businesses addressing these issues, as mentioned on the company website:"
+      },
+      {
+        "type": "blockquote",
+        "content": "It is a technology that allows users to accurately pinpoint the location of people or assets inside a building…"
+      },
+      {
+        "type": "paragraph",
+        "content": "As a candidate for Inpixon’s Success Engineer position, I am excited at the prospect of joining a team at the forefront of indoor intelligence with cutting edge technology that truly has the potential of changing the world as we know it. "
+      },
+      {
+        "type": "paragraph",
+        "content": "I’ve had the pleasure of speaking with Jeannie Ly about the organization, the company culture, and the role itself, and strongly believe that I possess the ideal skillset for this position. As a Software Engineer with Amdocs, I have not only enhanced existing interfaces with additional features, but have also developed applications from idea conception to production. Moreover, as a graduate of Wilfrid Laurier University's School of Business and Economics, I have had the opportunity to work for various companies in roles ranging from Staff Accountant to Operational Efficiencies Specialist. This has allowed me to develop the interpersonal skills needed to address client concerns in a professional manner, while also understanding a company’s financial motivations."
+      },
+      {
+        "type": "paragraph",
+        "content": "Aside from my work experience, I am also a strong believer in giving back to the community through volunteerism. As an active member of the Juno College of Technology community, I am heavily involved in student mentorship through several events including guest speaking engagements, after-hours web development help sessions, and mock tech interviews for recent graduate students. Prior to that, I also sat on the Board for The Foundation for Student Achievement, a charity focused on supporting at-risk youth by providing after-school tutoring sessions, scholarships, computer equipment, and meals."
+      },
+      {
+        "type": "paragraph",
+        "content": "As a potential Success Engineer, I welcome the challenge of bridging the gap between my business acumen and my passion for coding. I have heard great things about the Inpixon team, and am excited for the opportunity to work with intelligent, motivated, like-minded people. "
+      },
+      {
+        "type": "paragraph",
+        "content": "I thank you for your consideration, and I look forward to hearing more about the position."
+      },
+      {
+        "type": "paragraph",
+        "content": "Warm regards,"
+      },
+      {
+        "type": "paragraph",
+        "content": "Tyler Ackerman"
+      }
+    ]
+  },
+  {
+    "title": "Deploying a React App",
+    "description": "Launch via shared hosting in under five minutes.",
+    "dateLong": "August 5, 2020",
+    "dateShort": "Aug 2020",
+    "path": "deploy-react-app",
+    "hidden": false,
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "I’ve received a lot of questions recently with regards to deploying a React application to a personal webpage. Mostly, the confusion lies around the mistaken belief of the process being long and complicated. For that reason, many people opt instead to deploy via third-party hosting platforms like GitHub Pages, Firebase Hosting, or Heroku. While these are all great free options that I’ve used in the past, I’m happy to tell you that you can actually have your React application online within five minutes on your own personal domain. "
+      },
+      {
+        "type": "paragraph",
+        "content": "Before we begin, we’re going to make a couple assumptions about your application:"
+      },
+      {
+        "type": "ol",
+        "content": [
+          "You created your application using create-react-app",
+          "You already own a domain name and shared hosting"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Pros & Cons"
+      },
+      {
+        "type": "paragraph",
+        "content": "Most people choose the free hosting option due to the cost and lack of commitment. Using these platforms, users are able to launch their application in under an hour without entering any credit card information. These websites generally advertise high uptime (mostly ~95%) and only require an account to initialize."
+      },
+      {
+        "type": "paragraph",
+        "content": "With that being said, you will be obliged to include their personal signature in your subdomain. For example, if I had deployed this website using Heroku, my full address would have been www.tylerackerman.herokuapp.com. While there is no change in performance, it’s a little more satisfying and authentic without the additional subdomain. "
+      },
+      {
+        "type": "paragraph",
+        "content": "It is worth noting that some platforms offer a paid subscription model where you can have the additional subdomain removed, but at that point, you might as well just purchase a domain with hosting."
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 1 - Add Homepage to the Application"
+      },
+      {
+        "type": "photo",
+        "content": "https://www.dropbox.com/s/281vn3xeahf05qp/93317230_555895218670617_4348090131576520704_n.png?raw=1",
+        "size": "lg",
+        "altText": "Screenshot of package.json"
+      },
+      {
+        "type": "paragraph",
+        "content": "Navigate to package.json located in the root directory of your application. If no “homepage” attribute exists, add one with the value being your domain name."
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 2 - Build the Application"
+      },
+      {
+        "type": "photo",
+        "content": "https://www.dropbox.com/s/ic8j6icu0axl6se/92638557_508852749811044_1449339724807274496_n.png?raw=1",
+        "size": "lg",
+        "altText": "Screenshot of terminal after build"
+      },
+      {
+        "type": "paragraph",
+        "content": "Make sure your dependencies are up to date by running a quick “npm install” or “yarn” (depending on the package manager you’re using). Once that’s complete, run “npm run build”."
+      },
+      {
+        "type": "paragraph",
+        "content": "You’ll notice that a new “build” folder has been created. This contains a super compressed version of your application. More simply, this has all the static files required for you to run your application. We will be uploading this folder to your hosting platform of choice."
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 3 - Create .htaccess File"
+      },
+      {
+        "type": "paragraph",
+        "content": "Note - this step is only required the first time that your application is deployed.",
+        "fontStyle": "italic"
+      },
+      {
+        "type": "code",
+        "content": "<IfModule mod_rewrite.c>\n\n  RewriteEngine On\n  RewriteBase /\n  RewriteRule ^index.html$ - [L]\n  RewriteCond %{REQUEST_FILENAME} !-f\n  RewriteCond %{REQUEST_FILENAME} !-d\n  RewriteCond %{REQUEST_FILENAME} !-l\n  RewriteRule . /index.html [L]\n</IfModule>"
+      },
+      {
+        "type": "paragraph",
+        "content": "Within your build folder, create a new file named .htaccess. The purpose of this file, without getting overly technical, is that it contains the configuration required for the server to understand which file to serve when someone visits your homepage."
+      },
+      {
+        "type": "paragraph",
+        "content": "Copy and paste the contents located in the code block above into your .htaccess file. "
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 4A - Upload Files Using FTP Client"
+      },
+      {
+        "type": "photo",
+        "content": "https://www.dropbox.com/s/za8c9t1dkaol4hx/93193032_222169505678701_6984578651157168128_n.png?raw=1",
+        "size": "lg",
+        "altText": "Screenshot of FileZilla File Transfer"
+      },
+      {
+        "type": "paragraph",
+        "content": "Open your preferred FTP client (in my example, I used FileZilla), and navigate to the build directory on your local site. On the remote site, navigate to the /public_html directory. Upload all the files within the build directory. If this is your first time deploying the application, make sure .htaccess is included."
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 4B - Upload Files Using cPanel"
+      },
+      {
+        "type": "photo",
+        "content": "https://www.dropbox.com/s/n2kpayxugtetbeb/92701624_2741588795894881_2154754812883763200_n.png?raw=1",
+        "size": "lg",
+        "altText": "Screenshot of cPanel File Transfer"
+      },
+      {
+        "type": "paragraph",
+        "content": "For those who aren’t familiar with any FTP clients, there is the option to upload the static files using cPanel instead. It is worth noting that this process requires a few additional steps."
+      },
+      {
+        "type": "paragraph",
+        "content": "cPanel is a web-based graphical user interface used as a control panel to manage web hosting service accounts. It is the software of choice for many hosting platforms, including Bluehost, HostGator, and GoDaddy Hosting. In other words, it allows developers to publish websites, manage domains, organize web files, create email accounts, and much more. "
+      },
+      {
+        "type": "paragraph",
+        "content": "Login to your hosting platform of choice and navigate to cPanel. This is typically found within the advanced settings under File Manager. Once there, open the /public_html directory and upload all the files within the build folder of your local application. Be sure to include the .htaccess file if this is your first time deploying your application."
+      },
+      {
+        "type": "paragraph",
+        "content": "Note - cPanel will not allow you to upload everything at once. You will need to create a directory structure within cPanel that matches exactly what is located in the build folder. Once that’s complete, upload each folder’s contents individually.",
+        "fontStyle": "italic"
+      },
+      {
+        "type": "subtitle",
+        "content": "Step 5 - Refresh Your Webpage"
+      },
+      {
+        "type": "paragraph",
+        "content": "Congratulations! You’ve officially deployed your first React application to your personal website. If you don’t see any changes, don’t panic. Give it a few minutes and refresh again. Some hosting platforms deploy changes in intervals throughout the day."
+      }
+    ]
+  },
+  {
+    "title": "QR Code Tattoo",
+    "description": "Permanent design, temporary content.",
+    "dateLong": "July 15, 2020",
+    "dateShort": "July 2020",
+    "path": "tattoo",
+    "hidden": false,
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "When I decided that I wanted to get my second tattoo, I knew that I wanted something unique that would also age well. I considered countless designs but found it impossible to narrow down my options. "
+      },
+      {
+        "type": "paragraph",
+        "content": "So I chose all of them."
+      },
+      {
+        "type": "paragraph",
+        "content": "In other words, I decided on getting a QR code design that when scanned, redirects the user to my personal website where I can alter the content that’s displayed with a few clicks. Throughout this post, I will breakdown different criteria to help you make an informed decision, as well as how I went about handling the data from a technical standpoint. "
+      },
+      {
+        "type": "photo",
+        "content": "https://www.dropbox.com/s/0b7vnnzrwo3k1xq/93136926_536142663948157_376375032189812736_n.jpeg?raw=1",
+        "size": "lg",
+        "altText": "QR code tattoo on my left forearm."
+      },
+      {
+        "type": "paragraph",
+        "content": "After several hours of research, I narrowed the most important things to consider into three categories:"
+      },
+      {
+        "type": "ol",
+        "content": ["The content", "The scannability", "The code generator"]
+      },
+      {
+        "type": "subtitle",
+        "content": "The Content"
+      },
+      {
+        "type": "paragraph",
+        "content": "When choosing what exactly you want your QR code to scan to, it’s extremely important that this content is permanent. A great example of something permanent is plain text, like a note containing the unique phrase, “Live, Laugh, Love”. A terrible example is what one Argentinian sports fan did last year when he decided to make his code scan to a YouTube video of his club winning the Copa Libertadores."
+      },
+      {
+        "type": "blockquote",
+        "content": "It was an innovative, high-tech tribute. The only problem is that a rival team's fans responded by flooding to YouTube and reporting the video for copyright infringement as a prank, according to The Independent — which resulted with the video vanishing."
+      },
+      {
+        "type": "paragraph",
+        "content": "You read that correctly. This die-hard fan now has a big QR code tattoo that scans to a removed video. Don’t be like him. If you really want your favourite YouTube video tattooed on your body, I would consider spending a couple hours learning basic HTML, purchasing a domain name with hosting, and have the QR code scan to your personal website with the video embedded instead. That way if some rival hooligans decide to report your video, you can easily embed another one. Of course, make sure you auto-renew your domain name. "
+      },
+      {
+        "type": "subtitle",
+        "content": "The Scannability"
+      },
+      {
+        "type": "paragraph",
+        "content": "First and foremost, I would strongly recommend finding a highly skilled tattoo artist who has experience with QR codes. Ask them what their scan success rate is. Additionally, you’re going to want to make sure the tattoo is placed on a flat surface that likely won’t change size in the future. Forearm or back is typically safe. Upper arm or chest area may cause some issues. If you have darker skin, aim for a lighter area that's less exposed to the sun to increase the contrast of the ink. "
+      },
+      {
+        "type": "paragraph",
+        "content": "Your success rate will generally increase if you go for a larger QR code with less content being displayed. Without getting too technical, larger codes mean larger dots, which makes it easier for scanners to pick up on the data points.  Less content means less dots to be tattooed. The smaller QR codes are 21x21 dots and can hold up to 10 characters, while the larger ones are as big as 177x177 dots and can hold up to 1,852 characters. While it might seem enticing to get the lyrics to Despacito placed in a QR code, it will generally look more like static on a TV screen and will have to cover your entire back for the slight chance of a scan. Save yourself and your tattoo artist the trouble. "
+      },
+      {
+        "type": "paragraph",
+        "content": "What many people opt to do is to add error correction to their code. This allows for successful scans even when up to 30% of the tattoo to be incorrect or destroyed. If you’re feeling extra daring, you could even intentionally cover 30% of the tattoo with the logo of your choice to incorporate a neat little design. "
+      },
+      {
+        "type": "paragraph",
+        "content": "I recommend keeping it simple."
+      },
+      {
+        "type": "subtitle",
+        "content": "The Code Generator"
+      },
+      {
+        "type": "paragraph",
+        "content": "As I mentioned before, it’s very important that the content of the tattoo is permanent. While there are plenty of websites online that will create a custom QR code, make sure that the code doesn’t scan to their website first, process the data, and then redirect to the actual content you wanted displayed. If that website no longer exists in the future, neither will the content of your tattoo. Thankfully, this is fairly easy to check. Just generate the tattoo and scan it with your phone. If your phone alerts you of a redirect to the generator’s domain, I would change generators. "
+      },
+      {
+        "type": "paragraph",
+        "content": "The code generator I used was www.the-qrcode-generator.com. They had several different options of content to display, was super user friendly, and didn’t require me to pay."
+      },
+      {
+        "type": "subtitle",
+        "content": "The Code Behind the Code"
+      },
+      {
+        "type": "paragraph",
+        "content": "At a high level, the QR code scans to a short domain name that I purchased (tyack.tech), that immediately redirects the user to tylerackerman.io/tattoo. When this particular route is accessed, a GET request is performed to receive data from a Google Firebase Realtime Database that stores an object containing the contents that I want displayed. My application then handles that data and displays it on the user’s mobile phone. "
+      },
+      {
+        "type": "paragraph",
+        "content": "If I haven’t completely lost you yet, lets dig a little deeper."
+      },
+      {
+        "type": "photo",
+        "content": "https://www.dropbox.com/s/za8c9t1dkaol4hx/93193032_222169505678701_6984578651157168128_n.png?raw=1",
+        "size": "lg",
+        "altText": "Change QR Code page of portfolio"
+      },
+      {
+        "type": "paragraph",
+        "content": "The reason I chose to purchase the domain name tyack.tech was specifically because what I mentioned above – the domain is exactly 10 characters, meaning I was able to use the smallest QR code available, and therefore increasing the scannability."
+      },
+      {
+        "type": "paragraph",
+        "content": "The database holds an object with two properties:"
+      },
+      {
+        "type": "ul",
+        "content": [
+          "type – either a photo, video, or website redirect",
+          "content – the URL address of the content type"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "When the application receives the data, it then processes it into one of either three different React components – dependent completely on the type. When I want to change the content that is displayed, there’s a separate URL that I have access to (see above), that allows me to add the content and preview it at the same time. Once I approve of the new content, I submit the form and the old data is overwritten. "
+      },
+      {
+        "type": "paragraph",
+        "content": "There’s a ton more I can talk about, but to keep myself from rambling, I’ll summarize it by saying it works way better than I could have anticipated."
+      },
+      {
+        "type": "subtitle",
+        "content": "What's Next?"
+      },
+      {
+        "type": "paragraph",
+        "content": "The possibilities are truly endless. I originally built this using Firebase for React simply because I hadn’t had the time to try it out yet, but I eventually want to create my own database using Node. In terms of different content to display, someone actually recommended that I add my emergency contact and blood type in case of an emergency. A whole new practical application I had never even considered. "
+      },
+      {
+        "type": "paragraph",
+        "content": "For now, I’m having fun changing the content to headshots of my less tech-savvy friends and convincing them that they mean that much to me."
+      },
+      {
+        "type": "paragraph",
+        "content": "Special thank you goes out to my tattoo artist, Wookjin. He’s designed both my tattoos and has a super bright future ahead of him. If you want to see some truly amazing works of art, follow him on Instagram @shimwoojin."
+      }
+    ]
+  },
+  {
+    "title": "The New Website",
+    "description": "Out with the old, in with the new.",
+    "dateLong": "June 20th, 2020",
+    "dateShort": "June 2020",
+    "path": "new-website",
+    "hidden": false,
+    "sections": [
+      {
+        "type": "paragraph",
+        "content": "After over two years, I finally decided it was time to give the ol’ portfolio a facelift. The moment feels a little bittersweet with plenty of nostalgia. It was created in the final days of bootcamp at Juno College in the Spring of 2017. To say it stood the test of time is a big overstatement. My old friend was ready to go to the land of no return – somewhere between my old Accounting lecture notes and any junior high school pictures. "
+      },
+      {
+        "type": "photo",
+        "content": "https://www.dropbox.com/s/u3i7eqeqcfn7h3j/92290054_502314903797841_1378633662488117248_n.jpeg?raw=1",
+        "size": "lg",
+        "altText": "Old website splash page."
+      },
+      {
+        "type": "subtitle",
+        "content": "Why the Upgrade?"
+      },
+      {
+        "type": "paragraph",
+        "content": "When I first created my portfolio, I had already secured my first web development position with Scotiabank. I was due to start working the following week, so I prioritized brushing up on the fundamentals for onboarding over creating a pretty-looking webpage."
+      },
+      {
+        "type": "paragraph",
+        "content": "Fast forward two years."
+      },
+      {
+        "type": "paragraph",
+        "content": "The portfolio that barely represented my skillset as a developer when it was created definitely does not represent them now. I feel a sense of embarrassment and shame whenever someone asks to see it. The projects I had completed have APIs that are no longer maintained or just flat out don’t work anymore. The CSS animations and transitions look like they’re straight out of Piczo. Worst of all, my splash image on the homepage (see above) isn’t even a picture of me. "
+      },
+      {
+        "type": "subtitle",
+        "content": "Portfolio in React?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Yes. Let me explain."
+      },
+      {
+        "type": "paragraph",
+        "content": "I’ve been working with React for nearly two years now, and really appreciate the versatility of reusable components. Take these blog posts for example. Each paragraph, subtitle, image, bullet point, and blockquote is already preformatted and ready to go. It requires additional initial set-up work, but the investment pays off over time."
+      },
+      {
+        "type": "paragraph",
+        "content": "Additionally, there are a ton of React-specific packages that I’ve only gotten the chance to use in a limited capacity (including Styled-Components, Material UI, and React Firebase). I figured at worst, this provides me the opportunity to practice with some cool new features and potentially bring them into the workplace."
+      },
+      {
+        "type": "subtitle",
+        "content": "What about Projects?"
+      },
+      {
+        "type": "paragraph",
+        "content": "Patience. They are coming."
+      },
+      {
+        "type": "paragraph",
+        "content": "As with most things, I think it’s best to leave the old projects in the previous decade. Don’t worry, I have plenty of new project ideas on the way. I can’t wait to showcase all the new skills I’ve had the chance to learn over the course of the past couple years!"
+      },
+      {
+        "type": "paragraph",
+        "content": "My first major project has been to finish this portfolio, but now that it’s completed, I definitely want to make a full-stack application using the MERN stack (MongoDB, Express, React, Node). I’m also in the process of completing an Advanced Java course through Seneca College, so it would be pretty neat to create an something using Java in the backend with React in the front. Last but not least, I’ve been meaning to brush up on my Python knowledge, so anything involving that would be super cool as well. "
+      },
+      {
+        "type": "subtitle",
+        "content": "What's next?"
+      },
+      {
+        "type": "paragraph",
+        "content": "I’ve got a few different ideas I plan to test out in the next coming weeks and months. There’s a really unique concept I have in the works involving a QR code and a tattoo, so stay tuned for that. I also plan on adding blog posts every once in a while, and I’ll try my best to limit the amount of Raptors content. Amongst other things, I want to jump on the Dark Theme trend that every application is currently developing. I plan on creating a function that detects whether the user’s device is in dark mode and change the theming accordingly. "
+      },
+      {
+        "type": "paragraph",
+        "content": "Much like myself, this website is currently in development. Make sure to pop back in to see some cool updates!"
+      }
+    ]
+  }
 ]

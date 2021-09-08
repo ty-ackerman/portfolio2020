@@ -18,6 +18,7 @@ import {
 import styled from 'styled-components'
 
 import Posts from '../Writing/Posts.json'
+import PostTitle from '../Components/PostTitle'
 
 function WritingPost (props) {
   const [posts, setPosts] = useState({})
@@ -62,7 +63,7 @@ function WritingPost (props) {
     }
   }
 
-  const WritingPost = styled.div`
+  const WritingPostContainer = styled.div`
     display: flex;
     flex-flow: column wrap;
     position: relative;
@@ -72,27 +73,7 @@ function WritingPost (props) {
       max-width: 600px;
       width: 100%;
     }
-    h1 {
-      font-size: 35px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-    .date {
-      color: #797979;
-      padding-top: 10px;
-      position: relative;
-      &:before {
-        height: 1px;
-        width: 40px;
-        content: '';
-        background-color: #dfdfdf;
-        position: absolute;
-        top: 0;
-      }
-    }
-    .post-header {
-      margin-bottom: 45px;
-    }
+    
     .change-post {
       display: flex;
       justify-content: ${props => post.index === 0 || get(props, `posts.[${post.index - 1}.hidden]`)? 'flex-end' : 'space-between'};
@@ -124,17 +105,13 @@ function WritingPost (props) {
   `
 
   const loadNewPost = postPath => {
-    // getPost();
     props.history.push(`/writing/post?id=${postPath}`)
   }
 
   if (posts) return (
     <Fade show>
-      <WritingPost className='section' posts={posts}>
-        <div className='post-contents post-header'>
-          <h1 className='title'>{post.title}</h1>
-          <div className='date'>{post.dateLong}</div>
-        </div>
+      <WritingPostContainer className='section' posts={posts}>
+        <PostTitle title={post.title} subtitle={post.dateLong} />
         <div className='post-contents'>
           {!isEmpty(post) &&
             post.sections.map((section, key) => renderContent(section, key))}
@@ -165,7 +142,7 @@ function WritingPost (props) {
             )}
           </div>
         )}
-      </WritingPost>
+      </WritingPostContainer>
     </Fade>
   )
   return null

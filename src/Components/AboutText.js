@@ -14,7 +14,7 @@ export default function AboutText (props) {
 
         "I’m a strong believer in giving back to the community that helped raise you. Since graduating, I’ve accepted several different positions with the career college; including roles in student mentorship, in-class instructor assistance, and assignment marking. Most recently, I have been selected as a recurring guest speaker - providing career advice for recent grads.",
 
-        'Aside from coding, I’m a die-hard Toronto Raptors fan. I bleed red, literally and figuratively. To answer your question, yes, June 2019 was the best month of my life. During the NBA offseason, I take every opportunity I can to travel the globe. I’ve been fortunate enough to visit some pretty neat places. Last but not least, no About Me section is complete without mentioning my two lovely dogs, Barkley and Cooper.'
+        'Aside from coding, I’m a die-hard Toronto Raptors fan. I bleed red, literally and figuratively. To answer your question, yes, June 2019 was the best month of my life. During the NBA offseason, I take every opportunity I can to travel the globe. I’ve been fortunate enough to visit some pretty neat places. Last but not least, no About Me section is complete without mentioning my lovely pooch, Toby.'
       ]
     },
     {
