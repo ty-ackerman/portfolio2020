@@ -35,13 +35,28 @@ const BtnContainer = styled.div`
     &.small {
       padding: 0px 10px;
     }
+    &.tags {
+      font-size: 12px;
+      padding: 0px 10px;
+    }
   }
 `;
 
-const JournalButton = ({ handleClick, ...rest }) => {
+const JournalButton = ({
+  handleClick,
+  bgColor,
+  color,
+  borderColor,
+  ...rest
+}) => {
   return (
     <BtnContainer className="btnContainer">
-      <input type="button" onClick={handleClick} {...rest} />
+      <input
+        style={{ backgroundColor: bgColor, color, borderColor }}
+        type="button"
+        onClick={handleClick}
+        {...rest}
+      />
     </BtnContainer>
   );
 };

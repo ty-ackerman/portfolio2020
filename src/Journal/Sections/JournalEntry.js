@@ -5,6 +5,7 @@ import Fade from "../../Components/Fade";
 import PostTitle from "../../Components/PostTitle";
 import JournalButton from "../Components/JournalButton";
 import JournalPrompts from "./JournalPrompts";
+import JournalTags from "./JournalTags";
 
 import SubmitContainer from "./SubmitContainer";
 
@@ -21,7 +22,6 @@ export default function JournalEntry() {
   navigator.geolocation.getCurrentPosition((res) => console.log(res.coords));
 
   const toggleReminder = () => {
-    console.log("clicked");
     setReminder(!reminder);
   };
 
@@ -37,7 +37,7 @@ export default function JournalEntry() {
         />
         <JournalPrompts />
         <JournalPrompts />
-
+        <JournalTags />
         {/*  This is where I will be adding error handling (i.e. change "All Done" to "Fill in missing information") */}
         <SubmitContainer />
       </div>
