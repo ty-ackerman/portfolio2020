@@ -8,6 +8,7 @@ const TextBox = styled.div`
     padding: 0 10px;
     -webkit-appearance: none
     -webkit-border-radius: 0px;
+    border-radius: 0px;
   }
 `;
 

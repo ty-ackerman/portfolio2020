@@ -12,7 +12,7 @@ import SubmitContainer from "./SubmitContainer";
 export default function JournalEntry() {
   const type = useParams();
 
-  const [journalType, setJournalType] = useState("");
+  const [, setJournalType] = useState("");
   const [reminder, setReminder] = useState(false);
 
   useEffect(() => {
