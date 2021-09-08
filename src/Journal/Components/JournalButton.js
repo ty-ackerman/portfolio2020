@@ -8,7 +8,8 @@ const BtnContainer = styled.div`
     background-color: white;
     color: black;
     border: 1px solid black;
-    border-radius: 0px;
+    -webkit-appearance: none
+    -webkit-border-radius: 0px;
 
     @media (min-width: 1301px) {
       padding: 5px 40px;

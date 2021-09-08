@@ -6,7 +6,8 @@ const TextBox = styled.div`
     border: 1px solid black;
     font-size: 12px;
     padding: 0 10px;
-    border-radius: 0px;
+    -webkit-appearance: none
+    -webkit-border-radius: 0px;
   }
 `;
 
