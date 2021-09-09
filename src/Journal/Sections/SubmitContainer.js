@@ -26,7 +26,7 @@ const SubmitContainer = () => {
       <div className="prompt">All Done?</div>
       <div className="btnContainer">
         <JournalButton value="cancel" />
-        <JournalButton value="submit" />
+        <JournalButton value="submit" bgColor="#dadada" />
       </div>
     </SbmtCntr>
   );
