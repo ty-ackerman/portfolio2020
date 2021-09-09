@@ -11,7 +11,7 @@ const BtnContainer = styled.div`
     -webkit-appearance: none
     -webkit-border-radius: 0px;
     border-radius: 0;
-
+    flex-grow: 0;
     @media (min-width: 1301px) {
       padding: 5px 40px;
     }

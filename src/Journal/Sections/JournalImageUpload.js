@@ -5,18 +5,16 @@ import JournalInputName from "../Components/JournalInputName";
 import JournalTextField from "../Components/JournalTextField";
 
 const ImageSubmitContainer = styled.div`
+  width: 48%;
   .urlInput {
     display: flex;
     margin-bottom: 5px;
-    input[type="text"] {
-      width: 132.3px; // To Fix Later
-    }
-    & > *:first-child {
-      margin-right: 2px;
+    & > *:last-child {
+      margin-left: 2px;
     }
   }
   .imgContainer {
-    width: 50%;
+    width: 100%;
     img {
       max-width: 100%;
     }

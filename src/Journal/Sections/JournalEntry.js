@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import styled from "styled-components";
 
 import Fade from "../../Components/Fade";
 import PostTitle from "../../Components/PostTitle";
 import JournalButton from "../Components/JournalButton";
 import JournalImageUpload from "./JournalImageUpload";
+import JournalLocation from "./JournalLocation";
 import JournalPrompts from "./JournalPrompts";
 import JournalTags from "./JournalTags";
 
 import SubmitContainer from "./SubmitContainer";
+
+const FlexContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 export default function JournalEntry() {
   const type = useParams();
@@ -36,7 +43,10 @@ export default function JournalEntry() {
           handleClick={toggleReminder}
           className={`${reminder && "active"} small`}
         />
-        <JournalImageUpload />
+        <FlexContainer className="flex-container">
+          <JournalImageUpload />
+          <JournalLocation />
+        </FlexContainer>
         <JournalPrompts />
         <JournalPrompts />
         <JournalTags />
