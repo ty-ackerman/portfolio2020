@@ -8,16 +8,22 @@ const TextBox = styled.div`
     padding: 0 10px;
     -webkit-appearance: none
     -webkit-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 0;
+    -moz-appearance: none;
+    appearance: none;
   }
 `;
 
-const JournalTextField = ({ autoFocus }) => {
+const JournalTextField = ({ autoFocus, ...rest }) => {
   return (
     <TextBox>
-      <input autoFocus type="text" />
+      <input autoFocus type="text" {...rest}/>
     </TextBox>
   );
 };
+
+JournalTextField.defaultProps = {
+  placeholder: "Enter Text"
+}
 
 export default JournalTextField;

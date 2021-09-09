@@ -6,8 +6,9 @@ import WritingListItem from '../Components/WritingListItem'
 
 import styled from 'styled-components'
 
+const WritingContainer = styled.div``
+
 export default function Writing () {
-  const WritingContainer = styled.div``
 
   useEffect(() => {
     window.scrollTo(0, 0)

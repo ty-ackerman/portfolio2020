@@ -7,8 +7,7 @@ import { faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 import { NavLink } from 'react-router-dom'
 
-export default function Header () {
-  const HeaderWrapper = styled.header`
+const HeaderWrapper = styled.header`
     padding: 50px 40px;
     padding-right: 0;
     position: fixed;
@@ -111,6 +110,8 @@ export default function Header () {
       }
     }
   `
+
+export default function Header () {
 
   return (
     <HeaderWrapper>

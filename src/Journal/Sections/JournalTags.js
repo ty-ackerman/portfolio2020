@@ -34,7 +34,7 @@ const JournalTags = ({ tags }) => {
       </div>
       {addTag ? (
         <div className="addTagContainer">
-          <JournalTextField autoFocus />
+          <JournalTextField autoFocus placeholder="Enter New Tag" />
           <JournalButton value="Add" className="tags" bgColor="#dadada" />
         </div>
       ) : (

@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export default function Footer() {
-	const Footer = styled.footer`
+const FooterContainer = styled.footer`
 		margin-top: 50px;
 		margin-left: 340px;
 		margin-right: 40px;
@@ -35,8 +34,9 @@ export default function Footer() {
 		}
 	`;
 
+export default function Footer() {
 	return (
-		<Footer>
+		<FooterContainer>
 			<div className="footer-top">
 				<ul>
 					<a href="mailto:me@tylerackerman.io?subject=Sweet Website Ty!">
@@ -55,6 +55,6 @@ export default function Footer() {
 				</ul>
 			</div>
 			<div className="footer-bottom">Tyler Ackerman 2018-2021</div>
-		</Footer>
+		</FooterContainer>
 	);
 }
