@@ -6,6 +6,7 @@ import JournalTextField from "../Components/JournalTextField";
 import JournalTag from "./JournalTag";
 
 const TagContainer = styled.div`
+  width: 48%;
   .tagBtnContainer {
     display: flex;
     flex-flow: row wrap;

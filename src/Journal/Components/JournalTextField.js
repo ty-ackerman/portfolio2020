@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const TextBox = styled.div`
-  flex-grow: 2;
+  &.fullWidth {
+    flex-grow: 2;
+  }
   input {
     min-width: 0;
     width: 100%;
@@ -17,9 +19,9 @@ const TextBox = styled.div`
   }
 `;
 
-const JournalTextField = ({ autoFocus, handleChange, ...rest }) => {
+const JournalTextField = ({ autoFocus, handleChange, className, ...rest }) => {
   return (
-    <TextBox>
+    <TextBox className={className}>
       <input autoFocus type="text" {...rest} onChange={handleChange} />
     </TextBox>
   );

@@ -8,12 +8,15 @@ const InputName = styled.div`
     font-size: 12px;
     text-transform: capitalize;
   }
+  p.sentence {
+    text-transform: none;
+  }
 `;
 
-const JournalInputName = ({ inputName }) => {
+const JournalInputName = ({ inputName, className }) => {
   return (
     <InputName>
-      <p>{inputName}</p>
+      <p className={className}>{inputName}</p>
     </InputName>
   );
 };

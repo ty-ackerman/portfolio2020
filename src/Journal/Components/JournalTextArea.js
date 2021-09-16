@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const TextAreaContainer = styled.div`
     textarea {
@@ -11,24 +11,26 @@ const TextAreaContainer = styled.div`
         -moz-appearance: none;
         appearance: none;
         font-size: 12px;
+        padding: 0 10px;
+        border: 1px solid black;
     }
 
     textarea:focus {
         outline: none;
     }
-`
+`;
 
-const JournalTextArea = ({handleChange, ...rest}) => {
-    return (
-        <TextAreaContainer>
-            <textarea {...rest} onChange={handleChange}/>
-        </TextAreaContainer>
-    )
-}
+const JournalTextArea = ({ handleChange, ...rest }) => {
+  return (
+    <TextAreaContainer>
+      <textarea {...rest} onChange={handleChange} />
+    </TextAreaContainer>
+  );
+};
 
-JournalTextArea.defaultProps = { 
-    placeholder: "Enter Text",
-    handleChange: (e) => console.log(e.target.value)
-}
+JournalTextArea.defaultProps = {
+  placeholder: "Enter Text",
+  handleChange: (e) => console.log(e.target.value),
+};
 
-export default JournalTextArea
+export default JournalTextArea;

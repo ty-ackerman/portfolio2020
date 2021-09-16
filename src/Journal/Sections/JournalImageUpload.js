@@ -9,7 +9,7 @@ const ImageSubmitContainer = styled.div`
   .urlInput {
     display: flex;
     margin-bottom: 5px;
-    & > *:last-child {
+    input[type="button"] {
       margin-left: 2px;
     }
   }
@@ -36,6 +36,7 @@ const JournalImageUpload = () => {
           placeholder="Paste Image URL"
           handleChange={handleChange}
           value={image}
+          className="fullWidth"
         />
         {image && (
           <JournalButton

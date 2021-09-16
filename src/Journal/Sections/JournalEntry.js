@@ -6,8 +6,10 @@ import Fade from "../../Components/Fade";
 import PostTitle from "../../Components/PostTitle";
 import JournalButton from "../Components/JournalButton";
 import JournalImageUpload from "./JournalImageUpload";
-import JournalLocation from "./JournalLocation";
-import JournalPrompts from "./JournalPrompts";
+import JournalPeople from "./JournalPeople";
+// import JournalLocation from "./JournalLocation";
+// import JournalLocationSimplified from "./JournalLocationSimplified";
+import JournalPrompt from "./JournalPrompt";
 import JournalTags from "./JournalTags";
 
 import SubmitContainer from "./SubmitContainer";
@@ -23,11 +25,11 @@ export default function JournalEntry() {
   const [, setJournalType] = useState("");
   const [reminder, setReminder] = useState(false);
 
+  const [selectedPeople, setSelectedPeople] = useState([]);
+
   useEffect(() => {
     setJournalType(type);
   }, [type]);
-
-  navigator.geolocation.getCurrentPosition((res) => console.log(res.coords));
 
   const toggleReminder = () => {
     setReminder(!reminder);
@@ -43,13 +45,35 @@ export default function JournalEntry() {
           handleClick={toggleReminder}
           className={`${reminder && "active"} small`}
         />
+        <JournalPrompt
+          question="Title"
+          placeholder="Enter a captivating title"
+        />
+        <JournalPrompt question="Location" placeholder="Where u at doe" />
         <FlexContainer className="flex-container">
           <JournalImageUpload />
-          <JournalLocation />
+          {/* <JournalLocation /> */}
+          <JournalTags />
         </FlexContainer>
-        <JournalPrompts />
-        <JournalPrompts />
-        <JournalTags />
+        <JournalPrompt
+          className="sentence"
+          question="What were you doing?"
+          textArea
+        />
+        <JournalPrompt
+          className="sentence"
+          question="Anything worth remembering?"
+          textArea
+        />
+        <JournalPeople
+          selectedPeople={selectedPeople}
+          setSelectedPeople={setSelectedPeople}
+        />
+        <JournalPrompt
+          className="sentence"
+          question="Additional notes?"
+          textArea
+        />
         {/*  This is where I will be adding error handling (i.e. change "All Done" to "Fill in missing information") */}
         <SubmitContainer />
       </div>
