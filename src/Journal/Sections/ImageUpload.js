@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import JournalButton from "../Components/JournalButton";
-import JournalInputName from "../Components/JournalInputName";
-import JournalTextField from "../Components/JournalTextField";
+import Button from "../Components/Button";
+import InputName from "../Components/InputName";
+import TextField from "../Components/TextField";
 
 const ImageSubmitContainer = styled.div`
   width: 48%;
@@ -21,39 +21,33 @@ const ImageSubmitContainer = styled.div`
   }
 `;
 
-const JournalImageUpload = () => {
-  const [image, setImage] = useState("");
-
-  const handleChange = (e) => {
-    setImage(e.target.value);
-  };
-
+const ImageUpload = ({ picture, handleChange }) => {
   return (
     <ImageSubmitContainer>
-      <JournalInputName inputName="Picture Upload" />
+      <InputName inputName="Picture Upload" />
       <div className="urlInput">
-        <JournalTextField
+        <TextField
           placeholder="Paste Image URL"
           handleChange={handleChange}
-          value={image}
+          value={picture}
           className="fullWidth"
         />
-        {image && (
-          <JournalButton
+        {picture && (
+          <Button
             value="Clear"
             className="tags"
             bgColor="#dadada"
-            handleClick={() => setImage("")}
+            handleClick={() => handleChange("")}
           />
         )}
       </div>
-      {image && (
+      {picture && (
         <div className="imgContainer">
-          <img src={image} alt="" />
+          <img src={picture} alt="" />
         </div>
       )}
     </ImageSubmitContainer>
   );
 };
 
-export default JournalImageUpload;
+export default ImageUpload;

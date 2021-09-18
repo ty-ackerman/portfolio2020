@@ -20,7 +20,7 @@ const TextAreaContainer = styled.div`
     }
 `;
 
-const JournalTextArea = ({ handleChange, ...rest }) => {
+const TextArea = ({ handleChange, ...rest }) => {
   return (
     <TextAreaContainer>
       <textarea {...rest} onChange={handleChange} />
@@ -28,9 +28,9 @@ const JournalTextArea = ({ handleChange, ...rest }) => {
   );
 };
 
-JournalTextArea.defaultProps = {
+TextArea.defaultProps = {
   placeholder: "Enter Text",
   handleChange: (e) => console.log(e.target.value),
 };
 
-export default JournalTextArea;
+export default TextArea;

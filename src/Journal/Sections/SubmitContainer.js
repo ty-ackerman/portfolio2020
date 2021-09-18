@@ -1,5 +1,5 @@
 import React from "react";
-import JournalButton from "../Components/JournalButton";
+import Button from "../Components/Button";
 import styled from "styled-components";
 
 const SbmtCntr = styled.div`
@@ -20,13 +20,13 @@ const SbmtCntr = styled.div`
   }
 `;
 
-const SubmitContainer = () => {
+const SubmitContainer = ({ handleSubmit }) => {
   return (
     <SbmtCntr>
       <div className="prompt">All Done?</div>
       <div className="btnContainer">
-        <JournalButton value="cancel" />
-        <JournalButton value="submit" bgColor="#dadada" />
+        <Button value="cancel" />
+        <Button value="submit" bgColor="#dadada" onClick={handleSubmit} />
       </div>
     </SbmtCntr>
   );

@@ -19,17 +19,22 @@ const TextBox = styled.div`
   }
 `;
 
-const JournalTextField = ({ autoFocus, handleChange, className, ...rest }) => {
+const TextField = ({ autoFocus, handleChange, className, ...rest }) => {
   return (
     <TextBox className={className}>
-      <input autoFocus type="text" {...rest} onChange={handleChange} />
+      <input
+        autoFocus
+        type="text"
+        {...rest}
+        onChange={(e) => handleChange(e.target.value)}
+      />
     </TextBox>
   );
 };
 
-JournalTextField.defaultProps = {
+TextField.defaultProps = {
   placeholder: "Enter Text",
   handleChange: (e) => console.log("Default onChange", e.target),
 };
 
-export default JournalTextField;
+export default TextField;

@@ -45,13 +45,7 @@ const BtnContainer = styled.div`
   }
 `;
 
-const JournalButton = ({
-  handleClick,
-  bgColor,
-  color,
-  borderColor,
-  ...rest
-}) => {
+const Button = ({ handleClick, bgColor, color, borderColor, ...rest }) => {
   return (
     <BtnContainer className="btnContainer">
       <input
@@ -64,10 +58,10 @@ const JournalButton = ({
   );
 };
 
-JournalButton.defaultProps = {
+Button.defaultProps = {
   handleClick: () => console.log("Clicked"),
   value: "Default",
   name: "default",
 };
 
-export default JournalButton;
+export default Button;

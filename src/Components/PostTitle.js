@@ -6,6 +6,7 @@ const PostTitleContainer = styled.div`
     font-size: 35px;
     font-weight: 500;
     margin-bottom: 10px;
+    text-transform: capitalize;
   }
   .subtitle {
     color: #797979;

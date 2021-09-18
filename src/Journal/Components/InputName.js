@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const InputName = styled.div`
+const InputNameContainer = styled.div`
   margin-top: 10px;
   p {
     color: #797979;
@@ -13,16 +13,16 @@ const InputName = styled.div`
   }
 `;
 
-const JournalInputName = ({ inputName, className }) => {
+const InputName = ({ inputName, className }) => {
   return (
-    <InputName>
+    <InputNameContainer>
       <p className={className}>{inputName}</p>
-    </InputName>
+    </InputNameContainer>
   );
 };
 
-JournalInputName.defaultProps = {
+InputName.defaultProps = {
   inputName: "Input Name",
 };
 
-export default JournalInputName;
+export default InputName;
