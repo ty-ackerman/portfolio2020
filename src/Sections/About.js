@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react'
-import Title from '../Components/Title'
-import AboutText from '../Components/AboutText'
-import Fade from '../Components/Fade'
+import React, { useEffect } from "react";
+import Title from "../components/Title";
+import AboutText from "../components/AboutText";
+import Fade from "../components/Fade";
 
-export default function About () {
+export default function About() {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  })
+    window.scrollTo(0, 0);
+  });
 
   return (
     <Fade show>
-      <div className='section'>
-        <Title title='About' />
+      <div className="section">
+        <Title title="About" />
         <AboutText />
       </div>
     </Fade>
-  )
+  );
 }

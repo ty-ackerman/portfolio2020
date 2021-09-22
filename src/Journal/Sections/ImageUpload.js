@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Button from "../Components/Button";
-import InputName from "../Components/InputName";
-import TextField from "../Components/TextField";
+import Button from "../components/Button";
+import InputName from "../components/InputName";
+import TextField from "../components/TextField";
 
 const ImageSubmitContainer = styled.div`
   width: 48%;

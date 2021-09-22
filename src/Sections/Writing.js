@@ -1,30 +1,31 @@
-import React, { useEffect } from 'react'
-import Title from '../Components/Title'
-import Fade from '../Components/Fade'
-import Posts from '../Writing/Posts.json'
-import WritingListItem from '../Components/WritingListItem'
+import React, { useEffect } from "react";
+import Title from "../components/Title";
+import Fade from "../components/Fade";
+import Posts from "../writing/Posts.json";
+import WritingListItem from "../components/WritingListItem";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
-const WritingContainer = styled.div``
+const WritingContainer = styled.div``;
 
-export default function Writing () {
-
+export default function Writing() {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  })
+    window.scrollTo(0, 0);
+  });
 
   return (
     <Fade show>
-      <WritingContainer className='section'>
+      <WritingContainer className="section">
         <Title
-          title='Writing'
-          subtitle='Notes about life, work, and everything in between.'
+          title="Writing"
+          subtitle="Notes about life, work, and everything in between."
         />
-        {Posts.map(post => {
-          return !post.hidden && <WritingListItem key={post.path} post={post} />
+        {Posts.map((post) => {
+          return (
+            !post.hidden && <WritingListItem key={post.path} post={post} />
+          );
         })}
       </WritingContainer>
     </Fade>
-  )
+  );
 }

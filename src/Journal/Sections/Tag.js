@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../Components/Button";
+import Button from "../components/Button";
 
 const Tag = ({ tag, setTags, tags }) => {
   const [active, setActive] = useState(false);

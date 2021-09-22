@@ -1,17 +1,17 @@
 import React from "react";
 
-import Header from "./Sections/Header";
-import Home from "./Sections/Home";
-import Footer from "./Sections/Footer";
+import Header from "./sections/Header";
+import Home from "./sections/Home";
+import Footer from "./sections/Footer";
 
 import { Route, Switch } from "react-router-dom";
-import About from "./Sections/About";
-import Projects from "./Sections/Projects";
-import Writing from "./Sections/Writing";
-import WritingPost from "./Sections/WritingPost";
-import Tattoo from "./Sections/Tattoo";
-import AddContent from "./Sections/AddContent";
-import JournalEntry from "./Journal/Sections/JournalEntry";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Writing from "./sections/Writing";
+import WritingPost from "./sections/WritingPost";
+import Tattoo from "./sections/Tattoo";
+import AddContent from "./sections/AddContent";
+import JournalEntry from "./journal/sections/JournalEntry";
 
 function App() {
   return (

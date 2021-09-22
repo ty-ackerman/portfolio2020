@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import InputName from "../Components/InputName";
-import TextField from "../Components/TextField";
-import Button from "../Components/Button";
+import InputName from "../components/InputName";
+import TextField from "../components/TextField";
+import Button from "../components/Button";
 import styled from "styled-components";
 
 // This will come from API
@@ -69,6 +69,7 @@ const People = ({ selectedPeople, setSelectedPeople }) => {
       firstName: name[0],
       lastName: name.slice(1).join(" ") || "",
       id: new Date().getTime(),
+      posts: [],
     };
     setSelectedPeople([...selectedPeople, newPerson]);
     setSearchTerm("");
@@ -89,7 +90,7 @@ const People = ({ selectedPeople, setSelectedPeople }) => {
       <div className="searchBar">
         <TextField
           placeholder="Enter Name"
-          handleChange={(e) => setSearchTerm(e.target.value)}
+          handleChange={setSearchTerm}
           className="fullWidth"
           value={searchTerm}
         />

@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import fire from '../Components/fire'
-import Fade from '../Components/Fade'
-import TattooContent from '../Components/TattooContent'
-import { Swipeable } from 'react-swipeable'
-import { withRouter } from 'react-router-dom'
-import styled from 'styled-components'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import fire from "../components/fire";
+import Fade from "../components/Fade";
+import TattooContent from "../components/TattooContent";
+import { Swipeable } from "react-swipeable";
+import { withRouter } from "react-router-dom";
+import styled from "styled-components";
 
 const content =
-  'The hardest part about getting a tattoo is choosing a permanent design. My solution - a QR code that scans to the content of my choosing by linking it to my personal website. To put it more simply, I can change what the code displays with only a few clicks.'
+  "The hardest part about getting a tattoo is choosing a permanent design. My solution - a QR code that scans to the content of my choosing by linking it to my personal website. To put it more simply, I can change what the code displays with only a few clicks.";
 
-const title = 'QR Code Tattoo'
-const description = 'Permanent Design - Temporary Content'
+const title = "QR Code Tattoo";
+const description = "Permanent Design - Temporary Content";
 
 const PostContentsStyled = styled.div`
   display: flex;
@@ -92,62 +92,62 @@ const PostContentsStyled = styled.div`
       padding-left: 0;
     }
   }
-`
+`;
 
 const SectionStyled = styled.div`
   display: flex;
-`
+`;
 
 export class Tattoo extends Component {
-  constructor () {
-    super()
+  constructor() {
+    super();
     this.state = {
-      content: '',
-      type: '',
-      fullScreen: true
-    }
+      content: "",
+      type: "",
+      fullScreen: true,
+    };
   }
 
-  async componentDidMount () {
-    window.scrollTo(0, 0)
+  async componentDidMount() {
+    window.scrollTo(0, 0);
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       )
     ) {
-      this.setState({ fullScreen: true })
+      this.setState({ fullScreen: true });
     } else {
-      this.setState({ fullScreen: false })
+      this.setState({ fullScreen: false });
     }
-    await this.getData()
+    await this.getData();
   }
 
   getData = async () => {
-    const dbRef = await fire.database().ref('/')
-    dbRef.on('value', async snapshot => {
-      const data = await snapshot.val()
-      this.setState({ ...data })
-    })
-  }
+    const dbRef = await fire.database().ref("/");
+    dbRef.on("value", async (snapshot) => {
+      const data = await snapshot.val();
+      this.setState({ ...data });
+    });
+  };
 
   handleSwipe = () => {
-    this.props.history.push('/tattoo/add')
-  }
+    this.props.history.push("/tattoo/add");
+  };
 
   handleClick = () => {
-    this.state.fullScreen && this.setState({ fullScreen: false })
-  }
+    this.state.fullScreen && this.setState({ fullScreen: false });
+  };
 
-  render () {
-    const { fullScreen } = this.state
-    const { redirect } = this.props
+  render() {
+    const { fullScreen } = this.state;
+    const { redirect } = this.props;
 
     if (fullScreen && redirect) {
       return (
-        <Swipeable onSwipedLeft={eventData => this.handleSwipe()}>
+        <Swipeable onSwipedLeft={(eventData) => this.handleSwipe()}>
           <Fade show>
-            <div className='section' onClick={this.handleClick}>
-              <div className='post-contents'>
+            <div className="section" onClick={this.handleClick}>
+              <div className="post-contents">
                 <TattooContent
                   content={this.state.content}
                   type={this.state.type}
@@ -157,25 +157,25 @@ export class Tattoo extends Component {
             </div>
           </Fade>
         </Swipeable>
-      )
+      );
     }
     return (
-      <Swipeable onSwipedLeft={eventData => this.handleSwipe()}>
+      <Swipeable onSwipedLeft={(eventData) => this.handleSwipe()}>
         <Fade show>
-          <SectionStyled className='section' onClick={this.handleClick}>
+          <SectionStyled className="section" onClick={this.handleClick}>
             <PostContentsStyled>
-              <div className='left'>
+              <div className="left">
                 <h2>{title}</h2>
                 <h3>{description}</h3>
-                <div className='content-info'>{content}</div>
-                <div className='learn-more'>
-                  <div className='div'>
-                    To learn more about the tattoo,{' '}
-                    <Link to='/writing/post?id=tattoo'>click here</Link>.
+                <div className="content-info">{content}</div>
+                <div className="learn-more">
+                  <div className="div">
+                    To learn more about the tattoo,{" "}
+                    <Link to="/writing/post?id=tattoo">click here</Link>.
                   </div>
                 </div>
               </div>
-              <div className='right'>
+              <div className="right">
                 <TattooContent
                   content={this.state.content}
                   type={this.state.type}
@@ -186,8 +186,8 @@ export class Tattoo extends Component {
           </SectionStyled>
         </Fade>
       </Swipeable>
-    )
+    );
   }
 }
 
-export default withRouter(Tattoo)
+export default withRouter(Tattoo);

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 // import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import JournalDataService from "../../services/journal";
 
-import Fade from "../../Components/Fade";
-import PostTitle from "../../Components/PostTitle";
-import Button from "../Components/Button";
+import Fade from "../../components/Fade";
+import PostTitle from "../../components/PostTitle";
+import Button from "../components/Button";
 import ImageUpload from "./ImageUpload";
 import People from "./People";
 import Prompt from "./Prompt";
@@ -27,22 +28,56 @@ export default function Entry() {
   const [picture, setPicture] = useState("");
   const [time, setTime] = useState(new Date().getTime());
 
-  const [selectedPeople, setSelectedPeople] = useState([]);
-
   const toggleReminder = () => {
     setReminder(!reminder);
+  };
+
+  // Restaurant Backend Database Setup
+
+  useEffect(() => {
+    retrieveRestaurants();
+    // retrieveCuisines();
+  }, []);
+
+  const retrieveRestaurants = async () => {
+    try {
+      console.log(JournalDataService.getAllLocations());
+      // console.log(
+      //   await JournalDataService.updateLocation({
+      //     address: "1703-20 Minowan Miikan",
+      //     city: "Toronto",
+      //     country: "Canada",
+      //     date: "1632277694706",
+      //     lat: "21354321",
+      //     long: "231351321",
+      //     name: "Home Sweet Home",
+      //     _id: "614a94beb435654ce5ac6c95",
+      //   })
+      // );
+      // console.log(await JournalDataService.addLocation({ name: "Home" }));
+      // console.log(
+      //   await JournalDataService.addPerson({
+      //     firstName: "Toby",
+      //     lastName: "Ackerman",
+      //   })
+      // );
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   // Tag
   const [tags, setTags] = useState([]);
 
-  const addPostToTags = (post) => {
-    const newTags = JSON.parse(JSON.stringify(tags));
-    newTags.map((tag) => (tag.posts = [...tag.posts, post]));
-    setTags(newTags);
-    post.tags = newTags;
-    return post;
+  const addPostToState = (post, prevState, setNewState) => {
+    const newState = JSON.parse(JSON.stringify(prevState));
+    newState.map((obj) => (obj.posts = [...obj.posts, post]));
+    setNewState(newState);
+    return newState;
   };
+
+  // People
+  const [selectedPeople, setSelectedPeople] = useState([]);
 
   // --------------------------- //
 
@@ -54,9 +89,11 @@ export default function Entry() {
       picture,
       time,
       id: `post-${new Date().getTime()}`,
+      type: "general",
     };
-    const entryWithTags = addPostToTags(entry);
-    setPost(entryWithTags);
+    entry.tags = addPostToState(entry, tags, setTags);
+    entry.people = addPostToState(entry, selectedPeople, setSelectedPeople);
+    setPost(entry);
   };
 
   // Where we submit post to database
@@ -98,7 +135,6 @@ export default function Entry() {
         <FlexContainer className="flex-container">
           <ImageUpload handleChange={setPicture} picture={picture} />
           <TimeEntry handleChange={setTime} />
-          {/* <Location /> */}
         </FlexContainer>
         <Tags tags={tags} setTags={setTags} />
         <People

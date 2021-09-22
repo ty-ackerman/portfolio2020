@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import InputName from "../Components/InputName";
-import Button from "../Components/Button";
+import InputName from "../components/InputName";
+import Button from "../components/Button";
 import styled from "styled-components";
 
 const TimeContainer = styled.div`

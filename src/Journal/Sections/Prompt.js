@@ -1,7 +1,7 @@
 import React from "react";
-import InputName from "../Components/InputName";
-import TextArea from "../Components/TextArea";
-import TextField from "../Components/TextField";
+import InputName from "../components/InputName";
+import TextArea from "../components/TextArea";
+import TextField from "../components/TextField";
 
 const Prompt = ({ question, placeholder, textArea, handleChange, ...rest }) => {
   return (
