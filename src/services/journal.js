@@ -20,6 +20,14 @@ class JournalDataService {
   updateLocation(data) {
     return http.put("/location-edit", data);
   }
+
+  getScenarios() {
+    return http.get("scenarios");
+  }
+
+  getScenario(id) {
+    return http.get(`scenario?id=${id}`);
+  }
   //   get(id) {
   //     return http.get(`/restaurant?id=${id}`);
   //   }

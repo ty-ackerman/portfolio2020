@@ -23,7 +23,7 @@ const TextField = ({ autoFocus, handleChange, className, ...rest }) => {
   return (
     <TextBox className={className}>
       <input
-        autoFocus
+        autoFocus={autoFocus}
         type="text"
         {...rest}
         onChange={(e) => handleChange(e.target.value)}

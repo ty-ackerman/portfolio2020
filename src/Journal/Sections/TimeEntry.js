@@ -23,10 +23,10 @@ const TimeContainer = styled.div`
     padding: 0 10px;
     border: 1px solid black;
     height: 20px;
+    background-color: white;
+    color: black;
     &.hidden {
         opacity: 0;
-        //   border: 1px solid white;
-        //   color: white;
       }
   }
   

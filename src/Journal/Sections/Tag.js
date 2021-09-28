@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
 
-const Tag = ({ tag, setTags, tags }) => {
-  const [active, setActive] = useState(false);
+const Tag = ({ tag, setTags, tags, initalActive }) => {
+  const [active, setActive] = useState(initalActive);
 
   const handleClick = async () => {
     setTags([...tags, tag]);
@@ -10,13 +10,13 @@ const Tag = ({ tag, setTags, tags }) => {
   };
 
   const handleUnclick = () => {
-    setTags(tags.filter((item) => item.id !== tag.id));
+    setTags(tags.filter((item) => item !== tag));
     setActive(!active);
   };
 
   return (
     <Button
-      value={tag.name}
+      value={tag}
       className={`tags ${active && "active"}`}
       handleClick={!active ? handleClick : handleUnclick}
     />

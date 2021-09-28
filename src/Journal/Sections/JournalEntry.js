@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
+import React, { useState, useEffect, useCallback } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import JournalDataService from "../../services/journal";
 
@@ -13,6 +13,7 @@ import Tags from "./Tags";
 
 import SubmitContainer from "./SubmitContainer";
 import TimeEntry from "./TimeEntry";
+import Dropdown from "../components/Dropdown";
 
 const FlexContainer = styled.div`
   display: flex;
@@ -21,60 +22,55 @@ const FlexContainer = styled.div`
 
 export default function Entry() {
   // Post
-  const [post, setPost] = useState({});
+  const { scenario_id } = useParams();
+  const [scenario, setScenario] = useState({});
+  const [scenarios, setScenarios] = useState([]);
+  const [entry, setPost] = useState({ entry_id: new Date().getTime() });
   const [reminder, setReminder] = useState(false);
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
   const [picture, setPicture] = useState("");
   const [time, setTime] = useState(new Date().getTime());
+  const [questions, setQuestions] = useState([]);
+  const [answers, setAnswers] = useState([]);
 
   const toggleReminder = () => {
     setReminder(!reminder);
   };
 
-  // Restaurant Backend Database Setup
+  // Tag
+  const [selectedTags, setSelectedTags] = useState([]);
+  const [allTags, setAllTags] = useState([]);
 
-  useEffect(() => {
-    retrieveRestaurants();
-    // retrieveCuisines();
-  }, []);
-
-  const retrieveRestaurants = async () => {
+  const getInitialScenario = useCallback(async () => {
     try {
-      console.log(JournalDataService.getAllLocations());
-      // console.log(
-      //   await JournalDataService.updateLocation({
-      //     address: "1703-20 Minowan Miikan",
-      //     city: "Toronto",
-      //     country: "Canada",
-      //     date: "1632277694706",
-      //     lat: "21354321",
-      //     long: "231351321",
-      //     name: "Home Sweet Home",
-      //     _id: "614a94beb435654ce5ac6c95",
-      //   })
-      // );
-      // console.log(await JournalDataService.addLocation({ name: "Home" }));
-      // console.log(
-      //   await JournalDataService.addPerson({
-      //     firstName: "Toby",
-      //     lastName: "Ackerman",
-      //   })
-      // );
+      const initialScenario = await JournalDataService.getScenario(scenario_id);
+      const allScenarios = await JournalDataService.getScenarios();
+
+      setScenario(initialScenario.data);
+      setAllTags(initialScenario.data.frequentTags);
+      setScenarios(allScenarios.data);
     } catch (error) {
       console.error(error);
     }
-  };
+  }, [scenario_id]);
 
-  // Tag
-  const [tags, setTags] = useState([]);
+  useEffect(() => {
+    getInitialScenario();
+  }, [getInitialScenario]);
 
-  const addPostToState = (post, prevState, setNewState) => {
-    const newState = JSON.parse(JSON.stringify(prevState));
-    newState.map((obj) => (obj.posts = [...obj.posts, post]));
-    setNewState(newState);
-    return newState;
-  };
+  const onScenarioChange = useCallback(async () => {
+    if (scenario._id) {
+      const newScenario = await JournalDataService.getScenario(scenario._id);
+      const { data } = newScenario;
+      setQuestions(data.questions);
+      setAllTags(data.frequentTags);
+    }
+  }, [scenario._id]);
+
+  useEffect(() => {
+    onScenarioChange();
+  }, [scenario, onScenarioChange]);
 
   // People
   const [selectedPeople, setSelectedPeople] = useState([]);
@@ -82,32 +78,54 @@ export default function Entry() {
   // --------------------------- //
 
   const handleSubmit = async () => {
-    const entry = {
-      reminder,
-      title: title || "Journal Entry",
-      location,
-      picture,
-      time,
-      id: `post-${new Date().getTime()}`,
-      type: "general",
-    };
-    entry.tags = addPostToState(entry, tags, setTags);
-    entry.people = addPostToState(entry, selectedPeople, setSelectedPeople);
-    setPost(entry);
+    // const entry = {
+    //   reminder,
+    //   title: title || "Journal Entry",
+    //   location,
+    //   picture,
+    //   time,
+    //   id: `post-${new Date().getTime()}`,
+    //   type: "general",
+    // };
+    // entry.tags = addPostToState(entry, tags, setTags);
+    // entry.people = addPostToState(entry, selectedPeople, setSelectedPeople);
+    // setPost(entry);
   };
 
   // Where we submit post to database
-  useEffect(() => {
-    Object.keys(post).length && console.log(post);
-  }, [post]);
-
-  // Will use this code when I finalize journal types
-
-  // const type = useParams();
-  // const [, setJournalType] = useState("");
   // useEffect(() => {
-  //   setJournalType(type);
-  // }, [type]);
+  //   Object.keys(post).length && console.log(post);
+  // }, [post]);
+
+  // const addPostToState = (post, prevState, setNewState) => {
+  //   const newState = JSON.parse(JSON.stringify(prevState));
+  //   newState.map((obj) => (obj.posts = [...obj.posts, post]));
+  //   setNewState(newState);
+  //   return newState;
+  // };
+
+  const formatAnswers = (answer, question) => {
+    const answerDoc = {
+      response: answer,
+      question_id: question.question_id,
+      entry_id: entry.entry_id,
+      answer_id: new Date().getTime(),
+    };
+
+    if (
+      answers.filter((answer) => answer.question_id === question.question_id)
+        .length === 0
+    ) {
+      setAnswers([...answers, answerDoc]);
+    } else {
+      setAnswers([
+        ...answers.filter(
+          (answer) => answer.question_id !== question.question_id
+        ),
+        answerDoc,
+      ]);
+    }
+  };
 
   return (
     <Fade show>
@@ -127,6 +145,14 @@ export default function Entry() {
           placeholder="Enter a captivating title"
           handleChange={setTitle}
         />
+        {scenarios.length > 0 && (
+          <Dropdown
+            title="Scenario Type"
+            list={scenarios}
+            defaultId={scenario._id}
+            setSelected={setScenario}
+          />
+        )}
         <Prompt
           question="Location"
           placeholder="Where u at doe"
@@ -136,18 +162,31 @@ export default function Entry() {
           <ImageUpload handleChange={setPicture} picture={picture} />
           <TimeEntry handleChange={setTime} />
         </FlexContainer>
-        <Tags tags={tags} setTags={setTags} />
+        {
+          <Tags
+            allTags={allTags}
+            setAllTags={setAllTags}
+            selectedTags={selectedTags}
+            setSelectedTags={setSelectedTags}
+          />
+        }
         <People
           selectedPeople={selectedPeople}
           setSelectedPeople={setSelectedPeople}
         />
-        <Prompt className="sentence" question="What were you doing?" textArea />
-        <Prompt
-          className="sentence"
-          question="Anything worth remembering?"
-          textArea
-        />
-        <Prompt className="sentence" question="Additional notes?" textArea />
+        {questions &&
+          questions.map((question) => {
+            return (
+              <Prompt
+                key={question.question_id}
+                className="sentence"
+                questionObj={question}
+                question={question.ask}
+                type={question.type}
+                handleChange={formatAnswers}
+              />
+            );
+          })}
         {/*  This is where I will be adding error handling (i.e. change "All Done" to "Fill in missing information") */}
         <SubmitContainer handleSubmit={handleSubmit} />
       </div>

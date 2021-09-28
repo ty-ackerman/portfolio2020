@@ -20,10 +20,13 @@ const TextAreaContainer = styled.div`
     }
 `;
 
-const TextArea = ({ handleChange, ...rest }) => {
+const TextArea = ({ handleChange, questionObj, ...rest }) => {
   return (
     <TextAreaContainer>
-      <textarea {...rest} onChange={handleChange} />
+      <textarea
+        {...rest}
+        onChange={(e) => handleChange(e.target.value, questionObj)}
+      />
     </TextAreaContainer>
   );
 };

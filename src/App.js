@@ -25,7 +25,10 @@ function App() {
         <Route path="/tattoo/add" exact render={() => <AddContent />} />
         <Route path="/tattoo/info" exact render={() => <Tattoo />} />
         <Route path="/tattoo" exact render={() => <Tattoo redirect />} />
-        <Route path="/journal/:type" render={() => <JournalEntry />} />
+        <Route
+          path="/journal/add/:scenario_id"
+          render={() => <JournalEntry />}
+        />
         <Route path="/" render={() => <Home />} />
       </Switch>
       <Footer />

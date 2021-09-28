@@ -19,59 +19,56 @@ const TagContainer = styled.div`
       margin-right: 2px;
     }
   }
+  .errorContainer {
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+  }
 `;
 
-const Tags = ({ tags, setTags }) => {
-  const [allTags, setAllTags] = useState([]);
+const Tags = ({ allTags, setAllTags, selectedTags, setSelectedTags }) => {
   const [addTag, setAddTag] = useState(false); // Toggles the button/input to add tag
+  const [newTag, setNewTag] = useState("");
+  const [error, setError] = useState(false);
 
-  useEffect(() => {
-    setAllTags([
-      {
-        name: "Cooking",
-        id: 123,
-        posts: [],
-      },
-      {
-        name: "Golfing",
-        id: 1233,
-        posts: [],
-      },
-      {
-        name: "Working Out",
-        id: 12333,
-        posts: [],
-      },
-      {
-        name: "Chilling",
-        id: 13323,
-        posts: [],
-      },
-      {
-        name: "Audiobook",
-        id: 123423,
-        posts: [],
-      },
-      {
-        name: "Driving",
-        id: 123423423,
-        posts: [],
-      },
-    ]);
-  }, []);
+  const handleNewTag = () => {
+    if (!allTags.includes(newTag.toLowerCase())) {
+      setError(false);
+      setAllTags([...allTags, newTag.toLowerCase()]);
+      setSelectedTags([...selectedTags, newTag.toLowerCase()]);
+    } else {
+      setError(true);
+    }
+    setAddTag(false);
+  };
 
   return (
     <TagContainer>
       <InputName inputName="tags" />
       <div className="tagBtnContainer">
-        {allTags.map((tag) => (
-          <Tag key={tag.id} tag={tag} setTags={setTags} tags={tags} />
+        {allTags.map((tag, key) => (
+          <Tag
+            key={key}
+            tag={tag}
+            setTags={setSelectedTags}
+            tags={selectedTags}
+            initalActive={selectedTags.includes(tag)}
+          />
         ))}
       </div>
       {addTag ? (
         <div className="addTagContainer">
-          <TextField autoFocus placeholder="Enter New Tag" />
-          <Button value="Add" className="tags" bgColor="#dadada" />
+          <TextField
+            autoFocus
+            placeholder="Enter New Tag"
+            handleChange={setNewTag}
+          />
+          <Button
+            value="Add"
+            className="tags"
+            bgColor="#dadada"
+            handleClick={handleNewTag}
+          />
         </div>
       ) : (
         <Button
@@ -81,6 +78,11 @@ const Tags = ({ tags, setTags }) => {
           className="tags"
           // handleClick to submit on enter keydown
         />
+      )}
+      {error && (
+        <div className="errorContainer">
+          Tag already exists, idiot. Learn to read, and select another.
+        </div>
       )}
     </TagContainer>
   );
