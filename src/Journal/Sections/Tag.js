@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/Button";
 
 const Tag = ({ tag, setTags, tags, initalActive }) => {
   const [active, setActive] = useState(initalActive);
+
+  useEffect(() => {
+    setActive(initalActive);
+  }, [tag, initalActive]);
 
   const handleClick = async () => {
     setTags([...tags, tag]);

@@ -23,6 +23,9 @@ const TagContainer = styled.div`
     color: red;
     font-size: 12px;
     font-style: italic;
+    span {
+      text-transform: capitalize;
+    }
   }
 `;
 
@@ -61,7 +64,10 @@ const Tags = ({ allTags, setAllTags, selectedTags, setSelectedTags }) => {
           <TextField
             autoFocus
             placeholder="Enter New Tag"
-            handleChange={setNewTag}
+            handleChange={(e) => {
+              setError(false);
+              setNewTag(e);
+            }}
           />
           <Button
             value="Add"
@@ -81,7 +87,8 @@ const Tags = ({ allTags, setAllTags, selectedTags, setSelectedTags }) => {
       )}
       {error && (
         <div className="errorContainer">
-          Tag already exists, idiot. Learn to read, and select another.
+          "<span>{newTag}</span>"" already exists, idiot. Learn to read, and
+          select another.
         </div>
       )}
     </TagContainer>
