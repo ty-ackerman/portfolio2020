@@ -44,7 +44,10 @@ const Failure = () => {
           <img src={pooEmoji} alt="" />
         </div>
         <h2>Ah shit, it failed</h2>
-        <Button value="See All Entries" handleClick={() => history.push("/")} />
+        <Button
+          value="See All Entries"
+          handleClick={() => history.push("/journal")}
+        />
       </div>
     </FailureScreen>
   );

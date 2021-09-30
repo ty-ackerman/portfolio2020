@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const TextBox = styled.div`
@@ -19,14 +19,32 @@ const TextBox = styled.div`
   }
 `;
 
-const TextField = ({ autoFocus, handleChange, className, ...rest }) => {
+const TextField = ({ autoFocus, handleChange, className, value, ...rest }) => {
+  const [typingTimeout, setTypingTimeout] = useState(0);
+  const [tempValue, setTempValue] = useState(value);
+  useEffect(() => setTempValue(value), [value]);
+
+  const handleWaitAndChange = (value) => {
+    setTempValue(value);
+    if (typingTimeout) {
+      clearTimeout(typingTimeout);
+    }
+
+    setTypingTimeout(
+      setTimeout(function () {
+        console.log("waiting...");
+        handleChange(value);
+      }, 1000)
+    );
+  };
   return (
     <TextBox className={className}>
       <input
         autoFocus={autoFocus}
         type="text"
+        value={tempValue}
         {...rest}
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={(e) => handleWaitAndChange(e.target.value)}
       />
     </TextBox>
   );

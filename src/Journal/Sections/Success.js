@@ -44,7 +44,10 @@ const Success = () => {
           <img src={fireEmoji} alt="" />
         </div>
         <h2>Hellllll ya — she posted</h2>
-        <Button value="See All Entries" handleClick={() => history.push("/")} />
+        <Button
+          value="See All Entries"
+          handleClick={() => history.push("/journal")}
+        />
       </div>
     </SuccessScreen>
   );

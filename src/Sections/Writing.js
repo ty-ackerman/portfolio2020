@@ -22,7 +22,13 @@ export default function Writing() {
         />
         {Posts.map((post) => {
           return (
-            !post.hidden && <WritingListItem key={post.path} post={post} />
+            !post.hidden && (
+              <WritingListItem
+                key={post.path}
+                post={post}
+                path={`/writing/post?id=${post.path}`}
+              />
+            )
           );
         })}
       </WritingContainer>

@@ -64,7 +64,7 @@ export default function Entry() {
       setAllTags(initialScenario.data.frequentTags);
       setScenarios(allScenarios.data);
     } catch (error) {
-      history.push("/journal/add");
+      history.push("/journal/review");
     }
   }, [scenario_id, history]);
 
@@ -173,7 +173,6 @@ export default function Entry() {
     person.alias || `${person.firstName} ${person.lastName}`;
 
   const isDuplicatePerson = (searchTerm) => {
-    console.log(searchTerm, selectedPeople);
     if (
       selectedPeople.filter(
         (person) =>

@@ -37,6 +37,14 @@ class JournalDataService {
     return http.get(`entry?id=${id}`);
   }
 
+  getEntries(query, perPage = 20, page = 0, sort = "descending") {
+    return http.get(
+      `entries?entriesPerPage=${perPage}&sort=${sort}&page=${page}${
+        query ? "&" + query.type + "=" + query.search : ""
+      }`
+    );
+  }
+
   addAnswer(data) {
     return http.post(`answer-add`, data);
   }
