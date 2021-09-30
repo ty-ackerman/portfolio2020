@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../components/Button";
 import InputName from "../components/InputName";
@@ -29,20 +29,32 @@ const TagContainer = styled.div`
   }
 `;
 
-const Tags = ({ allTags, setAllTags, selectedTags, setSelectedTags }) => {
+const Tags = ({
+  allTags,
+  setAllTags,
+  selectedTags,
+  setSelectedTags,
+  scenario_id,
+}) => {
   const [addTag, setAddTag] = useState(false); // Toggles the button/input to add tag
   const [newTag, setNewTag] = useState("");
   const [error, setError] = useState(false);
 
   const handleNewTag = () => {
-    if (!allTags.includes(newTag.toLowerCase())) {
-      setError(false);
-      setAllTags([...allTags, newTag.toLowerCase()]);
-      setSelectedTags([...selectedTags, newTag.toLowerCase()]);
-    } else {
-      setError(true);
+    if (newTag !== "") {
+      if (!allTags.includes(newTag.toLowerCase())) {
+        setError(false);
+        setAllTags([...allTags, newTag.toLowerCase()]);
+        setSelectedTags([
+          ...selectedTags,
+          { name: newTag.toLowerCase(), scenario_id },
+        ]);
+        setNewTag("");
+      } else {
+        setError(true);
+      }
+      setAddTag(false);
     }
-    setAddTag(false);
   };
 
   return (
@@ -55,7 +67,11 @@ const Tags = ({ allTags, setAllTags, selectedTags, setSelectedTags }) => {
             tag={tag}
             setTags={setSelectedTags}
             tags={selectedTags}
-            initalActive={selectedTags.includes(tag)}
+            scenario_id={scenario_id}
+            initalActive={
+              selectedTags.filter((selectedTag) => selectedTag.name === tag)
+                .length
+            }
           />
         ))}
       </div>
@@ -68,6 +84,7 @@ const Tags = ({ allTags, setAllTags, selectedTags, setSelectedTags }) => {
               setError(false);
               setNewTag(e);
             }}
+            value={newTag}
           />
           <Button
             value="Add"
@@ -87,7 +104,7 @@ const Tags = ({ allTags, setAllTags, selectedTags, setSelectedTags }) => {
       )}
       {error && (
         <div className="errorContainer">
-          "<span>{newTag}</span>"" already exists, idiot. Learn to read, and
+          "<span>{newTag}</span>" already exists, idiot. Learn to read, and
           select another.
         </div>
       )}

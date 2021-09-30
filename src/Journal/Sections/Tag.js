@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "../components/Button";
 
-const Tag = ({ tag, setTags, tags, initalActive }) => {
+const Tag = ({ tag, setTags, tags, scenario_id, initalActive }) => {
   const [active, setActive] = useState(initalActive);
 
   useEffect(() => {
@@ -9,12 +9,12 @@ const Tag = ({ tag, setTags, tags, initalActive }) => {
   }, [tag, initalActive]);
 
   const handleClick = async () => {
-    setTags([...tags, tag]);
+    setTags([...tags, { name: tag, scenario_id }]);
     setActive(!active);
   };
 
   const handleUnclick = () => {
-    setTags(tags.filter((item) => item !== tag));
+    setTags(tags.filter((item) => item.name !== tag));
     setActive(!active);
   };
 

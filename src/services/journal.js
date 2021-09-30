@@ -18,7 +18,7 @@ class JournalDataService {
   }
 
   updateLocation(data) {
-    return http.put("/location-edit", data);
+    return http.put("location-edit", data);
   }
 
   getScenarios() {
@@ -28,10 +28,22 @@ class JournalDataService {
   getScenario(id) {
     return http.get(`scenario?id=${id}`);
   }
-  //   get(id) {
-  //     return http.get(`/restaurant?id=${id}`);
-  //   }
 
+  addEntry(data) {
+    return http.post(`entry-add`, data);
+  }
+
+  getEntry(id) {
+    return http.get(`entry?id=${id}`);
+  }
+
+  addAnswer(data) {
+    return http.post(`answer-add`, data);
+  }
+
+  editEntry(data) {
+    return http.put("entry-edit", data);
+  }
   //   // name zipcode or quisine
   //   find(query, by = "name", page = 0) {
   //     return http.get(`restaurants?${by}=${query}&page=${page}`);

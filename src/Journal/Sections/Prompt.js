@@ -4,6 +4,7 @@ import InputName from "../components/InputName";
 import TextArea from "../components/TextArea";
 import TextField from "../components/TextField";
 import styled from "styled-components";
+import { useParams } from "react-router";
 
 const BtnContainer = styled.div`
   display: flex;
@@ -18,9 +19,13 @@ const Prompt = ({
   type,
   handleChange,
   questionObj,
+  value,
   ...rest
 }) => {
-  const [active, setActive] = useState("default");
+  const { _id } = useParams();
+  const [active, setActive] = useState(
+    _id && typeof value === "boolean" ? value : "default"
+  );
 
   if (type === "text") {
     return (
@@ -30,6 +35,7 @@ const Prompt = ({
           placeholder={placeholder}
           handleChange={handleChange}
           questionObj={questionObj}
+          value={value}
         />
       </div>
     );
@@ -61,7 +67,11 @@ const Prompt = ({
     return (
       <div>
         <InputName inputName={question} {...rest} />
-        <TextField placeholder={placeholder} handleChange={handleChange} />
+        <TextField
+          placeholder={placeholder}
+          handleChange={handleChange}
+          value={value}
+        />
       </div>
     );
   }

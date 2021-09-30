@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import JournalDataService from "../../services/journal";
 
@@ -22,16 +22,18 @@ const FlexContainer = styled.div`
 
 export default function Entry() {
   // Post
-  const { scenario_id } = useParams();
+  const history = useHistory();
+  const { scenario_id, _id } = useParams();
   const [scenario, setScenario] = useState({});
   const [scenarios, setScenarios] = useState([]);
-  const [entry, setPost] = useState({
+  const [entry, setEntry] = useState({
     entry_id: new Date().getTime().toString(),
   });
   const [reminder, setReminder] = useState(false);
   const [title, setTitle] = useState("");
   const [picture, setPicture] = useState("");
   const [time, setTime] = useState(new Date().getTime().toString());
+  const [resetTime, setResetTime] = useState();
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
   // For location search
@@ -53,16 +55,49 @@ export default function Entry() {
 
   const getInitialScenario = useCallback(async () => {
     try {
-      const initialScenario = await JournalDataService.getScenario(scenario_id);
+      const initialScenario = await JournalDataService.getScenario(
+        scenario_id || "61521232b409a5cc2cdda3a0"
+      );
       const allScenarios = await JournalDataService.getScenarios();
 
       setScenario(initialScenario.data);
       setAllTags(initialScenario.data.frequentTags);
       setScenarios(allScenarios.data);
     } catch (error) {
-      console.error(error);
+      history.push("/journal/add");
     }
-  }, [scenario_id]);
+  }, [scenario_id, history]);
+
+  const getInitialEntry = useCallback(async () => {
+    try {
+      const res = (await JournalDataService.getEntry(_id)).data;
+      const allScenarios = (await JournalDataService.getScenarios()).data;
+      console.log(res);
+      // Update all information
+      setReminder(res.reminder);
+      setTitle(res.title);
+      setScenario(res.scenario);
+      setScenarios(allScenarios);
+      setAllTags(res.scenario.frequentTags);
+      setSelectedTags(
+        res.tags.map((tag) => {
+          return { name: tag, scenario_id: res.scenario.scenario_id };
+        })
+      );
+      setSelectedLocations(res.locations);
+      getAllLocations();
+      setPicture(res.picture);
+      setTime(res.time);
+      setResetTime(res.time);
+      setSelectedPeople(res.people);
+      getAllPeople();
+      setAnswers(res.answers);
+      // Update entry last
+    } catch (error) {
+      console.error(error);
+      history.push("/journal/add");
+    }
+  }, [_id, history]);
 
   const getAllPeople = async () => {
     const people = await JournalDataService.getAllPeople();
@@ -75,10 +110,16 @@ export default function Entry() {
   };
 
   useEffect(() => {
-    getInitialScenario();
-    getAllPeople();
-    getAllLocations();
-  }, [getInitialScenario]);
+    getInitialEntry();
+  }, [_id, getInitialEntry]);
+
+  useEffect(() => {
+    if (!_id) {
+      getInitialScenario();
+      getAllPeople();
+      getAllLocations();
+    }
+  }, [_id, getInitialScenario]);
 
   const onScenarioChange = useCallback(async () => {
     if (scenario._id) {
@@ -86,42 +127,14 @@ export default function Entry() {
       const { data } = newScenario;
       setQuestions(data.questions);
       setAllTags(data.frequentTags);
-      setSelectedTags([]);
+      // setSelectedTags([]);
+      // setAnswers([]);
     }
   }, [scenario._id]);
 
   useEffect(() => {
     onScenarioChange();
   }, [scenario, onScenarioChange]);
-
-  // --------------------------- //
-
-  const handleSubmit = async () => {
-    // const entry = {
-    //   reminder,
-    //   title: title || "Journal Entry",
-    //   location,
-    //   picture,
-    //   time,
-    //   id: `post-${new Date().getTime()}`,
-    //   type: "general",
-    // };
-    // entry.tags = addPostToState(entry, tags, setTags);
-    // entry.people = addPostToState(entry, selectedPeople, setSelectedPeople);
-    // setPost(entry);
-  };
-
-  // Where we submit post to database
-  // useEffect(() => {
-  //   Object.keys(post).length && console.log(post);
-  // }, [post]);
-
-  // const addPostToState = (post, prevState, setNewState) => {
-  //   const newState = JSON.parse(JSON.stringify(prevState));
-  //   newState.map((obj) => (obj.posts = [...obj.posts, post]));
-  //   setNewState(newState);
-  //   return newState;
-  // };
 
   const formatAnswers = (answer, question) => {
     const answerDoc = {
@@ -251,6 +264,63 @@ export default function Entry() {
     return false;
   };
 
+  // --------------------------- //
+
+  const handleSubmit = async () => {
+    try {
+      const entryDoc = {
+        ...entry,
+        reminder,
+        title: title || "Journal Entry",
+        location_ids: selectedLocations.map((location) => location.location_id),
+        picture,
+        time: time.toString(),
+        tags: selectedTags
+          .filter((tag) => tag.scenario_id === scenario.scenario_id)
+          .map((tag) => tag.name),
+        person_ids: selectedPeople.map((person) => person.person_id),
+        scenario_id: scenario.scenario_id,
+        question_ids: scenario.question_ids,
+        answer_ids: answers
+          .filter((answer) =>
+            scenario.question_ids.includes(answer.question_id)
+          )
+          .map((answer) => answer.answer_id),
+        _id: _id || undefined,
+      };
+      setEntry(entryDoc);
+      addLocations.forEach(
+        async (data) => await JournalDataService.addLocation(data)
+      );
+      addPeople.forEach(
+        async (data) => await JournalDataService.addPerson(data)
+      );
+      // Allow me to see the history of an answer/post (for future features)
+      answers.forEach(async (data) => await JournalDataService.addAnswer(data));
+      if (_id) {
+        console.log("here");
+        await JournalDataService.editEntry(entryDoc);
+      } else {
+        await JournalDataService.addEntry(entryDoc);
+      }
+      history.push("/journal/success");
+    } catch (error) {
+      history.push("/journal/error");
+      console.error(error);
+    }
+  };
+
+  const addExistingAnswer = (question) => {
+    const correctAnswer = answers.filter(
+      (answer) => answer.question_id === question.question_id
+    );
+    if (correctAnswer.length > 0) {
+      return correctAnswer[0].response;
+    } else {
+      return "";
+    }
+  };
+
   return (
     <Fade show>
       <div className="section">
@@ -268,6 +338,7 @@ export default function Entry() {
           question="Title"
           placeholder="Enter a captivating title"
           handleChange={setTitle}
+          value={title}
         />
         {scenarios.length > 0 && (
           <Dropdown
@@ -295,7 +366,7 @@ export default function Entry() {
         />
         <FlexContainer className="flex-container">
           <ImageUpload handleChange={setPicture} picture={picture} />
-          <TimeEntry handleChange={setTime} />
+          <TimeEntry handleChange={setTime} time={time} resetTime={resetTime} />
         </FlexContainer>
         {
           <Tags
@@ -303,6 +374,7 @@ export default function Entry() {
             setAllTags={setAllTags}
             selectedTags={selectedTags}
             setSelectedTags={setSelectedTags}
+            scenario_id={scenario.scenario_id}
           />
         }
         {allPeople.length ? (
@@ -333,6 +405,7 @@ export default function Entry() {
                 question={question.ask}
                 type={question.type}
                 handleChange={formatAnswers}
+                value={addExistingAnswer(question)}
               />
             );
           })}

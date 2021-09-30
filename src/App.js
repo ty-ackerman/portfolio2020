@@ -12,6 +12,8 @@ import WritingPost from "./sections/WritingPost";
 import Tattoo from "./sections/Tattoo";
 import AddContent from "./sections/AddContent";
 import JournalEntry from "./journal/sections/JournalEntry";
+import Success from "./journal/sections/Success";
+import Failure from "./journal/sections/Failure";
 
 function App() {
   return (
@@ -25,6 +27,10 @@ function App() {
         <Route path="/tattoo/add" exact render={() => <AddContent />} />
         <Route path="/tattoo/info" exact render={() => <Tattoo />} />
         <Route path="/tattoo" exact render={() => <Tattoo redirect />} />
+        <Route path="/journal/success/" exact render={() => <Success />} />
+        <Route path="/journal/failure/" exact render={() => <Failure />} />
+        <Route path="/journal/add/" exact render={() => <JournalEntry />} />
+        <Route path="/journal/edit/:_id" render={() => <JournalEntry />} />
         <Route
           path="/journal/add/:scenario_id"
           render={() => <JournalEntry />}

@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import InputName from "../components/InputName";
 import Button from "../components/Button";
 import styled from "styled-components";
+import { useParams } from "react-router";
 
 const TimeContainer = styled.div`
   width: 48%;
@@ -29,10 +30,13 @@ const TimeContainer = styled.div`
         opacity: 0;
       }
   }
-  
+  .prevTime {
+    font-size: 12px;
+  }
 `;
 
-const TimeEntry = ({ handleChange }) => {
+const TimeEntry = ({ handleChange, time, resetTime }) => {
+  const { _id } = useParams();
   const [chooseDate, setChooseDate] = useState(false);
 
   const handleChooseDate = (e) => {
@@ -41,16 +45,26 @@ const TimeEntry = ({ handleChange }) => {
 
   const handleChooseNow = () => {
     setChooseDate(false);
-    handleChange(new Date().getTime());
+    handleChange(
+      _id ? new Date(parseInt(resetTime)).getTime() : new Date().getTime()
+    );
+  };
+
+  const formatDate = (timeState) => {
+    const date = new Date(parseInt(timeState));
+    const dayMonthYear = date.toLocaleDateString();
+    const time = date.toLocaleTimeString();
+    return `${time} on ${dayMonthYear}`;
   };
 
   const dateInput = useRef(null);
   return (
     <TimeContainer>
       <InputName inputName="Time" />
+      {_id ? <div className="prevTime">{formatDate(time)}</div> : null}
       <div className="btnContainer">
         <Button
-          value="Now"
+          value={_id ? "Keep" : "Now"}
           className={`tags ${!chooseDate && "active"}`}
           handleClick={handleChooseNow}
         />
@@ -67,6 +81,7 @@ const TimeEntry = ({ handleChange }) => {
         type="datetime-local"
         ref={dateInput}
         onChange={(e) => handleChooseDate(e)}
+        placeholder="blahh"
         className={!chooseDate ? "hidden" : null}
       />
     </TimeContainer>
