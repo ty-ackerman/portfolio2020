@@ -34,7 +34,7 @@ const TextField = ({ autoFocus, handleChange, className, value, ...rest }) => {
       setTimeout(function () {
         console.log("waiting...");
         handleChange(value);
-      }, 1000)
+      }, 500)
     );
   };
   return (

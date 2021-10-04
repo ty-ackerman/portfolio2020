@@ -54,21 +54,24 @@ const Review = () => {
           <div className="section">Nothing to show</div>
         ) : entries.length ? (
           <div className="">
-            <div className="reminderEntries">
-              <h3>Entries with Reminders</h3>
-              {reminderEntries.map((entry) => {
-                return (
-                  <JournalListItem
-                    key={entry._id}
-                    path={`/journal/edit/${entry._id}`}
-                    entry={entry}
-                    className="reminder"
-                  />
-                );
-              })}
-            </div>
+            {reminderEntries.length ? (
+              <div className="reminderEntries">
+                <h3>Entries with Reminders</h3>
+                {reminderEntries.map((entry) => {
+                  return (
+                    <JournalListItem
+                      key={entry._id}
+                      path={`/journal/edit/${entry._id}`}
+                      entry={entry}
+                      className="reminder"
+                    />
+                  );
+                })}
+              </div>
+            ) : null}
+
             <div className="allEntries">
-              <h3>All Entries</h3>
+              {reminderEntries.length > 0 ? <h3>All Entries</h3> : null}
               {entries.map((entry) => {
                 return (
                   <JournalListItem

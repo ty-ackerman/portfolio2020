@@ -46,11 +46,14 @@ const StyledItem = styled.div`
     }
   }
   .imgContainer {
-    width: 100px;
     display: flex;
+    max-width: 30%;
   }
   .reminder {
     background-color: #fff2f2ed;
+  }
+  .titleContainer {
+    width: 60%;
   }
 `;
 
@@ -69,7 +72,7 @@ export default function JournalListItem(props) {
     <StyledItem>
       <Link to={path}>
         <div className={`one-post ${className}`}>
-          <div>
+          <div className="titleContainer">
             <div className="post-info post-title">{entry.title}</div>
             <div className="post-info post-subtitle">
               {formatDate(entry.time)}
