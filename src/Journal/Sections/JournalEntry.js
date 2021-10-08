@@ -395,19 +395,41 @@ export default function Entry() {
           />
         ) : null}
         {questions &&
-          questions.map((question) => {
-            return (
-              <Prompt
-                key={question.question_id}
-                className="sentence"
-                questionObj={question}
-                question={question.ask}
-                type={question.type}
-                handleChange={formatAnswers}
-                value={addExistingAnswer(question)}
-              />
-            );
+          scenario.question_ids &&
+          scenario.question_ids.map((question_id) => {
+            return questions
+              .filter((question) => question.question_id === question_id)
+              .map((correctQuestion) => {
+                return (
+                  <Prompt
+                    key={correctQuestion.question_id}
+                    className="sentence"
+                    questionObj={correctQuestion}
+                    question={correctQuestion.ask}
+                    type={correctQuestion.type}
+                    handleChange={formatAnswers}
+                    value={addExistingAnswer(correctQuestion)}
+                  />
+                );
+              });
           })}
+        {/* {questions &&
+          scenario.question_ids &&
+          scenario.question_ids.map((question) => {
+            console.log(scenario.question_ids);
+            return (
+              <div>Test</div>
+              // <Prompt
+              //   key={question.question_id}
+              //   className="sentence"
+              //   questionObj={question}
+              //   question={question.ask}
+              //   type={question.type}
+              //   handleChange={formatAnswers}
+              //   value={addExistingAnswer(question)}
+              // />
+            );
+          })} */}
         {/*  This is where I will be adding error handling (i.e. change "All Done" to "Fill in missing information") */}
         <SubmitContainer handleSubmit={handleSubmit} />
       </div>

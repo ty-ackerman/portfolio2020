@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router";
 import Button from "../components/Button";
 import styled from "styled-components";
 
@@ -21,11 +22,15 @@ const SbmtCntr = styled.div`
 `;
 
 const SubmitContainer = ({ handleSubmit }) => {
+  const history = useHistory();
   return (
     <SbmtCntr>
       <div className="prompt">All Done?</div>
       <div className="btnContainer">
-        <Button value="cancel" />
+        <Button
+          value="cancel"
+          onClick={() => history.push("/journal/review")}
+        />
         <Button value="submit" bgColor="#dadada" onClick={handleSubmit} />
       </div>
     </SbmtCntr>

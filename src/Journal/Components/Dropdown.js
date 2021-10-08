@@ -43,7 +43,22 @@ const Dropdown = ({ title, list, setSelected, defaultId }) => {
   const getDefaultIndex = (id, array) =>
     array.map((item) => item._id).indexOf(id);
 
-  //   const [open, setOpen] = useState(false);
+  const sortArray = (items) =>
+    items.sort(function (a, b) {
+      const nameA = a.name.toUpperCase();
+      const nameB = b.name.toUpperCase();
+
+      if (nameA < nameB) {
+        return -1;
+      }
+
+      if (nameA > nameB) {
+        return 1;
+      }
+
+      return 0;
+    });
+
   return (
     <DropdownStyled>
       <InputName inputName={title} />
@@ -51,7 +66,7 @@ const Dropdown = ({ title, list, setSelected, defaultId }) => {
         onChange={handleChange}
         defaultValue={list[getDefaultIndex(defaultId, list)].name}
       >
-        {list.map((item) => {
+        {sortArray(list).map((item) => {
           return (
             <option key={item._id} value={item.name}>
               {capitalizeText(item)}
