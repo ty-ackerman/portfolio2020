@@ -20,12 +20,13 @@ const TextAreaContainer = styled.div`
     }
 `;
 
-const TextArea = ({ handleChange, questionObj, ...rest }) => {
+const TextArea = ({ handleChange, questionObj, rows, ...rest }) => {
   return (
     <TextAreaContainer>
       <textarea
-        {...rest}
         onChange={(e) => handleChange(e.target.value, questionObj)}
+        style={{ resize: rows > 1 ? "vertical" : "none" }}
+        {...rest}
       />
     </TextAreaContainer>
   );

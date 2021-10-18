@@ -44,7 +44,7 @@ const Tags = ({
     if (newTag !== "") {
       if (!allTags.includes(newTag.toLowerCase())) {
         setError(false);
-        setAllTags([...allTags, newTag.toLowerCase()]);
+        // setAllTags([...allTags, newTag.toLowerCase()]);
         setSelectedTags([
           ...selectedTags,
           { name: newTag.toLowerCase(), scenario_id },
@@ -57,23 +57,54 @@ const Tags = ({
     }
   };
 
+  const handleClick = async (active, setActive, tag) => {
+    setSelectedTags([...selectedTags, { name: tag, scenario_id }]);
+    setAllTags(allTags.filter((allTag) => allTag !== tag));
+    setActive(!active);
+  };
+
+  const handleUnclick = (active, setActive, tag) => {
+    setSelectedTags(selectedTags.filter((item) => item.name !== tag));
+    !allTags.includes(tag) && setAllTags([...allTags, tag]);
+    setActive(!active);
+  };
   return (
     <TagContainer>
       <InputName inputName="tags" />
       <div className="tagBtnContainer">
-        {allTags.map((tag, key) => (
+        {selectedTags.map((tag, key) => (
           <Tag
-            key={key}
-            tag={tag}
-            setTags={setSelectedTags}
-            tags={selectedTags}
+            key={`${key}${new Date().getTime()}`}
+            tag={tag.name}
+            handleClick={handleClick}
+            handleUnclick={handleUnclick}
             scenario_id={scenario_id}
             initalActive={
-              selectedTags.filter((selectedTag) => selectedTag.name === tag)
-                .length
+              selectedTags.filter(
+                (selectedTag) => selectedTag.name === tag.name
+              ).length
             }
           />
         ))}
+        {allTags.map((tag, key) => {
+          const selectedTagsDestructured = selectedTags.map((tag) => tag.name);
+          if (!selectedTagsDestructured.includes(tag)) {
+            return (
+              <Tag
+                key={key}
+                tag={tag}
+                handleClick={handleClick}
+                handleUnclick={handleUnclick}
+                scenario_id={scenario_id}
+                initalActive={
+                  selectedTags.filter((selectedTag) => selectedTag.name === tag)
+                    .length
+                }
+              />
+            );
+          }
+          return null;
+        })}
       </div>
       {addTag ? (
         <div className="addTagContainer">

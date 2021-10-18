@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import Title from "../../components/Title";
 import JournalListItem from "../components/JournalListItem";
 import JournalDataService from "../../services/journal";
@@ -9,6 +9,9 @@ const StyledReview = styled.div`
     color: #656565;
     margin-top: 60px;
     text-decoration: underline;
+  }
+  .section {
+    margin-bottom: -51px;
   }
 `;
 

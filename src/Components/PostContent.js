@@ -21,38 +21,37 @@ export function PostLink(props) {
   );
 }
 
-export function PostSubtitle(props) {
-  const Subtitle = styled.h2`
-    margin: 20px 0;
-  `;
+const Subtitle = styled.h2`
+  margin: 20px 0;
+`;
 
+export function PostSubtitle(props) {
   return (
     <div>
       <Subtitle>{props.content}</Subtitle>
     </div>
   );
 }
+const Blockquote = styled.div`
+  margin: 20px 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  font-style: italic;
+  text-align: left;
+  &:before {
+    width: 1px;
+    height: calc(100% - 10px);
+    content: "";
+    background-color: #dfdfdf;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+`;
 
 export function PostBlockquote(props) {
-  const Blockquote = styled.div`
-    margin: 20px 0;
-    padding-left: 30px;
-    padding-right: 30px;
-    position: relative;
-    font-style: italic;
-    text-align: left;
-    &:before {
-      width: 1px;
-      height: calc(100% - 10px);
-      content: "";
-      background-color: #dfdfdf;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  `;
-
   return (
     <div>
       <Blockquote>{props.content}</Blockquote>
@@ -60,15 +59,15 @@ export function PostBlockquote(props) {
   );
 }
 
-export function PostCode(props) {
-  const StyledPre = styled.pre`
-    background-color: #dfdfdf;
-    color: black;
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.5;
-  `;
+const StyledPre = styled.pre`
+  background-color: #dfdfdf;
+  color: black;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+`;
 
+export function PostCode(props) {
   return (
     <StyledPre>
       <code>{props.content}</code>
@@ -76,14 +75,14 @@ export function PostCode(props) {
   );
 }
 
-export function PostListOrdered(props) {
-  const OrderedList = styled.ol`
-    list-style-position: inside;
-    li {
-      list-style-type: upper-roman;
-    }
-  `;
+const OrderedList = styled.ol`
+  list-style-position: inside;
+  li {
+    list-style-type: upper-roman;
+  }
+`;
 
+export function PostListOrdered(props) {
   return (
     <div>
       <OrderedList>
@@ -95,15 +94,15 @@ export function PostListOrdered(props) {
   );
 }
 
-export function PostListUnordered(props) {
-  const UnorderedList = styled.ul`
-    list-style-position: inside;
-    padding-left: 40px;
-    li {
-      list-style-type: square;
-    }
-  `;
+const UnorderedList = styled.ul`
+  list-style-position: inside;
+  padding-left: 40px;
+  li {
+    list-style-type: square;
+  }
+`;
 
+export function PostListUnordered(props) {
   return (
     <div>
       <UnorderedList>

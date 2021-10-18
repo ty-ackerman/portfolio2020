@@ -27,15 +27,17 @@ const Prompt = ({
     _id && typeof value === "boolean" ? value : "default"
   );
 
-  if (type === "text") {
+  if (type === "text" || type === "string") {
     return (
       <div>
         <InputName inputName={question} {...rest} />
+
         <TextArea
           placeholder={placeholder}
           handleChange={handleChange}
           questionObj={questionObj}
           value={value}
+          rows={type === "string" ? 1 : 5}
         />
       </div>
     );

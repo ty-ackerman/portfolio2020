@@ -72,7 +72,6 @@ export default function Entry() {
     try {
       const res = (await JournalDataService.getEntry(_id)).data;
       const allScenarios = (await JournalDataService.getScenarios()).data;
-      console.log(res);
       // Update all information
       setReminder(res.reminder);
       setTitle(res.title);
@@ -297,7 +296,6 @@ export default function Entry() {
       // Allow me to see the history of an answer/post (for future features)
       answers.forEach(async (data) => await JournalDataService.addAnswer(data));
       if (_id) {
-        console.log("here");
         await JournalDataService.editEntry(entryDoc);
       } else {
         await JournalDataService.addEntry(entryDoc);
@@ -413,24 +411,6 @@ export default function Entry() {
                 );
               });
           })}
-        {/* {questions &&
-          scenario.question_ids &&
-          scenario.question_ids.map((question) => {
-            console.log(scenario.question_ids);
-            return (
-              <div>Test</div>
-              // <Prompt
-              //   key={question.question_id}
-              //   className="sentence"
-              //   questionObj={question}
-              //   question={question.ask}
-              //   type={question.type}
-              //   handleChange={formatAnswers}
-              //   value={addExistingAnswer(question)}
-              // />
-            );
-          })} */}
-        {/*  This is where I will be adding error handling (i.e. change "All Done" to "Fill in missing information") */}
         <SubmitContainer handleSubmit={handleSubmit} />
       </div>
     </Fade>
